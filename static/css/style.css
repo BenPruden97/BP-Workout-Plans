@@ -72,6 +72,7 @@ nav .nav li a{
     text-decoration: none;
     border: 2px solid black;
     border-radius: 5px;
+    transition: 0.5s;
 }
 
 .display{
@@ -92,14 +93,13 @@ nav .nav .sign-up{
     text-decoration: none;
     border: 2px solid #db0007;
     border-radius: 5px;
+    transition: 0.5s;
 }
 
 nav .nav .sign-up:hover{
     background-color: #db0007;
     padding: 0.5rem;
-    font-weight: bold;
     color: #fafafa;
-    transition: ease-in-out 150ms;
 }
 
 nav .nav .log-in{
@@ -109,14 +109,13 @@ nav .nav .log-in{
     text-decoration: none;
     border: 2px solid #118324;
     border-radius: 5px;
+    transition: 0.5s;
 }
 
 nav .nav .log-in:hover{
     background-color: #118324;
     padding: 0.5rem;
-    font-weight: bold;
     color: #fafafa;
-    transition: ease-in-out 150ms;
 }
 
 .navbar{
@@ -136,6 +135,52 @@ nav .nav .log-in:hover{
     border: 2px solid black;
 }
 
+footer{
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.designer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0 0;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.fa-facebook-f{
+    font-size: 1.2rem;
+}
+
+.social-links li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+.social-links li a{
+    height: 45px;
+    width: 45px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 100%;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    padding: 0.75rem 1rem;    
+    transition: 0.5s;
+}
+
+.social-links li a:hover{
+    color: #fafafa;
+    background-color: black;
+}
 
 @media screen and (max-width: 992px) {
 
