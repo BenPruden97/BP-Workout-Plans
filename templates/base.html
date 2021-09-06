@@ -17,25 +17,83 @@
     <!----- Stylesheet Links ----->
 
     <!----- Bootstrap CDN ----->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!----- Font Awesome ----->
     <script src="https://kit.fontawesome.com/e8142a821e.js" crossorigin="anonymous"></script>
     <!----- style.css Sheet ----->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css.style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>BP Workout Plans</title>
 </head>
 <body>
 
-    <h1>Heading</h1>
+    <header>
+
+        <div class="row">
+
+            <div class="container-fluid">
+
+                <div class="nav-logo">
+
+                    <a href="{{ url_for('home') }}">BP Workout Plans</a>
+
+                </div>
+
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+                    <div class="burger-menu">
+
+                        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                    </div>
+                
+                    <div class="collapse navbar-collapse" id="collapse_target">
+
+                        <div class="nav">
+
+                            <ul>
+                                <li><a href="{{ url_for('home') }}">Home</a></li>
+                                <li><a href="#">Find A Workout Plan</a></li>
+                                <li><a href="#">Create A Workout Plan</a></li>
+                                <li><a href="#">Contact</a></li>
+
+                                <div class="display">
+                                    <li><a href="#"><i class="fas fa-user"></i></a>
+                                        <ul>
+                                            <li><a href="#">My Liked Workout Plans</a></li>
+                                            <li><a href="#">Edit Profile</a></li>
+                                            <li><a href="#">Log Out</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+
+                                <li><a href="#" class="sign-up">Sign Up</a></li>
+                                <li><a href="#" class="log-in">Log In</a></li>
+                            </ul>
+                        
+                        </div>
+
+                    </div>
+
+                </nav>
+
+            </div>
+
+        </div>
 
     {% block content %}
     {% endblock %}
 
-    <h1>Footer</h1>
-
     <!----- Bootstrap Javascript ----->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!----- script.js file ----->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

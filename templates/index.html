@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1>Testing</h1>
-
     {% for workout_plan in workout_plans %}
         {{ workout_plan.category_name }}<br>
         {{ workout_plan.workout_name }}<br>

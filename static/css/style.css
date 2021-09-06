@@ -1,0 +1,188 @@
+/*----- Google Font Import ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.nav-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    width: 100%;
+    padding: 0.5rem 0 0;
+}
+
+.nav-logo a{
+    color: black;
+    padding: 0.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.nav-logo a:hover{
+    background-color: black;
+    color: #fafafa;
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+nav .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    width: 100%;
+}
+
+nav .nav ul {
+    text-decoration: none;
+    text-align: center;
+}
+
+nav .nav li{
+    display: inline-block;
+    padding: 0.8rem;
+    margin-top: 15px;
+}
+
+nav .nav li a{
+    color: black;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.display{
+    display: none;
+}
+
+nav .nav li a:hover{
+    background-color: black;
+    padding: 0.5rem 0.8rem;
+    color: #fafafa;
+    border-radius: 5px;
+}
+
+nav .nav .sign-up{
+    background-color: transparent;
+    color: #db0007;
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 2px solid #db0007;
+    border-radius: 5px;
+}
+
+nav .nav .sign-up:hover{
+    background-color: #db0007;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #fafafa;
+    transition: ease-in-out 150ms;
+}
+
+nav .nav .log-in{
+    background-color: transparent;
+    color: #118324;
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 2px solid #118324;
+    border-radius: 5px;
+}
+
+nav .nav .log-in:hover{
+    background-color: #118324;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #fafafa;
+    transition: ease-in-out 150ms;
+}
+
+.navbar{
+    padding: 0;
+}
+
+.burger-menu{
+    background-color: #fafafa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.navbar .navbar-toggler{
+    border: 2px solid black;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    nav .nav li{
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    nav .nav li a{
+        padding: 0.3rem;
+    }
+    
+    nav .nav li a:hover{
+        padding: 0.3rem;
+    }
+
+    nav .nav .sign-up{
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+
+    nav .nav .sign-up:hover{
+        padding: 0.3rem;
+        font-weight: 300;
+    }
+        
+    nav .nav .log-in{
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+
+    nav .nav .log-in:hover{
+        padding: 0.3rem;
+        font-weight: 300;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    nav .nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fafafa;
+        width: 100%;
+    }
+}
