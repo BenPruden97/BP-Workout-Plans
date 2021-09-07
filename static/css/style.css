@@ -22,6 +22,10 @@ body{
     padding-left: 0;
 }
 
+/* ----- Navigation Section Styling ----- */
+
+/* ----- Navigation Logo Styling ----- */
+
 .nav-logo{
     display: flex;
     justify-content: center;
@@ -38,6 +42,7 @@ body{
     text-transform: uppercase;
     border: 2px solid black;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 .nav-logo a:hover{
@@ -47,6 +52,8 @@ body{
     border: 2px solid black;
 }
 
+/* ----- Navigation Styling ----- */
+
 nav .nav{
     display: flex;
     justify-content: center;
@@ -54,6 +61,8 @@ nav .nav{
     background-color: #fafafa;
     width: 100%;
 }
+
+/* ----- Navigation List Styling ----- */
 
 nav .nav ul {
     text-decoration: none;
@@ -86,6 +95,8 @@ nav .nav li a:hover{
     border-radius: 5px;
 }
 
+/* ----- Navigation Sign Up Button Styling ----- */
+
 nav .nav .sign-up{
     background-color: transparent;
     color: #db0007;
@@ -101,6 +112,8 @@ nav .nav .sign-up:hover{
     padding: 0.5rem;
     color: #fafafa;
 }
+
+/* ----- Navigation Log In Button Styling ----- */
 
 nav .nav .log-in{
     background-color: transparent;
@@ -118,27 +131,27 @@ nav .nav .log-in:hover{
     color: #fafafa;
 }
 
-.navbar{
-    padding: 0;
-}
+/* ----- Navigation Burger Menu Styling ----- */
 
-.burger-menu{
-    background-color: #fafafa;
-    width: 100%;
+.navbar{
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
 }
 
 .navbar .navbar-toggler{
     border: 2px solid black;
 }
 
+/* ----- Footer Section Styling ----- */
+
 footer{
     background-color: #fafafa;
     width: 100%;
 }
+
+/* ----- Footer Paragraph Styling ----- */
 
 .designer p{
     display: flex;
@@ -146,6 +159,8 @@ footer{
     align-items: center;
     padding: 1.5rem 0 0;
 }
+
+/* ----- Footer Social Links Styling ----- */
 
 .social-links{
     display: flex;
@@ -181,6 +196,119 @@ footer{
     color: #fafafa;
     background-color: black;
 }
+
+/* ----- Sign Up Section Styling ----- */
+
+.sign-up-section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #db0007;
+    width: 100%;
+    height: 38rem;
+}
+
+.sign-up-card{
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    min-width: 500px;
+    background-color: #fafafa;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    padding: 1rem;
+}
+
+.sign-up-card h1{
+    text-align: center;
+    padding: 1.5rem 0 0.5rem;
+}
+
+.sign-up-card input{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 60%;
+    background-color: #fafafa;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.sign-up-card i{
+    font-size: 1.25rem;
+}
+
+.sign-up-card input::placeholder{
+    color: black;
+}
+
+.username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-button button{
+    width: 65%;
+    background-color: #db0007;
+    color: #fafafa;
+    padding: 0.5rem;
+    border: 2px solid #db0007;
+    cursor: pointer;
+    margin: 1.5rem;
+    transition: 0.5s;
+}
+
+.sign-up-button button:hover{
+    background-color: #fafafa;
+    color: #db0007;
+}
+
+.account-already p{
+    text-align: center;
+    padding: 1rem;
+}
+
+.account-already span a{
+    text-decoration: none;
+    color: #118324;
+    border: 2px solid #118324;
+    border-radius: 5px;
+    padding: 0.25rem;
+    transition: 0.5s;
+}
+
+.account-already span a:hover{
+    color: #fafafa;
+    background-color: #118324;
+}
+
 
 @media screen and (max-width: 992px) {
 
@@ -229,5 +357,10 @@ footer{
         flex-direction: column;
         background-color: #fafafa;
         width: 100%;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
     }
 }
