@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="row">
+
+        <div class="container-fluid">
+
+            <div class="log-in-section">
+
+                <div class="log-in-card">
+
+                    <h1>Log In</h1>
+
+                        <div class="email">
+
+                            <i class="fas fa-envelope"></i>
+
+                            <label for="email"></label>
+                            <input id="email" name="email" type="email" placeholder="email address" required>
+
+                        </div>
+
+                        <div class="password">
+
+                            <i class="fas fa-lock"></i>
+
+                            <label for="username"></label>
+                            <input id="username" name="username" type="text" placeholder="password" required>
+
+                        </div>
+
+                        <div class="log-in-button">
+
+                            <button type="submit">
+                                Log In
+                            </button>
+
+                        </div>
+
+                        <div class="no-account">
+
+                            <p>Don't have an Account? <span><a href="{{ url_for('sign_up') }}">Sign Up</a></span></p>
+
+                        </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -29,6 +29,11 @@ def sign_up():
     return render_template("sign_up.html")
 
 
+@app.route("/log_in", methods=["GET", "POST"])
+def log_in():
+    return render_template("log_in.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
