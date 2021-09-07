@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="row">
+
+        <div class="container-fluid">
+
+            <div class="contact-section">
+
+                <div class="contact-card">
+
+                    <h1>Contact Us</h1>
+
+
+                    <p>If you have any questions, queries or would like some help, <br>please get in touch by filling out the form below</p>
+
+                        <div class="name">
+
+                            <label for="name"></label>
+                            <input id="name" name="name" type="text" minlength="5" maxlength="15" placeholder="name" required>
+
+                        </div>
+
+                        <div class="email">
+
+                            <label for="email"></label>
+                            <input id="email" name="email" type="email" placeholder="email address" required>
+
+                        </div>
+
+                        <div class="message">
+
+                            <label for="message"></label>
+                            <textarea id="message" name="message" placeholder="message" rows="5" cols="41.5"></textarea>
+
+                        </div>
+
+                        <div class="contact-button">
+
+                            <button type="submit">
+                                Send Message
+                            </button>
+
+                        </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

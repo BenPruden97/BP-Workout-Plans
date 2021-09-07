@@ -24,6 +24,10 @@ def home():
     return render_template("index.html", workout_plans=workout_plans)
 
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     return render_template("sign_up.html")
