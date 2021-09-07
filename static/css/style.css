@@ -22,6 +22,8 @@ body{
     padding-left: 0;
 }
 
+/* --------------- base.html Styling ---------------*/
+
 /* ----- Navigation Section Styling ----- */
 
 /* ----- Navigation Logo Styling ----- */
@@ -198,6 +200,87 @@ footer{
     background-color: black;
 }
 
+/* --------------- index.html Styling ---------------*/
+
+.sign-log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-home{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: #fafafa;
+    color: black;
+    padding: 1rem;
+}
+
+.sign-up-home h2{
+    padding: 1rem;
+}
+
+.sign-up-home h5{
+    padding: 0.5rem;
+}
+
+.sign-up-home button{
+    margin: 0.5rem;
+    padding: 0.5rem 2rem;
+    border: 2px solid #db0007;
+    border-radius: 5px;
+    color: #db0007;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.sign-up-home button:hover{
+    color: #fafafa;
+    background-color: #db0007;
+}
+
+.log-in-home{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    background-color: #fafafa;
+    color: black;
+    padding: 1rem;
+}
+
+.log-in-home h2{
+    padding: 1rem;
+}
+
+.log-in-home h5{
+    padding: 0.5rem;
+}
+
+.log-in-home button{
+    margin: 0.5rem;
+    padding: 0.5rem 2rem;
+    border: 2px solid #118324;
+    border-radius: 5px;
+    color: #118324;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.log-in-home button:hover{
+    color: #fafafa;
+    background-color: #118324;
+}
+
+/* --------------- sign_up.html Styling ---------------*/
+
 /* ----- Sign Up Section Styling ----- */
 
 .sign-up-section{
@@ -309,6 +392,8 @@ footer{
     color: #fafafa;
     background-color: #118324;
 }
+
+/* --------------- log_in.html Styling ---------------*/
 
 /* ----- Log In Section Styling ----- */
 
