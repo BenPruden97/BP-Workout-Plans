@@ -22,6 +22,11 @@ body{
     padding-left: 0;
 }
 
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* --------------- base.html Styling ---------------*/
 
 /* ----- Navigation Section Styling ----- */
@@ -80,6 +85,7 @@ nav .nav ul {
 nav .nav li{
     display: inline-block;
     margin-top: 15px;
+    padding: 0.5rem;
 }
 
 nav .nav li a{
@@ -172,7 +178,10 @@ nav .nav .log-in:hover{
 /* ----- Footer Section Styling ----- */
 
 footer{
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
     width: 100%;
     height: 14vh;
 }
@@ -184,7 +193,6 @@ footer{
     justify-content: center;
     align-items: center;
     color: black;
-    padding: 1.5rem 0 0;
 }
 
 /* ----- Footer Social Links Styling ----- */
@@ -327,7 +335,7 @@ footer{
     border: 2px solid black;
     border-radius: 10px;
     color: black;
-    padding: 1.5rem;
+    padding: 2.5rem;
 }
 
 .contact-card h1{
@@ -640,7 +648,15 @@ footer{
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768.5px) {
+
+    .nav-logo{
+        padding: 0;
+    }
+
+    .nav-logo a{
+        font-size: 2rem;
+    }
 
     nav .nav{
         display: flex;
@@ -648,11 +664,220 @@ footer{
         align-items: center;
         flex-direction: column;
         background-color: #fafafa;
+        height: 100%;
         width: 100%;
+        position: fixed;
+        overflow: hidden;
+        z-index: 1;
     }
 
     nav ul{
         display: flex;
         flex-direction: column;
+        position: absolute;
+        top: 25%;
+        width: 100%;
     }
+
+    nav.navbar.navbar-expand-md.navbar-light.bg-light::after{
+        content: '';
+        background-color: #fafafa;
+        height: 1vh;
+        width: 100%;
+    }
+
+    /* ----- Footer Section Styling ----- */
+
+    footer{
+        width: 100%;
+        height: 14vh;
+    }
+
+    /* ----- Footer Paragraph Styling ----- */
+
+    .designer p{
+        text-align: center;
+        font-size: 0.75rem;
+        padding: 1rem 2rem 0;
+    }
+
+    /* ----- Footer Social Links Styling ----- */
+
+    .fa-facebook-f{
+        font-size: 1.2rem;
+    }
+
+    .social-links li{
+        display: inline-block;
+        list-style-type: none;
+        padding: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .social-links li a{
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;    
+    }
+
+    .sign-up-section{
+        height: 70.6vh;
+    }
+
+    .sign-up-card{
+        padding: 3rem 1rem 1rem;
+    }
+
+    .sign-up-card h1{
+        text-align: center;
+        font-size: 2rem;
+        padding: 1rem 0 0.5rem;
+    }
+
+    .sign-up-card input{
+        padding: 0.25rem;
+    }
+
+    .sign-up-card i{
+        font-size: 1rem;
+    }
+
+    .sign-up-card input::placeholder{
+        font-size: 0.75rem;
+    }
+
+    .sign-up-button button{
+        font-size: 0.75rem;
+        padding: 0.25rem;
+        margin: 1rem;
+    }
+
+    .account-already p{
+        font-size: 0.75rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .account-already span a{
+        font-size: 0.75rem;
+        padding: 0.25rem;
+        transition: 0.5s;
+    }
+
 }
+
+@media screen and (max-width: 576px) {
+
+    .nav-logo{
+        padding: 0;
+    }
+
+    .nav-logo a{
+        font-size: 1.5rem;
+    }
+
+    nav .nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fafafa;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 25%;
+        width: 100%;
+    }
+
+    nav.navbar.navbar-expand-md.navbar-light.bg-light::after{
+        content: '';
+        background-color: #fafafa;
+        height: 1vh;
+        width: 100%;
+    }
+
+    /* ----- Footer Section Styling ----- */
+
+    footer{
+        width: 100%;
+        height: 13vh;
+    }
+
+    /* ----- Footer Paragraph Styling ----- */
+
+    .designer p{
+        text-align: center;
+        font-size: 0.6rem;
+        padding: 0.5rem 0 0 0;
+    }
+
+    /* ----- Footer Social Links Styling ----- */
+
+    .fa-facebook-f{
+        font-size: 0.75rem;
+    }
+
+    .social-links li{
+        display: inline-block;
+        list-style-type: none;
+        padding: 0.25rem;
+        padding-bottom: 1rem;
+    }
+
+    .social-links li a{
+        font-size: 0.75rem;
+        padding: 0.3rem 0.5rem;    
+    }
+
+    .sign-up-section{
+        height: 70vh;
+    }
+
+    .sign-up-card{
+        min-height: 275px;
+        min-width: 275px;
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .sign-up-card h1{
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0.5rem 0 0.5rem;
+    }
+
+    .sign-up-card input{
+        padding: 0.25rem;
+    }
+
+    .sign-up-card i{
+        font-size: 1rem;
+    }
+
+    .sign-up-card input::placeholder{
+        font-size: 0.75rem;
+    }
+
+    .sign-up-button button{
+        font-size: 0.75rem;
+        padding: 0.25rem;
+        margin: 1rem;
+    }
+
+    .account-already p{
+        font-size: 0.75rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .account-already span a{
+        font-size: 0.75rem;
+        padding: 0.25rem;
+        transition: 0.5s;
+    }
