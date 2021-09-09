@@ -40,8 +40,8 @@ dl, ol, ul {
     position: relative;
 }
 
-.flashes h4{
-    padding: 2.5rem;
+.flashes h5{
+    padding: 2.5rem 4rem;
     background-color: #fafafa;
     color: black;
     border: 2px solid black;
@@ -56,9 +56,18 @@ dl, ol, ul {
     top: 0.75rem;
     right: 1.25rem;
     color: black;
-    font-size: 1.25rem;
+    font-size: 0.8rem;
     border: none;
     background-color: #fafafa;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 0 0.35rem;
+}
+
+.flashes button:hover{
+    border: 2px solid #db0007;
+    color: #db0007;
 }
 
 /* --------------- base.html Styling ---------------*/
@@ -286,8 +295,8 @@ footer{
     padding: 1rem;
 }
 
-.sign-up-home h2{
-    padding: 1rem;
+.sign-up-home h3{
+    padding: 0.25rem;
 }
 
 .sign-up-home h5{
@@ -309,6 +318,16 @@ footer{
     background-color: #db0007;
 }
 
+.sign-up-home button a{
+    text-decoration: none;
+    color: #db0007;
+}
+
+.sign-up-home button a:hover{
+    text-decoration: none;
+    color: #fafafa;
+}
+
 .log-in-home{
     display: block;
     justify-content: center;
@@ -322,8 +341,8 @@ footer{
     padding: 1rem;
 }
 
-.log-in-home h2{
-    padding: 1rem;
+.log-in-home h3{
+    padding: 0.25rem;
 }
 
 .log-in-home h5{
@@ -338,6 +357,16 @@ footer{
     color: #118324;
     cursor: pointer;
     transition: 0.5s;
+}
+
+.log-in-home button a{
+    text-decoration: none;
+    color: #118324;
+}
+
+.log-in-home button a:hover{
+    text-decoration: none;
+    color: #fafafa;
 }
 
 .log-in-home button:hover{
@@ -355,7 +384,7 @@ footer{
     align-items: center;
     background-color: #009dff;
     width: 100%;
-    height: 67vh;
+    height: 65vh;
 }
 
 .contact-card{
@@ -363,23 +392,18 @@ footer{
     display: block;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
-    min-width: 500px;
+    height: 500px;
+    width: 500px;
     background-color: #fafafa;
     border: 2px solid black;
     border-radius: 10px;
     color: black;
-    padding: 2.5rem;
+    padding: 1rem;
 }
 
 .contact-card h1{
     text-align: center;
-    padding: 1rem 0 0.5rem;
-}
-
-.contact-card p{
-    text-align: center;
-    padding: 0.5rem 0 0;
+    padding: 2rem 0 0.5rem;
 }
 
 .contact-card input{
@@ -409,6 +433,7 @@ footer{
 }
 
 .message textarea{
+    width: 80%;
     border: none;
     border-bottom: 2px solid black;
     background-color: #fafafa;
@@ -431,7 +456,7 @@ footer{
     padding: 0.5rem;
     border: 2px solid #009dff;
     cursor: pointer;
-    margin: 1.5rem;
+    margin: 1rem;
     transition: 0.5s;
 }
 
@@ -458,8 +483,8 @@ footer{
     display: block;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
-    min-width: 500px;
+    height: 500px;
+    width: 500px;
     background-color: #fafafa;
     border: 2px solid black;
     border-radius: 10px;
@@ -576,7 +601,7 @@ footer{
     align-items: center;
     background-color: #118324;
     width: 100%;
-    height: 67vh;
+    height: 65vh;
 }
 
 .log-in-card{
@@ -584,8 +609,8 @@ footer{
     display: block;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
-    min-width: 500px;
+    height: 400px;
+    width: 500px;
     background-color: #fafafa;
     border: 2px solid black;
     border-radius: 10px;
@@ -595,7 +620,7 @@ footer{
 
 .log-in-card h1{
     text-align: center;
-    padding: 4rem 0 0.5rem;
+    padding: 1.5rem 0 0.5rem;
 }
 
 .log-in-card input{

@@ -28,6 +28,7 @@ def home():
 def contact():
     return render_template("contact.html")
 
+
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     if request.method == "POST":
@@ -46,14 +47,34 @@ def sign_up():
         mongo.db.members.insert_one(sign_up)
 
         session["member"] = request.form.get("username").lower()
-        flash("You Have Registered Successfully! Welcome to the community")
-        return render_template("index.html")
+        flash("Welcome to the community {}".format(request.form.get("username")))
+        return redirect(url_for("home", username=session["member"]))
 
     return render_template("sign_up.html")
 
 
 @app.route("/log_in", methods=["GET", "POST"])
 def log_in():
+    if request.method == "POST":
+        existing_member = mongo.db.members.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_member:
+
+            if check_password_hash(existing_member["password"], request.form.get("password")):
+                session["member"] = request.form.get("username").lower()
+                flash("Welcome Back!, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "home", username=session["member"]))
+            else:
+                flash("Incorrect Username and/or Password Entered, please try again")
+                return redirect(url_for("log_in"))
+
+        else:
+            flash("Incorrect Username and/or Password Entered, please try again")
+            return redirect(url_for("log_in"))
+
     return render_template("log_in.html")
 
 

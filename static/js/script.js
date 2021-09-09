@@ -5,7 +5,10 @@ document.getElementById("flash-button").addEventListener('click', function() {
 });
 
 
-// Password & Confirm Password Javascript Validation
+// Password & Confirm Password Javascript Validation/ Making Sure Password Match
+
+/* I used the code from this website - https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727518 
+to help with the matching passwords & styling */
 
 function checkPasswords() {
     if (document.getElementById("password").value ===
