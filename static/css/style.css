@@ -27,6 +27,40 @@ dl, ol, ul {
     margin-bottom: 0;
 }
 
+.flashes-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.flashes{
+    position: relative;
+}
+
+.flashes h4{
+    padding: 2.5rem;
+    background-color: #fafafa;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.flashes button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1.25rem;
+    color: black;
+    font-size: 1.25rem;
+    border: none;
+    background-color: #fafafa;
+}
+
 /* --------------- base.html Styling ---------------*/
 
 /* ----- Navigation Section Styling ----- */
@@ -181,7 +215,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: #fafafa;
     width: 100%;
     height: 15vh;
 }
@@ -479,6 +513,11 @@ footer{
     align-items: center;
 }
 
+#passwords-match{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 .sign-up-button{
     display: flex;
     justify-content: center;
@@ -494,6 +533,13 @@ footer{
     cursor: pointer;
     margin: 1.5rem;
     transition: 0.5s;
+}
+
+.sign-up-button button:disabled{
+    border: 2px solid #db0007;
+    background-color: #fafafa;
+    color: #db0007;
+    cursor: default;
 }
 
 .sign-up-button button:hover{
@@ -650,7 +696,6 @@ footer{
 
 }
 
-
 @media (max-width: 992px) {
 
     .nav-logo{
@@ -674,7 +719,7 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: blue;
+        background-color: #fafafa;
         width: 100%;
         height: 15vh;
     }

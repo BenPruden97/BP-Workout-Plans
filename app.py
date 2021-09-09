@@ -30,6 +30,25 @@ def contact():
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
+    if request.method == "POST":
+        existing_member = mongo.db.members.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_member:
+            flash("This username already exists, please try again")
+            return redirect(url_for("sign_up"))
+
+        sign_up = {
+            "username": request.form.get("username").lower(),
+            "email": request.form.get("email").lower(),
+            "password": generate_password_hash(request.form.get("password")),
+        }
+        mongo.db.members.insert_one(sign_up)
+
+        session["member"] = request.form.get("username").lower()
+        flash("You Have Registered Successfully! Welcome to the community")
+        return render_template("index.html")
+
     return render_template("sign_up.html")
 
 

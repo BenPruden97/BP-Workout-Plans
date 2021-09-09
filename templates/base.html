@@ -79,6 +79,34 @@
 
         </div>
 
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row">
+
+                        <div class="container-fluid">
+
+                            <div class="flashes-section">
+
+                                <div class="flashes">
+
+                                    <h4>{{ message }}</h4>
+
+                                    <button id="flash-button"><i class="fas fa-times"></i></button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
     {% block content %}
     {% endblock %}
 

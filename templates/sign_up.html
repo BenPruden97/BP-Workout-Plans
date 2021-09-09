@@ -5,7 +5,7 @@
 
         <div class="container-fluid">
 
-            <div class="sign-up-section col-12">
+            <form class="sign-up-section col-12" method="POST" action="{{ url_for('sign_up') }}">
 
                 <div class="sign-up-card">
 
@@ -16,7 +16,7 @@
                             <i class="fas fa-user"></i>
 
                             <label for="username"></label>
-                            <input id="username" name="username" type="text" minlength="5" maxlength="15" placeholder="username" required>
+                            <input id="username" name="username" type="text" minlength="2" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="username" required>
 
                         </div>
 
@@ -33,8 +33,9 @@
 
                             <i class="fas fa-lock"></i>
 
-                            <label for="username"></label>
-                            <input id="username" name="username" type="text" placeholder="password" required>
+                            <label for="password"></label>
+                            <input id="password" name="password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
+                                placeholder="password" onkeyup="checkPasswords();" required>
 
                         </div>
 
@@ -42,14 +43,17 @@
 
                             <i class="fas fa-shield-alt"></i>
 
-                            <label for="username"></label>
-                            <input id="username" name="username" type="text" placeholder="confirm password" required>
+                            <label for="confirm_password"></label>
+                            <input id="confirm_password" name="confirm_password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
+                                placeholder="confirm password" onkeyup="checkPasswords();" required>
 
                         </div>
 
+                        <div id="passwords-match"></div>
+
                         <div class="sign-up-button">
 
-                            <button type="submit">
+                            <button type="submit" name="submit" id="submit" disabled>
                                 Sign Up
                             </button>
 
@@ -63,7 +67,7 @@
 
                 </div>
 
-            </div>
+            </form>
 
         </div>
 
