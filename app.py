@@ -63,7 +63,7 @@ def log_in():
 
             if check_password_hash(existing_member["password"], request.form.get("password")):
                 session["member"] = request.form.get("username").lower()
-                flash("Welcome Back!, {}".format(
+                flash("Welcome Back {}!".format(
                     request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["member"]))
@@ -82,7 +82,18 @@ def log_in():
 def profile(username):
     username = mongo.db.members.find_one(
         {"username": session["member"]})["username"]
-    return render_template("profile.html", username=username)
+
+    if session["member"]:
+        return render_template("profile.html", username=username)
+
+    return redirect("log_in")
+
+
+@app.route("/log_out")
+def log_out():
+    flash("You have been logged out")
+    session.pop("member")
+    return redirect(url_for("log_in"))
 
 
 

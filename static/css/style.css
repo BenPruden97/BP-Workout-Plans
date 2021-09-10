@@ -59,19 +59,20 @@ dl, ol, ul {
     position: absolute;
     top: 0.75rem;
     right: 1.25rem;
-    color: black;
+    color: #db0007;
     font-size: 0.8rem;
     border: none;
     background-color: #fafafa;
     cursor: pointer;
-    border: 2px solid black;
+    border: 2px solid #db0007;
     border-radius: 100%;
     padding: 0 0.35rem;
 }
 
 .flashes button:hover{
     border: 2px solid #db0007;
-    color: #db0007;
+    background-color: #db0007;
+    color: #fafafa;
 }
 
 /* --------------- base.html Styling ---------------*/
@@ -211,18 +212,19 @@ nav .nav .log-in:hover{
 
 .dropdown{
     display: none;
+    position: relative;
 }
 
 .nav ul li:hover .dropdown{
-    display: block;
+    display: inline-block;
     position: absolute;
     background-color: #fafafa;
     border: 2px solid black;
     border-radius: 5px;
     padding: 0.25rem;
     padding-bottom: 1rem;
-    bottom: -5rem;
-    margin-left: 2.5rem;
+    top: 4.6rem;
+    right: 27rem;
     z-index: 1;
 }
 
@@ -230,7 +232,6 @@ nav .nav .log-in:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .nav ul li:hover .dropdown ul li{
