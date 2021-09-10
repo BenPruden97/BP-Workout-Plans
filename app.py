@@ -48,7 +48,7 @@ def sign_up():
 
         session["member"] = request.form.get("username").lower()
         flash("Welcome to the community {}".format(request.form.get("username")))
-        return redirect(url_for("home", username=session["member"]))
+        return redirect(url_for("profile", username=session["member"]))
 
     return render_template("sign_up.html")
 
@@ -66,7 +66,7 @@ def log_in():
                 flash("Welcome Back!, {}".format(
                     request.form.get("username")))
                 return redirect(url_for(
-                    "home", username=session["member"]))
+                    "profile", username=session["member"]))
             else:
                 flash("Incorrect Username and/or Password Entered, please try again")
                 return redirect(url_for("log_in"))
@@ -76,6 +76,14 @@ def log_in():
             return redirect(url_for("log_in"))
 
     return render_template("log_in.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.members.find_one(
+        {"username": session["member"]})["username"]
+    return render_template("profile.html", username=username)
+
 
 
 if __name__ == "__main__":

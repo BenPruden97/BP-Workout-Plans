@@ -27,6 +27,10 @@ dl, ol, ul {
     margin-bottom: 0;
 }
 
+.col-12{
+    padding: 0;
+}
+
 .flashes-section{
     display: flex;
     justify-content: center;
@@ -203,6 +207,34 @@ nav .nav .log-in:hover{
     background-color: #118324;
     padding: 0.5rem;
     color: #fafafa;
+}
+
+.dropdown{
+    display: none;
+}
+
+.nav ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    background-color: #fafafa;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.25rem;
+    padding-bottom: 1rem;
+    bottom: -5rem;
+    margin-left: 2.5rem;
+    z-index: 1;
+}
+
+.nav ul li:hover .dropdown ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav ul li:hover .dropdown ul li{
+    font-size: 0.75rem;
 }
 
 /* ----- Navigation Burger Menu Styling ----- */
@@ -679,6 +711,87 @@ footer{
 .no-account span a:hover{
     color: #fafafa;
     background-color: #db0007;
+}
+
+/* --------------- profile.html Styling ---------------*/
+
+/* ----- Profile Section Styling ----- */
+
+.profile-section{
+    background-color: #fafafa;
+    height: 65vh;
+}
+
+.profile-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.profile-heading h3{
+    text-align: center;
+    background-color: #fafafa;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.profile-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: black;
+}
+
+.profile-options h4{
+    background-color: #fafafa;
+    color: black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 2px solid #fafafa;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 1.25rem;
+}
+
+.profile-options h4:hover{
+    background-color: grey;
+    color: #fafafa;
+    text-decoration: none;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+.profile-recent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent-liked-plan{
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.recent-liked-plan h4{
+    text-align: center;
+    padding: 2rem 0 1rem;
+}
+
+.recent-workout-plan{
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.recent-workout-plan h4{
+    text-align: center;
+    padding: 2rem 0 1rem;
 }
 
 @media (max-width: 1100px) {
