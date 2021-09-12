@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% for workout_plan in workout_plans %}
+        
+        {{ workout_plan.workout_name }}<br>
+        {{ workout_plan.workout_description }}<br>
+        {{ workout_plan.exercise_name }}<br>
+        {{ workout_plan.number_of_sets }}<br>
+        {{ workout_plan.number_of_reps }}<br>
+        {{ workout_plan.rest_time }}<br>
+        {{ workout_plan.weight_used }}<br>
+        {{ workout_plan.superset }}<br>
+        {{ workout_plan.dropset }}<br>
+        {{ workout_plan.total_exercise_amount }}<br>
+        {{ workout_plan.total_workout_time }}
+
+    {% endfor %}
+
+    <div class="row">
+
+        <div class="container-fluid">
+
+            <form class="create_workout-form-section col-12" method="POST" action="">
+
+                <div class="create-workout-form">
+
+                    <h3>Create A Workout Plan</h3>
+
+                        <div class="workout-input">
+
+                            <label for="workout_name">Muscle Group:</label><br>
+                            <input id="workout_name" name="workout_name" type="text" 
+                            minlength="5" maxlength="35" required>
+
+                        </div>
+
+                        <div class="workout-input">
+
+                            <label for="workout_name">Workout Name:</label><br>
+                            <input id="workout_name" name="workout_name" type="text" 
+                            minlength="5" maxlength="35" required>
+
+                        </div>
+
+                        <div class="workout-input">
+
+                            <label for="workout_name">Workout Name:</label><br>
+                            <input id="workout_name" name="workout_name" type="text" 
+                            minlength="5" maxlength="35" required>
+
+                        </div>
+
+                        <div class="workout-input">
+
+                            <label for="workout_name">Workout Name:</label><br>
+                            <input id="workout_name" name="workout_name" type="text" 
+                            minlength="5" maxlength="35" required>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock %}

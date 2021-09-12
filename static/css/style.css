@@ -418,6 +418,53 @@ footer{
     border: 2px solid black;
 }
 
+
+/* --------------- create_workout.html Styling ---------------*/
+
+/* ----- Create A Workout Plan Section Styling ----- */
+
+.create_workout-form-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.create-workout-form{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 725px;
+    background-color: #fafafa;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    padding: 1rem;
+}
+
+.create-workout-form h3{
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 0 1.5rem;
+}
+
+.workout-input{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.workout-input input{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fafafa;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 /* --------------- contact.html Styling ---------------*/
 
 /* ----- Contact Section Styling ----- */

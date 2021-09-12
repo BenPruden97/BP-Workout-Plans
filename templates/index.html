@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <p>Choose Your Muscle Group</p>
+    <select name="" id="">
+        {% for category in workout_categories %}
+                <option value="{{ category.workout_category }}">{{ category.workout_category }}</option>
+        {% endfor %}
+    </select><br>
+
+    <p>Choose Your Workout Difficulty</p>
+    <select name="" id="">
+        {% for difficulty in workout_difficulties %}
+                <option value="{{ difficulty.workout_difficulty }}">{{ difficulty.workout_difficulty }}</option>
+        {% endfor %}
+    </select><br>
+
     {% for workout_plan in workout_plans %}
     
-        {{ workout_plan.category_name }}<br>
         {{ workout_plan.workout_name }}<br>
         {{ workout_plan.workout_description }}<br>
         {{ workout_plan.exercise_name }}<br>
@@ -13,7 +26,6 @@
         {{ workout_plan.weight_used }}<br>
         {{ workout_plan.superset }}<br>
         {{ workout_plan.dropset }}<br>
-        {{ workout_plan.workout_difficulty }}<br>
         {{ workout_plan.total_exercise_amount }}<br>
         {{ workout_plan.total_workout_time }}
 

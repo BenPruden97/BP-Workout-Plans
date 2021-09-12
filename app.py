@@ -21,7 +21,9 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     workout_plans = mongo.db.workout_plans.find()
-    return render_template("index.html", workout_plans=workout_plans)
+    workout_difficulties = mongo.db.workout_difficulties.find()
+    workout_categories = mongo.db.workout_categories.find()
+    return render_template("index.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
 
 
 @app.route("/find_workouts")
@@ -99,6 +101,11 @@ def log_out():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+@app.route("/create_workout")
+def create_workout():
+    return render_template("create_workout.html")
 
 
 if __name__ == "__main__":
