@@ -310,16 +310,7 @@ footer{
 
 /* --------------- index.html Styling ---------------*/
 
-.sign-log{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .sign-up-home{
-    display: block;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -362,9 +353,6 @@ footer{
 }
 
 .log-in-home{
-    display: block;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -415,6 +403,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fafafa;
 }
 
 .workout-card{
@@ -423,7 +412,6 @@ footer{
     align-items: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border: 2px solid black;
 }
 
 .individual-card{

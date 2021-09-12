@@ -2,6 +2,7 @@
 {% block content %}
 
     {% for workout_plan in workout_plans %}
+    
         {{ workout_plan.category_name }}<br>
         {{ workout_plan.workout_name }}<br>
         {{ workout_plan.workout_description }}<br>
@@ -12,15 +13,19 @@
         {{ workout_plan.weight_used }}<br>
         {{ workout_plan.superset }}<br>
         {{ workout_plan.dropset }}<br>
+        {{ workout_plan.workout_difficulty }}<br>
+        {{ workout_plan.total_exercise_amount }}<br>
+        {{ workout_plan.total_workout_time }}
+
     {% endfor %}
 
     <div class="row">
 
         <div class="container-fluid">
 
-            <div class="sign-log">
+            <div class="d-flex">
 
-                <div class="sign-up-home col-6">
+                <div class="sign-up-home flex-fill">
 
                     <h3>Don't have an account with us?</h3>
 
@@ -30,7 +35,7 @@
 
                 </div>
 
-                <div class="log-in-home col-6">
+                <div class="log-in-home flex-fill">
 
                     <h3>Already have an account with us?</h3>
 
