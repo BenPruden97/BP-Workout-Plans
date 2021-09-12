@@ -24,9 +24,9 @@ def home():
     return render_template("index.html", workout_plans=workout_plans)
 
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
+@app.route("/find_workouts")
+def find_workouts():
+    return render_template("find_workouts.html")
 
 
 @app.route("/sign_up", methods=["GET", "POST"])
@@ -95,6 +95,10 @@ def log_out():
     session.pop("member")
     return redirect(url_for("log_in"))
 
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":

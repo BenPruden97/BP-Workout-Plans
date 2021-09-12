@@ -407,6 +407,29 @@ footer{
     background-color: #118324;
 }
 
+/* --------------- find_workouts.html Styling ---------------*/
+
+/* ----- Find Workouts Section Styling ----- */
+
+.row-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workout-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 2px solid black;
+}
+
+.individual-card{
+    border: 2px solid black;
+}
+
 /* --------------- contact.html Styling ---------------*/
 
 /* ----- Contact Section Styling ----- */
