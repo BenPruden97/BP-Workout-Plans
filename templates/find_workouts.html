@@ -1,22 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for workout_plan in workout_plans %}
-        {{ workout_plan.category_name }}<br>
-        {{ workout_plan.workout_name }}<br>
-        {{ workout_plan.workout_description }}<br>
-        {{ workout_plan.exercise_name }}<br>
-        {{ workout_plan.number_of_sets }}<br>
-        {{ workout_plan.number_of_reps }}<br>
-        {{ workout_plan.rest_time }}<br>
-        {{ workout_plan.weight_used }}<br>
-        {{ workout_plan.superset }}<br>
-        {{ workout_plan.dropset }}<br>
-    {% endfor %}
+    <div class="container-fluid">
 
-    <div class="row">
-
-        <div class="container-fluid">
+        <div class="row">
 
             <div class="row-1 ">
 
@@ -92,9 +79,9 @@
 
     </div>
 
-    <div class="row">
+    <div class="container-fluid">
 
-        <div class="container-fluid">
+        <div class="row">
 
             <div class="row-1">
 
@@ -170,9 +157,9 @@
 
     </div>
 
-    <div class="row">
+    <div class="container-fluid">
 
-        <div class="container-fluid">
+        <div class="row">
 
             <div class="row-1">
 
