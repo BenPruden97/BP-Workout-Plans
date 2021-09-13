@@ -29,6 +29,7 @@ dl, ol, ul {
 
 .col-12{
     padding: 0;
+    background-color: #fafafa;
 }
 
 .flashes-section{
@@ -399,7 +400,7 @@ footer{
 
 /* ----- Find Workouts Section Styling ----- */
 
-.row-1{
+.row-color{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -412,6 +413,7 @@ footer{
     align-items: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    margin: 0 2rem 0;
 }
 
 .individual-card{
@@ -428,6 +430,7 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: #fafafa;
+    margin: 0.5rem;
 }
 
 .create-workout-form{
@@ -503,14 +506,7 @@ footer{
 }
 
 .exercise-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: bold;
-    width: 100%;
-}
-
-.exercise-input div{
     margin: 0.5rem;
 }
 
@@ -804,8 +800,6 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: #118324;
-    width: 100%;
-    height: 65vh;
 }
 
 .log-in-card{
@@ -813,7 +807,6 @@ footer{
     display: block;
     justify-content: center;
     align-items: center;
-    height: 400px;
     width: 500px;
     background-color: #fafafa;
     border: 2px solid black;
@@ -889,11 +882,6 @@ footer{
 
 /* ----- Profile Section Styling ----- */
 
-.profile-section{
-    background-color: #fafafa;
-    height: 65vh;
-}
-
 .profile-heading{
     display: flex;
     justify-content: center;
@@ -938,12 +926,6 @@ footer{
     text-decoration: none;
     border: 2px solid grey;
     cursor: pointer;
-}
-
-.profile-recent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .recent-liked-plan{

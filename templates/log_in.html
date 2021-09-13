@@ -5,47 +5,51 @@
 
         <div class="row">
 
-            <form class="log-in-section col-12" method="POST" action="{{ url_for('log_in') }}">
+            <div class="col-12">
 
-                <div class="log-in-card">
+                <form class="log-in-section" method="POST" action="{{ url_for('log_in') }}">
 
-                    <h1>Log In</h1>
+                    <div class="log-in-card">
 
-                        <div class="username">
+                        <h1>Log In</h1>
 
-                            <i class="fas fa-envelope"></i>
+                            <div class="username">
 
-                            <label for="username"></label>
-                            <input id="username" name="username" type="text" placeholder="username" required>
+                                <i class="fas fa-envelope"></i>
 
-                        </div>
+                                <label for="username"></label>
+                                <input id="username" name="username" type="text" placeholder="username" required>
 
-                        <div class="password">
+                            </div>
 
-                            <i class="fas fa-lock"></i>
+                            <div class="password">
 
-                            <label for="password"></label>
-                            <input id="password" name="password" type="password" placeholder="password" required>
+                                <i class="fas fa-lock"></i>
 
-                        </div>
+                                <label for="password"></label>
+                                <input id="password" name="password" type="password" placeholder="password" required>
 
-                        <div class="log-in-button">
+                            </div>
 
-                            <button type="submit" name="submit">
-                                Log In
-                            </button>
+                            <div class="log-in-button">
 
-                        </div>
+                                <button type="submit" name="submit">
+                                    Log In
+                                </button>
 
-                        <div class="no-account">
+                            </div>
 
-                            <p>Don't have an Account? <span><a href="{{ url_for('sign_up') }}">Sign Up</a></span></p>
+                            <div class="no-account">
 
-                        </div>
+                                <p>Don't have an Account? <span><a href="{{ url_for('sign_up') }}">Sign Up</a></span></p>
 
-                </div>
+                            </div>
 
-            </form>
+                    </div>
+
+                </form>
+
+            </div>
 
         </div>
 

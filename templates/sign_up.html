@@ -5,69 +5,73 @@
 
         <div class="row">
 
-            <form class="sign-up-section col-12" method="POST" action="{{ url_for('sign_up') }}">
+            <div class="col-12">
 
-                <div class="sign-up-card">
+                <form class="sign-up-section" method="POST" action="{{ url_for('sign_up') }}">
 
-                    <h1>Sign Up</h1>
+                    <div class="sign-up-card">
 
-                        <div class="username">
+                        <h1>Sign Up</h1>
 
-                            <i class="fas fa-user"></i>
+                            <div class="username">
 
-                            <label for="username"></label>
-                            <input id="username" name="username" type="text" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" placeholder="username" required>
+                                <i class="fas fa-user"></i>
 
-                        </div>
+                                <label for="username"></label>
+                                <input id="username" name="username" type="text" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" placeholder="username" required>
 
-                        <div class="email">
+                            </div>
 
-                            <i class="fas fa-envelope"></i>
+                            <div class="email">
 
-                            <label for="email"></label>
-                            <input id="email" name="email" type="email" placeholder="email address" required>
+                                <i class="fas fa-envelope"></i>
 
-                        </div>
+                                <label for="email"></label>
+                                <input id="email" name="email" type="email" placeholder="email address" required>
 
-                        <div class="password">
+                            </div>
 
-                            <i class="fas fa-lock"></i>
+                            <div class="password">
 
-                            <label for="password"></label>
-                            <input id="password" name="password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
-                                placeholder="password" onkeyup="checkPasswords();" required>
+                                <i class="fas fa-lock"></i>
 
-                        </div>
+                                <label for="password"></label>
+                                <input id="password" name="password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
+                                    placeholder="password" onkeyup="checkPasswords();" required>
 
-                        <div class="confirm-password">
+                            </div>
 
-                            <i class="fas fa-shield-alt"></i>
+                            <div class="confirm-password">
 
-                            <label for="confirm_password"></label>
-                            <input id="confirm_password" name="confirm_password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
-                                placeholder="confirm password" onkeyup="checkPasswords();" required>
+                                <i class="fas fa-shield-alt"></i>
 
-                        </div>
+                                <label for="confirm_password"></label>
+                                <input id="confirm_password" name="confirm_password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
+                                    placeholder="confirm password" onkeyup="checkPasswords();" required>
 
-                        <div id="passwords-match"></div>
+                            </div>
 
-                        <div class="sign-up-button">
+                            <div id="passwords-match"></div>
 
-                            <button type="submit" name="submit" id="submit" disabled>
-                                Sign Up
-                            </button>
+                            <div class="sign-up-button">
 
-                        </div>
+                                <button type="submit" name="submit" id="submit" disabled>
+                                    Sign Up
+                                </button>
 
-                        <div class="account-already">
+                            </div>
 
-                            <p>Already have an Account? <span><a href="{{ url_for('log_in') }}">Log In</a></span></p>
+                            <div class="account-already">
 
-                        </div>
+                                <p>Already have an Account? <span><a href="{{ url_for('log_in') }}">Log In</a></span></p>
 
-                </div>
+                            </div>
 
-            </form>
+                    </div>
+
+                </form>
+
+            </div>
 
         </div>
 
