@@ -7,7 +7,7 @@
 
             <div class="col-12">
 
-                <form class="create-workout-form-section" method="POST" action="">
+                <form class="create-workout-form-section" method="POST" action="{{ url_for('create_workout') }}">
 
                     <div class="create-workout-form">
 
@@ -35,8 +35,6 @@
 
                         </div>
 
-                        {% for workout_plan in workout_plans %}
-
                         <div class="workout-input">
 
                             <label for="workout_name">Workout Name:</label><br>
@@ -53,6 +51,7 @@
 
                         </div>
 
+                        
                         <div class="exercise">
 
                             <h4>Exercise 1:</h4>
@@ -75,7 +74,7 @@
 
                                             <label for="number_of_sets">Number Of Sets:</label>
                                             <input id="number_of_sets" name="number_of_sets" type="number" 
-                                            min="3" max="10" required>
+                                            min="3" max="10" placeholder="number of sets" required>
 
                                         </div>
 
@@ -87,7 +86,7 @@
 
                                             <label for="number_of_reps">Number Of Reps:</label>
                                             <input id="number_of_reps" name="number_of_reps" type="number" 
-                                            min="1" max="20" required>
+                                            min="1" max="20" placeholder="number of reps" required>
 
                                         </div>
 
@@ -131,7 +130,7 @@
 
                                             <label for="weight_used">Weight Used(kg):</label>
                                             <input id="weight_used" name="weight_used" type="number" 
-                                            min="3" max="50" required>
+                                            min="3" max="50" placeholder="weight used" required>
 
                                         </div>
 
@@ -201,7 +200,7 @@
 
                                             <label for="number_of_sets">Number Of Sets:</label>
                                             <input id="number_of_sets" name="number_of_sets" type="number" 
-                                            min="3" max="10" required>
+                                            min="3" max="10" placeholder="number of sets" required>
 
                                         </div>
 
@@ -213,7 +212,7 @@
 
                                             <label for="number_of_reps">Number Of Reps:</label>
                                             <input id="number_of_reps" name="number_of_reps" type="number" 
-                                            min="1" max="20" required>
+                                            min="1" max="20" placeholder="number of reps" required>
 
                                         </div>
 
@@ -257,7 +256,7 @@
 
                                             <label for="weight_used">Weight Used(kg):</label>
                                             <input id="weight_used" name="weight_used" type="number" 
-                                            min="3" max="50" required>
+                                            min="3" max="50" placeholder="weight used" required>
 
                                         </div>
 
@@ -327,7 +326,7 @@
 
                                             <label for="number_of_sets">Number Of Sets:</label>
                                             <input id="number_of_sets" name="number_of_sets" type="number" 
-                                            min="3" max="10" required>
+                                            min="3" max="10" placeholder="number of sets" required>
 
                                         </div>
 
@@ -339,7 +338,7 @@
 
                                             <label for="number_of_reps">Number Of Reps:</label>
                                             <input id="number_of_reps" name="number_of_reps" type="number" 
-                                            min="1" max="20" required>
+                                            min="1" max="20" placeholder="number of reps" required>
 
                                         </div>
 
@@ -383,7 +382,7 @@
 
                                             <label for="weight_used">Weight Used(kg):</label>
                                             <input id="weight_used" name="weight_used" type="number" 
-                                            min="3" max="50" required>
+                                            min="3" max="50" placeholder="weight used" required>
 
                                         </div>
 
@@ -431,37 +430,53 @@
 
                         </div>
 
-                        <div class="exercise-options">
+                        <div class="container-fluid">
 
-                            <div>
+                            <div class="row">
 
-                                <label for="total_exercise_amount">Total Amount Of Exercises:</label>
-                                <select name="total_exercise_amount" id="total_exercise_amount">
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
+                                <div class="col-6">
 
-                            </div>
+                                    <div class="exercise-options">
 
-                            <div>
+                                        <div>
 
-                                <label for="total_workout_time">Total Workout Time:</label>
-                                <select name="total_workout_time" id="total_workout_time" required> 
-                                    <option value="15 Mins">15 Mins</option>
-                                    <option value="30 Mins">30 Mins</option>
-                                    <option value="45 Mins">45 Mins</option>
-                                    <option value="60 Mins">60 Mins</option>
-                                    <option value="75 Mins">75 Mins</option>
-                                    <option value="90 Mins">90 Mins</option>
-                                    <option value="105 Mins">105 Mins</option>
-                                    <option value="120 Mins">120 Mins</option>
-                                </select>
+                                            <label for="total_exercise_amount">Total Amount Of Exercises:</label>
+                                            <select name="total_exercise_amount" id="total_exercise_amount">
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-6">
+
+                                    <div class="exercise-options">
+
+                                        <label for="total_workout_time">Total Workout Time:</label>
+                                        <select name="total_workout_time" id="total_workout_time" required> 
+                                            <option value="15 Mins">15 Mins</option>
+                                            <option value="30 Mins">30 Mins</option>
+                                            <option value="45 Mins">45 Mins</option>
+                                            <option value="60 Mins">60 Mins</option>
+                                            <option value="75 Mins">75 Mins</option>
+                                            <option value="90 Mins">90 Mins</option>
+                                            <option value="105 Mins">105 Mins</option>
+                                            <option value="120 Mins">120 Mins</option>
+                                        </select>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
@@ -469,11 +484,9 @@
 
                         <div class="form-button">
 
-                            <button>Create Workout Plan</button>
+                            <button type="submit">Create Workout Plan</button>
 
                         </div>
-
-                        {% endfor %}
 
                     </div>
 

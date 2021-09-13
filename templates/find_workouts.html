@@ -1,90 +1,100 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="container-fluid">
+    {% for workout_category in workout_categories %}
+    {% for workout_difficulty in workout_difficulties %}
+    {% for workout_plan in workout_plans %}
 
-        <div class="row row-color">
+        <div class="container-fluid">
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="row row-color">
 
-                <div class="workout-card">
+                <div class="col-12 col-md-6 col-lg-4">
 
-                    <div class="individual-card">
+                    <div class="workout-card">
 
-                        <img src="" alt="">
+                        <div class="individual-card">
 
-                        <h5>Beginner Chest Workout</h5>
+                            <img src="" alt="">
 
-                        <h6>Muscle Group: Chest</h6>
+                            <h5>Muscle Group: {{ workout_plan.workout_category }}</h5>
 
-                        <p>Total Sets: 4</p>
+                            <h6>Workout Difficulty: {{ workout_plan.workout_difficulty }}</h6>
 
-                        <p>Total Reps: 8</p>
+                            <p>Number Of Sets: {{ workout_plan.number_of_sets }}</p>
 
-                        <p>Exercise Amount: 6</p>
+                            <p>Number Of Reps: {{ workout_plan.number_of_reps }}</p>
 
-                        <p>Workout Time: 1 Hour</p>
+                            <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
+
+                            <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
+
+                        </div>
 
                     </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="workout-card">
+
+                        <div class="individual-card">
+
+                            <img src="" alt="">
+
+                            <h5>Muscle Group: {{ workout_plan.workout_category }}</h5>
+
+                            <h6>Workout Difficulty: {{ workout_plan.workout_difficulty }}</h6>
+
+                            <p>Number Of Sets: {{ workout_plan.number_of_sets }}</p>
+
+                            <p>Number Of Reps: {{ workout_plan.number_of_reps }}</p>
+
+                            <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
+
+                            <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
+
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="workout-card">
+
+                        <div class="individual-card">
+
+                            <img src="" alt="">
+
+                            <h5>Muscle Group: {{ workout_plan.workout_category }}</h5>
+
+                            <h6>Workout Difficulty: {{ workout_plan.workout_difficulty }}</h6>
+
+                            <p>Number Of Sets: {{ workout_plan.number_of_sets }}</p>
+
+                            <p>Number Of Reps: {{ workout_plan.number_of_reps }}</p>
+
+                            <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
+
+                            <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
+
+                        </div>
+
+                    </div>
+                    
 
                 </div>
 
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-
-                <div class="workout-card">
-
-                    <div class="individual-card">
-
-                        <img src="" alt="">
-
-                        <h5>Beginner Chest Workout</h5>
-
-                        <h6>Muscle Group: Chest</h6>
-
-                        <p>Total Sets: 4</p>
-
-                        <p>Total Reps: 8</p>
-
-                        <p>Exercise Amount: 6</p>
-
-                        <p>Workout Time: 1 Hour</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-
-                <div class="workout-card">
-
-                    <div class="individual-card">
-
-                        <img src="" alt="">
-
-                        <h5>Beginner Chest Workout</h5>
-
-                        <h6>Muscle Group: Chest</h6>
-
-                        <p>Total Sets: 4</p>
-
-                        <p>Total Reps: 8</p>
-
-                        <p>Exercise Amount: 6</p>
-
-                        <p>Workout Time: 1 Hour</p>
-
-                    </div>
-
-                </div>
-
-            </div>  
 
         </div>
 
-    </div>
+    {% endfor %}
+    {% endfor %}
+    {% endfor %}
 
 {% endblock %}

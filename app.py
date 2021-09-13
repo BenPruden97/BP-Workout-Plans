@@ -25,7 +25,11 @@ def home():
 
 @app.route("/find_workouts")
 def find_workouts():
-    return render_template("find_workouts.html")
+
+    workout_plans = mongo.db.workout_plans.find()
+    workout_difficulties = mongo.db.workout_difficulties.find()
+    workout_categories = mongo.db.workout_categories.find()
+    return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
 
 
 @app.route("/sign_up", methods=["GET", "POST"])
@@ -100,8 +104,28 @@ def contact():
     return render_template("contact.html")
 
 
-@app.route("/create_workout")
+@app.route("/create_workout", methods=["GET", "POST"])
 def create_workout():
+    if request.method == "POST":
+        workout_plan = {
+            "workout_category": request.form.get("workout_category"),
+            "workout_difficulty": request.form.get("workout_difficulty"),
+            "workout_name": request.form.get("workout_name"),
+            "workout_descriptions": request.form.get("workout_description"),
+            "exercise_name": request.form.get("exercise_name"),
+            "number_of_sets": request.form.get("number_of_sets"),
+            "number_of_reps": request.form.get("number_of_reps"),
+            "rest_time": request.form.get("rest_time"),
+            "weight_used": request.form.get("weight_used"),
+            "superset": request.form.get("superset"),
+            "dropset": request.form.get("dropset"),
+            "total_exercise_amount": request.form.get("total_exercise_amount"),
+            "total_workout_time": request.form.get("total_workout_time")
+        }
+        mongo.db.workout_plans.insert(workout_plan)
+        flash("Workout Plan Successfully Added")
+        return redirect(url_for('find_workouts'))
+
     workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
