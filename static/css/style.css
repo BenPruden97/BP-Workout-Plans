@@ -32,6 +32,12 @@ dl, ol, ul {
     background-color: #fafafa;
 }
 
+.col-12.col-md-6.col-lg-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .flashes-section{
     display: flex;
     justify-content: center;
@@ -411,13 +417,86 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 300px;
     margin: 1rem;
 }
 
 .individual-card{
     border: 2px solid black;
-    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.card-image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/chest-category.jpg") no-repeat center center;
+    width: 300px;
+    height: 175px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.card-image-section h5{
+    color: #fafafa;
+}
+
+.card-workout-stats{
+    padding-top: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-workout-stats hr{
+    border: 1px solid black;
+}
+
+#workout-options{
+    display: none;
+}
+
+.workout-edit-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-workout{
+    width: 25%;
+    background-color: #118324;
+    color: #fafafa;
+    padding: 0.5rem;
+    border: 2px solid #118324;
+    cursor: pointer;
+    margin: 0 1rem 1rem; 
+    transition: 0.5s;
+}
+
+.edit-workout:hover{
+    background-color: #fafafa;
+    color: #118324;
+}
+
+
+.delete-workout{
+    width: 25%;
+    background-color: #db0007;
+    color: #fafafa;
+    padding: 0.5rem;
+    border: 2px solid #db0007;
+    cursor: pointer;
+    margin: 0 1rem 1rem; 
+    transition: 0.5s;
+}
+
+.delete-workout:hover{
+    background-color: #fafafa;
+    color: #db0007;
 }
 
 /* --------------- create_workout.html Styling ---------------*/

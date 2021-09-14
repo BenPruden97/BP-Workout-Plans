@@ -1,33 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for workout_category in workout_categories %}
-    {% for workout_difficulty in workout_difficulties %}
-    {% for workout_plan in workout_plans %}
+    
 
-        <div class="container-fluid">
+    <div class="container-fluid">
 
-            <div class="row row-color">
+        <div class="row row-color">
+
+            {% for workout_category in workout_categories %}
+            {% for workout_difficulty in workout_difficulties %}
+            {% for workout_plan in workout_plans %}
 
                 <div class="col-12 col-md-6 col-lg-4">
 
                     <div class="workout-card">
 
-                        <div class="individual-card">
+                        <div class="individual-card" onmouseenter="cardOptions()" onmouseleave="cardOptionsLeave()">
 
-                            <img src="" alt="">
+                            <div class="card-image-section">
 
-                            <h5>Muscle Group: {{ workout_plan.workout_category }}</h5>
+                                <h5>{{ workout_plan.workout_name }}</h5>
 
-                            <h6>Workout Difficulty: {{ workout_plan.workout_difficulty }}</h6>
+                            </div>
 
-                            <p>Number Of Sets: {{ workout_plan.number_of_sets }}</p>
+                            <div class="card-workout-stats">
 
-                            <p>Number Of Reps: {{ workout_plan.number_of_reps }}</p>
+                                <p>Muscle Group: {{ workout_plan.workout_category }}</p>
 
-                            <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
+                                <hr>
 
-                            <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
+                                <p>Workout Difficulty: {{ workout_plan.workout_difficulty }}</p>
+
+                                <hr>
+
+                                <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
+
+                                <hr>
+
+                                <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
+
+                                <hr>
+
+                                <p>Created By: {{ workout_plan.created_by }}</p>
+
+                                
+                                <div id="workout-options">
+
+                                    <div class="workout-edit-delete">
+
+                                        <button class="edit-workout">Edit</button>
+
+                                        <button class="delete-workout">Delete</button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
@@ -35,66 +64,12 @@
 
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="workout-card">
-
-                        <div class="individual-card">
-
-                            <img src="" alt="">
-
-                            <h5>Muscle Group: {{ workout_plan.workout_category }}</h5>
-
-                            <h6>Workout Difficulty: {{ workout_plan.workout_difficulty }}</h6>
-
-                            <p>Number Of Sets: {{ workout_plan.number_of_sets }}</p>
-
-                            <p>Number Of Reps: {{ workout_plan.number_of_reps }}</p>
-
-                            <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
-
-                            <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
-
-                        </div>
-
-                    </div>
-                    
-
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="workout-card">
-
-                        <div class="individual-card">
-
-                            <img src="" alt="">
-
-                            <h5>Muscle Group: {{ workout_plan.workout_category }}</h5>
-
-                            <h6>Workout Difficulty: {{ workout_plan.workout_difficulty }}</h6>
-
-                            <p>Number Of Sets: {{ workout_plan.number_of_sets }}</p>
-
-                            <p>Number Of Reps: {{ workout_plan.number_of_reps }}</p>
-
-                            <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
-
-                            <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
-
-                        </div>
-
-                    </div>
-                    
-
-                </div>
-
-            </div>
+            {% endfor %}
+            {% endfor %}
+            {% endfor %}
 
         </div>
 
-    {% endfor %}
-    {% endfor %}
-    {% endfor %}
+    </div>
 
 {% endblock %}

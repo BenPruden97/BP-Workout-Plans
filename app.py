@@ -120,7 +120,8 @@ def create_workout():
             "superset": request.form.get("superset"),
             "dropset": request.form.get("dropset"),
             "total_exercise_amount": request.form.get("total_exercise_amount"),
-            "total_workout_time": request.form.get("total_workout_time")
+            "total_workout_time": request.form.get("total_workout_time"),
+            "created_by": session["member"]
         }
         mongo.db.workout_plans.insert(workout_plan)
         flash("Workout Plan Successfully Added")

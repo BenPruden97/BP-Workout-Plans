@@ -22,3 +22,13 @@ function checkPasswords() {
         document.getElementById("submit").disabled = true;
     }
 };
+
+
+function cardOptions(){
+    document.getElementById("workout-options").style.display = "block"
+}
+
+function cardOptionsLeave(){
+    document.getElementById("workout-options").style.display = "none"
+}
+    
