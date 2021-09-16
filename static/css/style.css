@@ -427,7 +427,7 @@ footer{
     margin-bottom: 0.5rem;
 }
 
-.card-image-section{
+.chest-image-section{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -439,7 +439,71 @@ footer{
     border-top-right-radius: 6px;
 }
 
-.card-image-section h5{
+.chest-image-section h5{
+    color: #fafafa;
+}
+
+.back-image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/back-category.jpg") no-repeat center center;
+    width: 300px;
+    height: 175px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.back-image-section h5{
+    color: #fafafa;
+}
+
+.arms-image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/arm-category.jpg") no-repeat center center;
+    width: 300px;
+    height: 175px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.arms-image-section h5{
+    color: #fafafa;
+}
+
+.legs-image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/leg-category.jpg") no-repeat center center;
+    width: 300px;
+    height: 175px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.legs-image-section h5{
+    color: #fafafa;
+}
+
+.shoulders-image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/shoulder-category.jpg") no-repeat center center;
+    width: 300px;
+    height: 175px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.shoulders-image-section h5{
     color: #fafafa;
 }
 

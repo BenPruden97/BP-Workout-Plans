@@ -18,7 +18,11 @@
                             <label for="workout_category">Choose Muscle Group:</label><br>
                             <select name="workout_category" id="workout_category" required>
                                 {% for category in workout_categories %}
+                                    {% if category.workout_category == workout_plan.workout_category %}
+                                    <option value="{{ category.workout_category }}" selected>{{ category.workout_category }}</option>
+                                    {% else %}
                                     <option value="{{ category.workout_category }}">{{ category.workout_category }}</option>
+                                    {% endif %}
                                 {% endfor %}
                             </select>
 
@@ -29,7 +33,11 @@
                             <label for="workout_difficulty">Choose Workout Difficulty:</label><br>
                             <select name="workout_difficulty" id="workout_difficulty" required>
                                 {% for difficulty in workout_difficulties %}
+                                    {% if difficulty.workout_difficulty == workout_plan.workout_difficulty %}
+                                    <option value="{{ difficulty.workout_difficulty }}" selected>{{ difficulty.workout_difficulty }}</option>
+                                    {% else %}
                                     <option value="{{ difficulty.workout_difficulty }}">{{ difficulty.workout_difficulty }}</option>
+                                    {% endif %}
                                 {% endfor %}
                             </select>
 
@@ -38,7 +46,7 @@
                         <div class="workout-input">
 
                             <label for="workout_name">Workout Name:</label><br>
-                            <input id="workout_name" name="workout_name" type="text" 
+                            <input value="{{ workout_plan.workout_name }}" id="workout_name" name="workout_name" type="text" 
                             minlength="5" maxlength="35" placeholder="workout name" required>
 
                         </div>
@@ -47,7 +55,9 @@
 
                             <label for="workout_description">Workout Description:</label><br>
                             <textarea name="workout_description" id="workout_description" cols="30" rows="5"
-                            minlength="5" maxlength="150" placeholder="workout description" required></textarea>
+                            minlength="5" maxlength="150" placeholder="workout description" required>
+                            {{- workout_plan.workout_descriptions -}}
+                            </textarea>
 
                         </div>
 
@@ -59,7 +69,7 @@
                             <div class="workout-input">
 
                                 <label for="exercise_name">Exerise Name:</label><br>
-                                <input id="exercise_name" name="exercise_name" type="text" 
+                                <input value="{{ workout_plan.exercise_name }}" id="exercise_name" name="exercise_name" type="text" 
                                 minlength="5" maxlength="35" placeholder="exercise name" required>
 
                             </div>
@@ -73,7 +83,7 @@
                                         <div class="exercise-input">
 
                                             <label for="number_of_sets">Number Of Sets:</label>
-                                            <input id="number_of_sets" name="number_of_sets" type="number" 
+                                            <input value="{{ workout_plan.number_of_sets }}" id="number_of_sets" name="number_of_sets" type="number" 
                                             min="3" max="10" placeholder="number of sets" required>
 
                                         </div>
@@ -134,42 +144,6 @@
 
                                         </div>
 
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="dropset">Dropset:</label>
-                                            <select name="dropset" id="dropset">
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="superset">Superset:</label>
-                                            <select name="superset" id="superset">
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-
-                                        </div>
-                                    
                                     </div>
 
                                 </div>
@@ -185,7 +159,7 @@
                             <div class="workout-input">
 
                                 <label for="exercise_name">Exerise Name:</label><br>
-                                <input id="exercise_name" name="exercise_name" type="text" 
+                                <input value="{{ workout_plan.exercise_name }}" id="exercise_name" name="exercise_name" type="text" 
                                 minlength="5" maxlength="35" placeholder="exercise name" required>
 
                             </div>
@@ -199,7 +173,7 @@
                                         <div class="exercise-input">
 
                                             <label for="number_of_sets">Number Of Sets:</label>
-                                            <input id="number_of_sets" name="number_of_sets" type="number" 
+                                            <input value="{{ workout_plan.number_of_sets }}" id="number_of_sets" name="number_of_sets" type="number" 
                                             min="3" max="10" placeholder="number of sets" required>
 
                                         </div>
@@ -260,42 +234,6 @@
 
                                         </div>
 
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="dropset">Dropset:</label>
-                                            <select name="dropset" id="dropset">
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="superset">Superset:</label>
-                                            <select name="superset" id="superset">
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-
-                                        </div>
-                                    
                                     </div>
 
                                 </div>
@@ -311,7 +249,7 @@
                             <div class="workout-input">
 
                                 <label for="exercise_name">Exerise Name:</label><br>
-                                <input id="exercise_name" name="exercise_name" type="text" 
+                                <input value="{{ workout_plan.exercise_name }}" id="exercise_name" name="exercise_name" type="text" 
                                 minlength="5" maxlength="35" placeholder="exercise name" required>
 
                             </div>
@@ -325,7 +263,7 @@
                                         <div class="exercise-input">
 
                                             <label for="number_of_sets">Number Of Sets:</label>
-                                            <input id="number_of_sets" name="number_of_sets" type="number" 
+                                            <input value="{{ workout_plan.number_of_sets }}" id="number_of_sets" name="number_of_sets" type="number" 
                                             min="3" max="10" placeholder="number of sets" required>
 
                                         </div>
@@ -386,42 +324,6 @@
 
                                         </div>
 
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="dropset">Dropset:</label>
-                                            <select name="dropset" id="dropset">
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="superset">Superset:</label>
-                                            <select name="superset" id="superset">
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-
-                                        </div>
-                                    
                                     </div>
 
                                 </div>

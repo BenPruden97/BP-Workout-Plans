@@ -19,7 +19,27 @@
 
                             <div class="card-image-section">
 
-                                <h5>{{ workout_plan.workout_name }}</h5>
+                                {% if workout_plan.workout_category == 'Chest' %}
+                                    <div class="chest-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Back' %}
+                                    <div class="back-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Arms' %}
+                                    <div class="arms-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Legs' %}
+                                    <div class="legs-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% else %}
+                                <div class="shoulders-image-section">
+                                    <h5>{{ workout_plan.workout_name }}</h5>
+                                </div>
+                                {% endif %}
 
                             </div>
 
