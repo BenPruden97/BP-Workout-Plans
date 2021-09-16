@@ -68,9 +68,9 @@
 
                                     <div class="workout-edit-delete">
 
-                                        <button class="edit-workout"><a href="{{ url_for('edit_workout', workout_plan_id=workout_plan._id) }}">Edit</a></button>
+                                        <a href="{{ url_for('edit_workout', workout_plan_id=workout_plan._id) }}" class="edit-workout">Edit</a>
 
-                                        <button class="delete-workout">Delete</button>
+                                        <a href="{{ url_for('edit_workout', workout_plan_id=workout_plan._id) }}" class="delete-workout">Delete</a>                                        
 
                                     </div>
 
