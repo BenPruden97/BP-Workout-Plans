@@ -4,7 +4,6 @@ document.getElementById("flash-button").addEventListener('click', function() {
     document.querySelector(".flashes-section").style.display = "none";
 });
 
-
 // Password & Confirm Password Javascript Validation/ Making Sure Password Match
 
 /* I used the code from this website - https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727518 
@@ -31,4 +30,10 @@ function cardOptions(){
 function cardOptionsLeave(){
     document.getElementById("workout-options").style.display = "none"
 }
+
+
+
+document.getElementsByClassName("fa-user").addEventListener('click', function() {
+    document.getElementsByClassName("dropdown").style.display = "block";
+});
     
