@@ -22,18 +22,13 @@ function checkPasswords() {
     }
 };
 
+const workoutCard = document.getElementById("individual-card");
 
-function cardOptions(){
-    document.getElementById("workout-options").style.display = "block"
-}
-
-function cardOptionsLeave(){
-    document.getElementById("workout-options").style.display = "none"
-}
-
-
-
-document.getElementsByClassName("fa-user").addEventListener('click', function() {
-    document.getElementsByClassName("dropdown").style.display = "block";
+workoutCard.addEventListener('mouseenter', e => {
+    document.querySelector("#workout-options").style.display = "block";
 });
-    
+
+workoutCard.addEventListener('mouseleave', e => {
+    document.querySelector("#workout-options").style.display = "none";
+});
+

@@ -226,6 +226,13 @@ def edit_workout(workout_plan_id):
     return render_template("edit_workout.html", workout_plan=workout_plan, workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
 
 
+@app.route("/delete_workout/<workout_plan_id>")
+def delete_workout(workout_plan_id):
+    mongo.db.workout_plans.remove({"_id": ObjectId(workout_plan_id)})
+    flash("Workout Plan Successfully Deleted")
+    return redirect(url_for('find_workouts'))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
