@@ -741,15 +741,36 @@ footer{
     align-items: center;
 }
 
-.form-button button{
+.form-button a{
     background-color: #fafafa;
     color: black;
-    width: 50%;
+    width: 25%;
     padding: 0.5rem;
     border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
-    margin: 1rem;
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+    transition: 0.5s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.form-button a:hover{
+    background-color: black;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.form-button button{
+    background-color: #fafafa;
+    color: black;
+    width: 40%;
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
     margin-top: 1.5rem;
     transition: 0.5s;
 }
