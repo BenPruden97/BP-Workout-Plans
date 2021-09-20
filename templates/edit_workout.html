@@ -56,7 +56,7 @@
                             <label for="workout_description">Workout Description:</label><br>
                             <textarea name="workout_description" id="workout_description" cols="30" rows="5"
                             minlength="5" maxlength="150" placeholder="workout description" required>
-                            {{- workout_plan.workout_descriptions -}}
+                            {{- workout_plan.workout_description -}}
                             </textarea>
 
                         </div>
@@ -69,7 +69,7 @@
 
                                 <label for="exercise_name_1">Exerise Name:</label><br>
                                 <input value="{{ workout_plan.exercise_name_1 }}" id="exercise_name_1" name="exercise_name_1" type="text" 
-                                minlength="5" maxlength="35" placeholder="exercise name" required>
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
 
                             </div>
 
@@ -120,7 +120,14 @@
                                                 {% if workout_plan.rest_time_1 == workout_plan.rest_time_1 %}
                                                 <option value="{{ workout_plan.rest_time_1 }}" selected>{{ workout_plan.rest_time_1 }}</option>
                                                 {% else %}
-                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
+                                                <option value="workout_plan.rest_time_1">15 Secs</option>
+                                                <option value="workout_plan.rest_time_1">30 Secs</option>
+                                                <option value="workout_plan.rest_time_1">45 Secs</option>
+                                                <option value="workout_plan.rest_time_1">60 Secs</option>
+                                                <option value="workout_plan.rest_time_1">75 Secs</option>
+                                                <option value="workout_plan.rest_time_1">90 Secs</option>
+                                                <option value="workout_plan.rest_time_1">105 Secs</option>
+                                                <option value="workout_plan.rest_time_1">120 Secs</option>
                                                 {% endif %}
                                                 </select>
 
@@ -156,7 +163,7 @@
 
                                 <label for="exercise_name_2">Exerise Name:</label><br>
                                 <input value="{{ workout_plan.exercise_name_2 }}" id="exercise_name_2" name="exercise_name_2" type="text" 
-                                minlength="5" maxlength="35" placeholder="exercise name" required>
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
 
                             </div>
 
@@ -242,8 +249,8 @@
                             <div class="workout-input">
 
                                 <label for="exercise_name_3">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_3 }}" id="exercise_name_3" name="exercise_name_3" type="text" 
-                                minlength="5" maxlength="35" placeholder="exercise name" required>
+                                <input value="{{ workout_plan.exercise_name_3 }}" id="exercise_name_3" name="exercise_name_3" type="text"
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
 
                             </div>
 
@@ -330,7 +337,7 @@
 
                                 <label for="exercise_name_4">Exerise Name:</label><br>
                                 <input value="{{ workout_plan.exercise_name_4 }}" id="exercise_name_4" name="exercise_name_4" type="text" 
-                                minlength="5" maxlength="35" placeholder="exercise name" required>
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
 
                             </div>
 
@@ -417,7 +424,7 @@
 
                                 <label for="exercise_name_5">Exerise Name:</label><br>
                                 <input value="{{ workout_plan.exercise_name_5 }}" id="exercise_name_5" name="exercise_name_5" type="text" 
-                                minlength="5" maxlength="35" placeholder="exercise name" required>
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
 
                             </div>
 
@@ -504,7 +511,7 @@
 
                                 <label for="exercise_name_6">Exerise Name:</label><br>
                                 <input value="{{ workout_plan.exercise_name_6 }}" id="exercise_name_6" name="exercise_name_6" type="text" 
-                                minlength="5" maxlength="35" placeholder="exercise name" required>
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
 
                             </div>
 
@@ -591,7 +598,7 @@
 
                                 <label for="exercise_name_7">Exerise Name:</label><br>
                                 <input value="{{ workout_plan.exercise_name_7 }}" id="exercise_name_7" name="exercise_name_7" type="text" 
-                                minlength="5" maxlength="35" placeholder="exercise name" required>
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
 
                             </div>
 
@@ -678,7 +685,7 @@
 
                                 <label for="exercise_name_8">Exerise Name:</label><br>
                                 <input value="{{ workout_plan.exercise_name_8 }}" id="exercise_name_8" name="exercise_name_8" type="text" 
-                                minlength="5" maxlength="35" placeholder="exercise name" required>
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
 
                             </div>
 
@@ -767,11 +774,11 @@
 
                                         <label for="total_exercise_amount">Total Amount of Exercises:</label>
                                         <select name="total_exercise_amount" id="total_exercise_amount" required> 
-                                        {% if workout_plan.total_exercise_amount == workout_plan.total_exercise_amount %}
-                                        <option value="{{ workout_plan.total_exercise_amount }}" selected>{{ workout_plan.total_exercise_amount }}</option>
-                                        {% else %}
-                                        <option value="{{ workout_plan.total_exercise_amount }}">{{ workout_plan.total_exercise_amount }}</option>
-                                        {% endif %}
+                                            {% if workout_plan.total_exercise_amount == workout_plan.total_exercise_amount %}
+                                            <option value="{{ workout_plan.total_exercise_amount }}" selected>{{ workout_plan.total_exercise_amount }}</option>
+                                            {% else %}
+                                            <option value="{{ workout_plan.total_exercise_amount }}">{{ workout_plan.total_exercise_amount }}</option>
+                                            {% endif %}
                                         </select>
 
                                     </div>
@@ -784,11 +791,11 @@
 
                                         <label for="total_workout_time">Total Workout Time:</label>
                                         <select name="total_workout_time" id="total_workout_time" required> 
-                                        {% if workout_plan.total_workout_time == workout_plan.total_workout_time %}
-                                        <option value="{{ workout_plan.total_workout_time }}" selected>{{ workout_plan.total_workout_time }}</option>
-                                        {% else %}
-                                        <option value="{{ workout_plan.total_workout_time }}">{{ workout_plan.total_workout_time }}</option>
-                                        {% endif %}
+                                            {% if total_workout_time == workout_plan.total_workout_time %}
+                                            <option value="{{ workout_plan.total_workout_time }}" selected>{{ workout_plan.total_workout_time }}</option>
+                                            {% else %}
+                                            <option value="{{ workout_plan.total_workout_time }}">{{ workout_plan.total_workout_time }}</option>
+                                            {% endif %}
                                         </select>
 
                                     </div>
