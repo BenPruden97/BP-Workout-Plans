@@ -568,7 +568,7 @@ footer{
 }
 
 .workout-options{
-    display: none;
+    display: block;
 }
 
 .workout-edit-delete{

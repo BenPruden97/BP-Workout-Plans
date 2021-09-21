@@ -773,12 +773,12 @@
                                     <div class="exercise-options">
 
                                         <label for="total_exercise_amount">Total Amount of Exercises:</label>
-                                        <select name="total_exercise_amount" id="total_exercise_amount" required> 
-                                            {% if workout_plan.total_exercise_amount == workout_plan.total_exercise_amount %}
-                                            <option value="{{ workout_plan.total_exercise_amount }}" selected>{{ workout_plan.total_exercise_amount }}</option>
-                                            {% else %}
-                                            <option value="{{ workout_plan.total_exercise_amount }}">{{ workout_plan.total_exercise_amount }}</option>
-                                            {% endif %}
+                                        <select name="total_exercise_amount" id="total_exercise_amount" required>
+                                                {% if workout_plan.total_exercise_amount %}
+                                                    <option value="{{ workout_plan.total_exercise_amount }}" selected>{{ workout_plan.total_exercise_amount }}</option>
+                                                {% else %}
+                                                    <option value="{{ workout_plan.total_exercise_amount }}">{{ workout_plan.total_exercise_amount }}</option>
+                                                {% endif %}
                                         </select>
 
                                     </div>
@@ -790,12 +790,12 @@
                                     <div class="exercise-options">
 
                                         <label for="total_workout_time">Total Workout Time:</label>
-                                        <select name="total_workout_time" id="total_workout_time" required> 
-                                            {% if total_workout_time == workout_plan.total_workout_time %}
-                                            <option value="{{ workout_plan.total_workout_time }}" selected>{{ workout_plan.total_workout_time }}</option>
-                                            {% else %}
-                                            <option value="{{ workout_plan.total_workout_time }}">{{ workout_plan.total_workout_time }}</option>
-                                            {% endif %}
+                                        <select name="total_workout_time" id="total_workout_time" required>
+                                                {% if workout_plan.total_workout_time %}
+                                                    <option value="{{ workout_plan.total_workout_time }}" selected>{{ workout_plan.total_workout_time }}</option>
+                                                {% else %}
+                                                    <option value="{{ workout_plan.total_workout_time }}">{{ workout_plan.total_workout_time }}</option>
+                                                {% endif %}
                                         </select>
 
                                     </div>
