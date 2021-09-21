@@ -453,6 +453,75 @@ footer{
 
 /* ----- Find Workouts Section Styling ----- */
 
+.search-image{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/search-bar-image.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 1rem;
+}
+
+.search-input{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.search-input label{
+    color: #fafafa;
+    font-size: 1.5rem;
+    padding: 1rem 0 0.25rem;
+}
+
+.search-input input{
+    width: 50%;
+    padding: 0.5rem;
+    margin: 0.25rem 0 1rem;
+    color: black;
+    border: none;
+    border-bottom: 4px solid #009dff;
+}
+
+.search-image input::placeholder{
+    color: black;
+}
+
+.search-input a{
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #fafafa;
+    border: 2px solid #db0007;
+    border-radius: 5px;
+    color: #db0007;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.search-input a:hover{
+    color: #fafafa;
+    background-color: #db0007;
+}
+
+.search-input button{
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #fafafa;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.search-input button:hover{
+    color: #fafafa;
+    background-color: black;
+}
+
 .row-color{
     display: flex;
     justify-content: center;
