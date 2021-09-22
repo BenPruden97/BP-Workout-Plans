@@ -364,6 +364,42 @@ footer{
     text-decoration: none;
 }
 
+.create-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 1.5rem;
+}
+
+.create-home h1{
+    padding-bottom: 0.5rem;
+}
+
+.create-home h5{
+    padding: 0.25rem;
+}
+
+.create-home a{
+    background-color: #fafafa;
+    color: black;
+    padding: 0.75rem;
+    margin: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.create-home a:hover{
+    background-color: black;
+    color: #fafafa;
+    text-decoration: none;
+}
+
 .sign-up-home{
     text-align: center;
     border-top: 2px solid black;
@@ -371,6 +407,10 @@ footer{
     background-color: #fafafa;
     color: black;
     padding: 1rem;
+}
+
+.sign-up-home h6{
+    padding: 1.5rem;
 }
 
 .sign-up-home h3{
@@ -540,7 +580,7 @@ footer{
 .individual-card{
     border: 2px solid black;
     border-radius: 10px;
-    margin-bottom: 0.5rem;
+    margin: 1.5rem;
 }
 
 .chest-image-section{

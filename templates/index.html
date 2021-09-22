@@ -24,6 +24,34 @@
 
     </div>
 
+    {% if session.member %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="create-home">
+
+                    <h1>Create Your Own Workout Plan</h1>
+
+                    <h5>Have you got a workout plan in mind?</h5>
+                    
+                    <h5>Create your very own workout plan and share it with the rest of the community</h5>
+
+                    <a href="{{ url_for('create_workout') }}">Create A Workout Plan</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% else %}
+
     <div class="container-fluid">
 
         <div class="row">
@@ -59,5 +87,7 @@
         </div>
 
     </div>
+
+    {% endif %}
 
 {% endblock %}
