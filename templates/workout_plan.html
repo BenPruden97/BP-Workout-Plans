@@ -1,0 +1,827 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <form class="create-workout-form-section" method="POST" action="{{ url_for('edit_workout', workout_plan_id=workout_plan._id) }}">
+
+                    <div class="create-workout-form">
+
+                        <h3>{{ workout_plan.workout_name }}</h3>
+
+                        <div class="workout-input">
+
+                            <label for="workout_category">Choose Muscle Group:</label><br>
+                            <select name="workout_category" id="workout_category" required>
+                                {% for category in workout_categories %}
+                                    {% if category.workout_category == workout_plan.workout_category %}
+                                    <option value="{{ category.workout_category }}" selected>{{ category.workout_category }}</option>
+                                    {% else %}
+                                    <option value="{{ category.workout_category }}">{{ category.workout_category }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+
+                        </div>
+
+                        <div class="workout-input">
+
+                            <label for="workout_difficulty">Choose Workout Difficulty:</label><br>
+                            <select name="workout_difficulty" id="workout_difficulty" required>
+                                {% for difficulty in workout_difficulties %}
+                                    {% if difficulty.workout_difficulty == workout_plan.workout_difficulty %}
+                                    <option value="{{ difficulty.workout_difficulty }}" selected>{{ difficulty.workout_difficulty }}</option>
+                                    {% else %}
+                                    <option value="{{ difficulty.workout_difficulty }}">{{ difficulty.workout_difficulty }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+
+                        </div>
+
+                        <div class="workout-input">
+
+                            <label for="workout_name">Workout Name:</label><br>
+                            <input value="{{ workout_plan.workout_name }}" id="workout_name" name="workout_name" type="text" 
+                            minlength="5" maxlength="35" placeholder="workout name" required>
+
+                        </div>
+
+                        <div class="workout-input">
+
+                            <label for="workout_description">Workout Description:</label><br>
+                            <textarea name="workout_description" id="workout_description" cols="30" rows="5"
+                            minlength="5" maxlength="150" placeholder="workout description" required>
+                            {{- workout_plan.workout_description -}}
+                            </textarea>
+
+                        </div>
+                        
+                        <div class="exercise">
+
+                            <h4>Exercise</h4>
+
+                            <div class="workout-input">
+
+                                <label for="exercise_name_1">Exerise Name:</label><br>
+                                <input value="{{ workout_plan.exercise_name_1 }}" id="exercise_name_1" name="exercise_name_1" type="text" 
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_sets_1">Number Of Sets:</label>
+                                            <input value="{{ workout_plan.number_of_sets_1 }}" id="number_of_sets_1" name="number_of_sets_1" type="number" 
+                                            min="3" max="10" placeholder="number of sets" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_reps_1">Number Of Reps:</label>
+                                            <input value="{{ workout_plan.number_of_reps_1 }}" id="number_of_reps_1" name="number_of_reps_1" type="number" 
+                                            min="1" max="20" placeholder="number of reps" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <div>
+
+                                                <label for="rest_time_1">Rest Time:</label>
+                                                <select value="{{ workout_plan.rest_time_1 }}" name="rest_time_1" id="rest_time_1">
+                                                {% if workout_plan.rest_time_1 == workout_plan.rest_time_1 %}
+                                                <option value="{{ workout_plan.rest_time_1 }}" selected>{{ workout_plan.rest_time_1 }}</option>
+                                                {% else %}
+                                                <option value="workout_plan.rest_time_1">15 Secs</option>
+                                                <option value="workout_plan.rest_time_1">30 Secs</option>
+                                                <option value="workout_plan.rest_time_1">45 Secs</option>
+                                                <option value="workout_plan.rest_time_1">60 Secs</option>
+                                                <option value="workout_plan.rest_time_1">75 Secs</option>
+                                                <option value="workout_plan.rest_time_1">90 Secs</option>
+                                                <option value="workout_plan.rest_time_1">105 Secs</option>
+                                                <option value="workout_plan.rest_time_1">120 Secs</option>
+                                                {% endif %}
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="div col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="weight_used_1">Weight Used(kg):</label>
+                                            <input value="{{ workout_plan.weight_used_1 }}" id="weight_used_1" name="weight_used_1" type="number" 
+                                            min="3" max="50" placeholder="weight used" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exercise">
+
+                            <h4>Exercise</h4>
+
+                            <div class="workout-input">
+
+                                <label for="exercise_name_2">Exerise Name:</label><br>
+                                <input value="{{ workout_plan.exercise_name_2 }}" id="exercise_name_2" name="exercise_name_2" type="text" 
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_sets_2">Number Of Sets:</label>
+                                            <input value="{{ workout_plan.number_of_sets_2 }}" id="number_of_sets_2" name="number_of_sets_2" type="number" 
+                                            min="3" max="10" placeholder="number of sets" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_reps_2">Number Of Reps:</label>
+                                            <input value="{{ workout_plan.number_of_reps_2 }}" id="number_of_reps_2" name="number_of_reps_2" type="number" 
+                                            min="1" max="20" placeholder="number of reps" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <div>
+
+                                                <label for="rest_time_2">Rest Time:</label>
+                                                <select value="{{ workout_plan.rest_time_2 }}" name="rest_time_2" id="rest_time_2">
+                                                {% if workout_plan.rest_time_2 == workout_plan.rest_time_2 %}
+                                                <option value="{{ workout_plan.rest_time_2 }}" selected>{{ workout_plan.rest_time_2 }}</option>
+                                                {% else %}
+                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
+                                                {% endif %}
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="div col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="weight_used_2">Weight Used(kg):</label>
+                                            <input value="{{ workout_plan.weight_used_2 }}" id="weight_used_2" name="weight_used_2" type="number" 
+                                            min="3" max="50" placeholder="weight used" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exercise">
+
+                            <h4>Exercise</h4>
+
+                            <div class="workout-input">
+
+                                <label for="exercise_name_3">Exerise Name:</label><br>
+                                <input value="{{ workout_plan.exercise_name_3 }}" id="exercise_name_3" name="exercise_name_3" type="text"
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_sets_3">Number Of Sets:</label>
+                                            <input value="{{ workout_plan.number_of_sets_3 }}" id="number_of_sets_3" name="number_of_sets_3" type="number" 
+                                            min="3" max="10" placeholder="number of sets" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_reps_3">Number Of Reps:</label>
+                                            <input value="{{ workout_plan.number_of_reps_3 }}" id="number_of_reps_3" name="number_of_reps_3" type="number" 
+                                            min="1" max="20" placeholder="number of reps" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <div>
+
+                                                <label for="rest_time_3">Rest Time:</label>
+                                                <select value="{{ workout_plan.rest_time_3 }}" name="rest_time_3" id="rest_time_3">
+                                                {% if workout_plan.rest_time_3 == workout_plan.rest_time_3 %}
+                                                <option value="{{ workout_plan.rest_time_3 }}" selected>{{ workout_plan.rest_time_3 }}</option>
+                                                {% else %}
+                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
+                                                {% endif %}
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="div col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="weight_used_3">Weight Used(kg):</label>
+                                            <input value="{{ workout_plan.weight_used_3 }}" id="weight_used_3" name="weight_used_3" type="number" 
+                                            min="3" max="50" placeholder="weight used" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exercise">
+
+                            <h4>Exercise</h4>
+
+                            <div class="workout-input">
+
+                                <label for="exercise_name_4">Exerise Name:</label><br>
+                                <input value="{{ workout_plan.exercise_name_4 }}" id="exercise_name_4" name="exercise_name_4" type="text" 
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_sets_4">Number Of Sets:</label>
+                                            <input value="{{ workout_plan.number_of_sets_4 }}" id="number_of_sets_4" name="number_of_sets_4" type="number" 
+                                            min="3" max="10" placeholder="number of sets" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_reps_1">Number Of Reps:</label>
+                                            <input value="{{ workout_plan.number_of_reps_4 }}" id="number_of_reps_4" name="number_of_reps_4" type="number" 
+                                            min="1" max="20" placeholder="number of reps" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <div>
+
+                                                <label for="rest_time_4">Rest Time:</label>
+                                                <select value="{{ workout_plan.rest_time_4 }}" name="rest_time_4" id="rest_time_4">
+                                                {% if workout_plan.rest_time_4 == workout_plan.rest_time_4 %}
+                                                <option value="{{ workout_plan.rest_time_4 }}" selected>{{ workout_plan.rest_time_4 }}</option>
+                                                {% else %}
+                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
+                                                {% endif %}
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="div col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="weight_used_4">Weight Used(kg):</label>
+                                            <input value="{{ workout_plan.weight_used_4 }}" id="weight_used_4" name="weight_used_4" type="number" 
+                                            min="3" max="50" placeholder="weight used" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exercise">
+
+                            <h4>Exercise</h4>
+
+                            <div class="workout-input">
+
+                                <label for="exercise_name_5">Exerise Name:</label><br>
+                                <input value="{{ workout_plan.exercise_name_5 }}" id="exercise_name_5" name="exercise_name_5" type="text" 
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_sets_5">Number Of Sets:</label>
+                                            <input value="{{ workout_plan.number_of_sets_5 }}" id="number_of_sets_5" name="number_of_sets_5" type="number" 
+                                            min="3" max="10" placeholder="number of sets" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_reps_5">Number Of Reps:</label>
+                                            <input value="{{ workout_plan.number_of_reps_5 }}" id="number_of_reps_5" name="number_of_reps_5" type="number" 
+                                            min="1" max="20" placeholder="number of reps" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <div>
+
+                                                <label for="rest_time_5">Rest Time:</label>
+                                                <select value="{{ workout_plan.rest_time_5 }}" name="rest_time_5" id="rest_time_5">
+                                                {% if workout_plan.rest_time_5 == workout_plan.rest_time_5 %}
+                                                <option value="{{ workout_plan.rest_time_5 }}" selected>{{ workout_plan.rest_time_5 }}</option>
+                                                {% else %}
+                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
+                                                {% endif %}
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="div col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="weight_used_5">Weight Used(kg):</label>
+                                            <input value="{{ workout_plan.weight_used_5 }}" id="weight_used_5" name="weight_used_5" type="number" 
+                                            min="3" max="50" placeholder="weight used" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exercise">
+
+                            <h4>Exercise</h4>
+
+                            <div class="workout-input">
+
+                                <label for="exercise_name_6">Exerise Name:</label><br>
+                                <input value="{{ workout_plan.exercise_name_6 }}" id="exercise_name_6" name="exercise_name_6" type="text" 
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_sets_6">Number Of Sets:</label>
+                                            <input value="{{ workout_plan.number_of_sets_6 }}" id="number_of_sets_6" name="number_of_sets_6" type="number" 
+                                            min="3" max="10" placeholder="number of sets" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_reps_6">Number Of Reps:</label>
+                                            <input value="{{ workout_plan.number_of_reps_6 }}" id="number_of_reps_6" name="number_of_reps_6" type="number" 
+                                            min="1" max="20" placeholder="number of reps" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <div>
+
+                                                <label for="rest_time_6">Rest Time:</label>
+                                                <select value="{{ workout_plan.rest_time_6 }}" name="rest_time_6" id="rest_time_6">
+                                                {% if workout_plan.rest_time_6 == workout_plan.rest_time_6 %}
+                                                <option value="{{ workout_plan.rest_time_6 }}" selected>{{ workout_plan.rest_time_6 }}</option>
+                                                {% else %}
+                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
+                                                {% endif %}
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="div col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="weight_used_6">Weight Used(kg):</label>
+                                            <input value="{{ workout_plan.weight_used_6 }}" id="weight_used_6" name="weight_used_6" type="number" 
+                                            min="3" max="50" placeholder="weight used" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exercise">
+
+                            <h4>Exercise</h4>
+
+                            <div class="workout-input">
+
+                                <label for="exercise_name_7">Exerise Name:</label><br>
+                                <input value="{{ workout_plan.exercise_name_7 }}" id="exercise_name_7" name="exercise_name_7" type="text" 
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_sets_7">Number Of Sets:</label>
+                                            <input value="{{ workout_plan.number_of_sets_7 }}" id="number_of_sets_7" name="number_of_sets_7" type="number" 
+                                            min="3" max="10" placeholder="number of sets" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_reps_7">Number Of Reps:</label>
+                                            <input value="{{ workout_plan.number_of_reps_7 }}" id="number_of_reps_7" name="number_of_reps_7" type="number" 
+                                            min="1" max="20" placeholder="number of reps" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <div>
+
+                                                <label for="rest_time_7">Rest Time:</label>
+                                                <select value="{{ workout_plan.rest_time_7 }}" name="rest_time_7" id="rest_time_7">
+                                                {% if workout_plan.rest_time_7 == workout_plan.rest_time_7 %}
+                                                <option value="{{ workout_plan.rest_time_7 }}" selected>{{ workout_plan.rest_time_7 }}</option>
+                                                {% else %}
+                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
+                                                {% endif %}
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="div col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="weight_used_7">Weight Used(kg):</label>
+                                            <input value="{{ workout_plan.weight_used_7 }}" id="weight_used_7" name="weight_used_7" type="number" 
+                                            min="3" max="50" placeholder="weight used" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exercise">
+
+                            <h4>Exercise</h4>
+
+                            <div class="workout-input">
+
+                                <label for="exercise_name_8">Exerise Name:</label><br>
+                                <input value="{{ workout_plan.exercise_name_8 }}" id="exercise_name_8" name="exercise_name_8" type="text" 
+                                minlength="3" maxlength="20" placeholder="exercise name" required>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_sets_8">Number Of Sets:</label>
+                                            <input value="{{ workout_plan.number_of_sets_8 }}" id="number_of_sets_8" name="number_of_sets_8" type="number" 
+                                            min="3" max="10" placeholder="number of sets" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="number_of_reps_8">Number Of Reps:</label>
+                                            <input value="{{ workout_plan.number_of_sets_8 }}" id="number_of_reps_8" name="number_of_reps_8" type="number" 
+                                            min="1" max="20" placeholder="number of reps" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <div class="exercise-input">
+
+                                            <div>
+
+                                                <label for="rest_time_8">Rest Time:</label>
+                                                <select value="{{ workout_plan.rest_time_8 }}" name="rest_time_8" id="rest_time_8">
+                                                {% if workout_plan.rest_time_8 == workout_plan.rest_time_8 %}
+                                                <option value="{{ workout_plan.rest_time_8 }}" selected>{{ workout_plan.rest_time_8 }}</option>
+                                                {% else %}
+                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
+                                                {% endif %}
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="div col-6">
+
+                                        <div class="exercise-input">
+
+                                            <label for="weight_used_8">Weight Used(kg):</label>
+                                            <input value="{{ workout_plan.weight_used_8 }}" id="weight_used_8" name="weight_used_8" type="number" 
+                                            min="3" max="50" placeholder="weight used" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="container-fluid">
+
+                            <div class="row">
+
+                                <div class="col-6">
+
+                                    <div class="exercise-options">
+
+                                        <label for="total_exercise_amount">Total Amount of Exercises:</label>
+                                        <select name="total_exercise_amount" id="total_exercise_amount" required>
+                                                {% if workout_plan.total_exercise_amount %}
+                                                    <option value="{{ workout_plan.total_exercise_amount }}" selected>{{ workout_plan.total_exercise_amount }}</option>
+                                                {% else %}
+                                                    <option value="{{ workout_plan.total_exercise_amount }}">{{ workout_plan.total_exercise_amount }}</option>
+                                                {% endif %}
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-6">
+
+                                    <div class="exercise-options">
+
+                                        <label for="total_workout_time">Total Workout Time:</label>
+                                        <select name="total_workout_time" id="total_workout_time" required>
+                                                {% if workout_plan.total_workout_time %}
+                                                    <option value="{{ workout_plan.total_workout_time }}" selected>{{ workout_plan.total_workout_time }}</option>
+                                                {% else %}
+                                                    <option value="{{ workout_plan.total_workout_time }}">{{ workout_plan.total_workout_time }}</option>
+                                                {% endif %}
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-button">
+
+                            <a href="{{ url_for('find_workouts') }}">Cancel</a>
+
+                            <button type="submit">Edit Workout Plan</button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

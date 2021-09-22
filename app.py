@@ -36,6 +36,15 @@ def find_workouts():
     return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
 
 
+@app.route("/workout_plan/<workout_plan_id>")
+def workout_plan(workout_plan_id):
+
+    workout_plan = mongo.db.workout_plans.find_one({"_id": ObjectId(workout_plan_id)})
+    workout_difficulties = mongo.db.workout_difficulties.find()
+    workout_categories = mongo.db.workout_categories.find()
+    return render_template("workout_plan.html", workout_plan=workout_plan, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
 
