@@ -34,7 +34,7 @@
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <div class="workout-card">
+                    <a class="card-link" href="{{ url_for('workout_plan', workout_plan_id=workout_plan._id) }}"><div class="workout-card">
 
                         <div class="individual-card" id="individual-card">
 
@@ -62,7 +62,7 @@
                                 </div>
                                 {% endif %}
 
-                            </div>
+                            </div></a>
 
                             <div class="card-workout-stats">
 

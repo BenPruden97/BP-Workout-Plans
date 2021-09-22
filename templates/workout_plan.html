@@ -13,6 +13,21 @@
 
                         <h3>{{ workout_plan.workout_name }}</h3>
 
+                        
+                        <div class="container-fluid">
+
+                            <div class="row">
+
+                                <div class="col-12 like-created">
+
+                                    <h5>Workout Was Created By: {{ workout_plan.created_by }}</h5>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
                         <div class="workout-input">
 
                             <label for="workout_category">Choose Muscle Group:</label><br>
@@ -806,11 +821,47 @@
 
                         </div>
 
-                        <div class="form-button">
+                        <div class="container-fluid">
 
-                            <a href="{{ url_for('find_workouts') }}">Cancel</a>
+                            <div class="row">
 
-                            <button type="submit">Edit Workout Plan</button>
+                                <div class="col-6">
+
+                                    <div class="like-workout-styling">
+
+                                        <a class="go-back" href="{{ url_for('find_workouts') }}">Go Back</a>
+            
+                                    </div>
+
+                                </div>
+
+                                {% if session.member %}
+
+                                <div class="col-6">
+
+                                    <div class="like-workout-styling">
+
+                                        <a class="like-workout" href="{{ url_for('find_workouts') }}">Like This Workout</a>
+            
+                                    </div>
+
+                                </div>
+
+                                {% else %}
+
+                                <div class="col-6">
+
+                                    <div class="like-workout-styling">
+
+                                        <a class="like-workout" href="{{ url_for('log_in') }}">Log In To Like This Workout</a>
+            
+                                    </div>
+
+                                </div>
+
+                                {% endif %}
+
+                            </div>
 
                         </div>
 
