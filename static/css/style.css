@@ -29,7 +29,6 @@ dl, ol, ul {
 
 .col-12{
     padding: 0;
-    background-color: #fafafa;
 }
 
 .col-12.col-md-6.col-lg-4{
@@ -231,7 +230,6 @@ nav .nav .log-in:hover{
 
 .user-links ul{
     text-decoration: none;
-    
 }
 
 .user-links li{
@@ -329,6 +327,7 @@ footer{
 
 .home-text{
     border-top: 2px solid black;
+    border-bottom: 2px solid black;
     text-align: center;
     padding: 1rem 0 2.5rem;
 }
@@ -498,7 +497,6 @@ footer{
     background-size: cover;
     width: 100%;
     height: 400px;
-    margin-bottom: 1rem;
 }
 
 .search-input{

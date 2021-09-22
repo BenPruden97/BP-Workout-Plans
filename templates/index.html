@@ -24,6 +24,95 @@
 
     </div>
 
+    <div class="container-fluid">
+
+        <div class="row row-color">
+
+            {% for workout_category in workout_categories %}
+            {% for workout_difficulty in workout_difficulties %}
+            {% for workout_plan in workout_plans %}
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="workout-card">
+
+                        <div class="individual-card" id="individual-card">
+
+                            <div class="card-image-section">
+
+                                {% if workout_plan.workout_category == 'Chest' %}
+                                    <div class="chest-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Back' %}
+                                    <div class="back-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Arms' %}
+                                    <div class="arms-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Legs' %}
+                                    <div class="legs-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% else %}
+                                <div class="shoulders-image-section">
+                                    <h5>{{ workout_plan.workout_name }}</h5>
+                                </div>
+                                {% endif %}
+
+                            </div>
+
+                            <div class="card-workout-stats">
+
+                                <p>Muscle Group: {{ workout_plan.workout_category }}</p>
+
+                                <hr>
+
+                                <p>Workout Difficulty: {{ workout_plan.workout_difficulty }}</p>
+
+                                <hr>
+
+                                <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
+
+                                <hr>
+
+                                <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
+
+                                <hr>
+
+                                <p>Created By: {{ workout_plan.created_by }}</p>
+
+                            </div> 
+
+                            <div class="workout-options" id="workout-options">
+
+                                <div class="workout-edit-delete">
+                        
+                                    {% if session.member|lower == workout_plan.created_by|lower or session.member|lower == "admin"|lower %}
+                                        <a href="{{ url_for('edit_workout', workout_plan_id=workout_plan._id) }}" class="edit-workout">Edit</a>
+                                        <a href="{{ url_for('delete_workout', workout_plan_id=workout_plan._id) }}" class="delete-workout">Delete</a>                                        
+                                    {% endif %}
+
+                                </div>
+                        
+                            </div> 
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+            {% endfor %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+
     {% if session.member %}
 
     <div class="container-fluid">

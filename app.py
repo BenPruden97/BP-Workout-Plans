@@ -20,13 +20,17 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("index.html")
+
+    workout_plans = mongo.db.workout_plans.find().sort("_id", 1).limit(6)
+    workout_difficulties = mongo.db.workout_difficulties.find()
+    workout_categories = mongo.db.workout_categories.find()
+    return render_template("index.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
 
 
 @app.route("/find_workouts")
 def find_workouts():
 
-    workout_plans = list(mongo.db.workout_plans.find())
+    workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
     return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
@@ -37,7 +41,7 @@ def search():
 
     query = request.form.get("query")
 
-    workout_plans = list(mongo.db.workout_plans.find({"$text": {"$search": query}}))
+    workout_plans = mongo.db.workout_plans.find({"$text": {"$search": query}})
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
     return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
@@ -169,7 +173,7 @@ def create_workout():
         flash("Workout Plan Successfully Added")
         return redirect(url_for('find_workouts'))
 
-    workout_plans = list(mongo.db.workout_plans.find())
+    workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
     return render_template("create_workout.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
@@ -231,7 +235,7 @@ def edit_workout(workout_plan_id):
         flash("Workout Plan Successfully Updated")
 
     workout_plan = mongo.db.workout_plans.find_one({"_id": ObjectId(workout_plan_id)})
-    workout_plans = list(mongo.db.workout_plans.find())
+    workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
     return render_template("edit_workout.html", workout_plan=workout_plan, workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
