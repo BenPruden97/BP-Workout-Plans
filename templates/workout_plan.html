@@ -30,13 +30,13 @@
 
                         <div class="workout-input">
 
-                            <p>Muscle Group: {{ workout_plan.workout_category }}</p>
+                            <p>Muscle Group: <br>{{ workout_plan.workout_category }}</p>
 
                         </div>
 
                         <div class="workout-input">
 
-                            <p>Muscle Group: {{ workout_plan.workout_difficulty }}</p>
+                            <p>Muscle Group: <br>{{ workout_plan.workout_difficulty }}</p>
 
                         </div>
 
@@ -58,662 +58,707 @@
 
                         </div>
                         
-                        <div class="exercise">
+                        <div class="accordion" id="accordionExample">
 
-                            <h4>Exercise</h4>
+                            <div class="accordion-item">
 
-                            <div class="workout-input">
+                                <h2 class="accordion-header" id="headingOne">
 
-                                <label for="exercise_name_1">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_1 }}" id="exercise_name_1" name="exercise_name_1" type="text" 
-                                minlength="3" maxlength="20" placeholder="exercise name" required>
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        {{ workout_plan.exercise_name_1 }}
+                                    </button>
 
-                            </div>
+                                </h2>
 
-                            <div class="container-fluid">
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 
-                                <div class="row">
+                                    <div class="accordion-body">
 
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_1">Number Of Sets:</label>
-                                            <input value="{{ workout_plan.number_of_sets_1 }}" id="number_of_sets_1" name="number_of_sets_1" type="number" 
-                                            min="3" max="10" placeholder="number of sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_1">Number Of Reps:</label>
-                                            <input value="{{ workout_plan.number_of_reps_1 }}" id="number_of_reps_1" name="number_of_reps_1" type="number" 
-                                            min="1" max="20" placeholder="number of reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_1">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_1 }}" name="rest_time_1" id="rest_time_1">
-                                                    <option value="{{ workout_plan.rest_time_1 }}" selected>{{ workout_plan.rest_time_1 }}</option>
-                                                </select>
-
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_sets_1">Number Of Sets:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_1 }}" id="number_of_sets_1" name="number_of_sets_1" type="number" 
+                                                        min="3" max="10" placeholder="number of sets" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_reps_1">Number Of Reps:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_1 }}" id="number_of_reps_1" name="number_of_reps_1" type="number" 
+                                                        min="1" max="20" placeholder="number of reps" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
                                             </div>
-
+            
                                         </div>
-
-                                    </div>
-
-                                    <div class="div col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="weight_used_1">Weight Used(kg):</label>
-                                            <input value="{{ workout_plan.weight_used_1 }}" id="weight_used_1" name="weight_used_1" type="number" 
-                                            min="3" max="50" placeholder="weight used" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="exercise">
-
-                            <h4>Exercise</h4>
-
-                            <div class="workout-input">
-
-                                <label for="exercise_name_2">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_2 }}" id="exercise_name_2" name="exercise_name_2" type="text" 
-                                minlength="3" maxlength="20" placeholder="exercise name" required>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_2">Number Of Sets:</label>
-                                            <input value="{{ workout_plan.number_of_sets_2 }}" id="number_of_sets_2" name="number_of_sets_2" type="number" 
-                                            min="3" max="10" placeholder="number of sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_2">Number Of Reps:</label>
-                                            <input value="{{ workout_plan.number_of_reps_2 }}" id="number_of_reps_2" name="number_of_reps_2" type="number" 
-                                            min="1" max="20" placeholder="number of reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_2">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_2 }}" name="rest_time_2" id="rest_time_2">                                             
-                                                    <option value="{{ workout_plan.rest_time_2 }}" selected>{{ workout_plan.rest_time_2 }}</option>
-                                                </select>
-
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <div>
+            
+                                                            <label for="rest_time_1">Rest Time:</label>
+                                                            <select value="{{ workout_plan.rest_time_1 }}" name="rest_time_1" id="rest_time_1">
+                                                                <option value="{{ workout_plan.rest_time_1 }}" selected>{{ workout_plan.rest_time_1 }}</option>
+                                                            </select>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="div col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="weight_used_1">Weight Used(kg):</label>
+                                                        <input value="{{ workout_plan.weight_used_1 }}" id="weight_used_1" name="weight_used_1" type="number" 
+                                                        min="3" max="50" placeholder="weight used" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
                                             </div>
-
+            
                                         </div>
-
-                                    </div>
-
-                                    <div class="div col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="weight_used_2">Weight Used(kg):</label>
-                                            <input value="{{ workout_plan.weight_used_2 }}" id="weight_used_2" name="weight_used_2" type="number" 
-                                            min="3" max="50" placeholder="weight used" required>
-
-                                        </div>
-
+                                    
                                     </div>
 
                                 </div>
-
                             </div>
 
-                        </div>
+                            <div class="accordion-item">
 
-                        <div class="exercise">
+                                <h2 class="accordion-header" id="headingTwo">
 
-                            <h4>Exercise</h4>
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        {{ workout_plan.exercise_name_2 }}
+                                    </button>
 
-                            <div class="workout-input">
+                                </h2>
 
-                                <label for="exercise_name_3">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_3 }}" id="exercise_name_3" name="exercise_name_3" type="text"
-                                minlength="3" maxlength="20" placeholder="exercise name" required>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 
-                            </div>
+                                    <div class="accordion-body">
 
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_3">Number Of Sets:</label>
-                                            <input value="{{ workout_plan.number_of_sets_3 }}" id="number_of_sets_3" name="number_of_sets_3" type="number" 
-                                            min="3" max="10" placeholder="number of sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_3">Number Of Reps:</label>
-                                            <input value="{{ workout_plan.number_of_reps_3 }}" id="number_of_reps_3" name="number_of_reps_3" type="number" 
-                                            min="1" max="20" placeholder="number of reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_3">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_3 }}" name="rest_time_3" id="rest_time_3">
-                                                    <option value="{{ workout_plan.rest_time_3 }}" selected>{{ workout_plan.rest_time_3 }}</option>
-                                                </select>
-
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_sets_2">Number Of Sets:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_2 }}" id="number_of_sets_2" name="number_of_sets_2" type="number" 
+                                                        min="3" max="10" placeholder="number of sets" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_reps_2">Number Of Reps:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_2 }}" id="number_of_reps_7" name="number_of_reps_2" type="number" 
+                                                        min="1" max="20" placeholder="number of reps" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
                                             </div>
-
+            
                                         </div>
-
-                                    </div>
-
-                                    <div class="div col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="weight_used_3">Weight Used(kg):</label>
-                                            <input value="{{ workout_plan.weight_used_3 }}" id="weight_used_3" name="weight_used_3" type="number" 
-                                            min="3" max="50" placeholder="weight used" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="exercise">
-
-                            <h4>Exercise</h4>
-
-                            <div class="workout-input">
-
-                                <label for="exercise_name_4">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_4 }}" id="exercise_name_4" name="exercise_name_4" type="text" 
-                                minlength="3" maxlength="20" placeholder="exercise name" required>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_4">Number Of Sets:</label>
-                                            <input value="{{ workout_plan.number_of_sets_4 }}" id="number_of_sets_4" name="number_of_sets_4" type="number" 
-                                            min="3" max="10" placeholder="number of sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_1">Number Of Reps:</label>
-                                            <input value="{{ workout_plan.number_of_reps_4 }}" id="number_of_reps_4" name="number_of_reps_4" type="number" 
-                                            min="1" max="20" placeholder="number of reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_4">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_4 }}" name="rest_time_4" id="rest_time_4">                                             
-                                                    <option value="{{ workout_plan.rest_time_4 }}" selected>{{ workout_plan.rest_time_4 }}</option>
-                                                </select>
-
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <div>
+            
+                                                            <label for="rest_time_7">Rest Time:</label>
+                                                            <select value="{{ workout_plan.rest_time_2 }}" name="rest_time_2" id="rest_time_2">
+                                                                <option value="{{ workout_plan.rest_time_2 }}" selected>{{ workout_plan.rest_time_2 }}</option>
+                                                            </select>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="div col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="weight_used_2">Weight Used(kg):</label>
+                                                        <input value="{{ workout_plan.weight_used_2 }}" id="weight_used_2" name="weight_used_2" type="number" 
+                                                        min="3" max="50" placeholder="weight used" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
                                             </div>
-
+            
                                         </div>
-
-                                    </div>
-
-                                    <div class="div col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="weight_used_4">Weight Used(kg):</label>
-                                            <input value="{{ workout_plan.weight_used_4 }}" id="weight_used_4" name="weight_used_4" type="number" 
-                                            min="3" max="50" placeholder="weight used" required>
-
-                                        </div>
-
+                                    
                                     </div>
 
                                 </div>
 
                             </div>
 
-                        </div>
+                            <div class="accordion-item">
 
-                        <div class="exercise">
+                                <h2 class="accordion-header" id="headingThree">
 
-                            <h4>Exercise</h4>
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        {{ workout_plan.exercise_name_3 }}
+                                    </button>
+                                </h2>
 
-                            <div class="workout-input">
-
-                                <label for="exercise_name_5">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_5 }}" id="exercise_name_5" name="exercise_name_5" type="text" 
-                                minlength="3" maxlength="20" placeholder="exercise name" required>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_5">Number Of Sets:</label>
-                                            <input value="{{ workout_plan.number_of_sets_5 }}" id="number_of_sets_5" name="number_of_sets_5" type="number" 
-                                            min="3" max="10" placeholder="number of sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_5">Number Of Reps:</label>
-                                            <input value="{{ workout_plan.number_of_reps_5 }}" id="number_of_reps_5" name="number_of_reps_5" type="number" 
-                                            min="1" max="20" placeholder="number of reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_5">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_5 }}" name="rest_time_5" id="rest_time_5">
-                                                    <option value="{{ workout_plan.rest_time_5 }}" selected>{{ workout_plan.rest_time_5 }}</option>
-                                                </select>
-
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                
+                                    <div class="accordion-body">
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_sets_3">Number Of Sets:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_3 }}" id="number_of_sets_3" name="number_of_sets_3" type="number" 
+                                                        min="3" max="10" placeholder="number of sets" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_reps_3">Number Of Reps:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_3 }}" id="number_of_reps_3" name="number_of_reps_3" type="number" 
+                                                        min="1" max="20" placeholder="number of reps" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
                                             </div>
-
+            
                                         </div>
-
-                                    </div>
-
-                                    <div class="div col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="weight_used_5">Weight Used(kg):</label>
-                                            <input value="{{ workout_plan.weight_used_5 }}" id="weight_used_5" name="weight_used_5" type="number" 
-                                            min="3" max="50" placeholder="weight used" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="exercise">
-
-                            <h4>Exercise</h4>
-
-                            <div class="workout-input">
-
-                                <label for="exercise_name_6">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_6 }}" id="exercise_name_6" name="exercise_name_6" type="text" 
-                                minlength="3" maxlength="20" placeholder="exercise name" required>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_6">Number Of Sets:</label>
-                                            <input value="{{ workout_plan.number_of_sets_6 }}" id="number_of_sets_6" name="number_of_sets_6" type="number" 
-                                            min="3" max="10" placeholder="number of sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_6">Number Of Reps:</label>
-                                            <input value="{{ workout_plan.number_of_reps_6 }}" id="number_of_reps_6" name="number_of_reps_6" type="number" 
-                                            min="1" max="20" placeholder="number of reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_6">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_6 }}" name="rest_time_6" id="rest_time_6">
-                                                    <option value="{{ workout_plan.rest_time_6 }}" selected>{{ workout_plan.rest_time_6 }}</option>
-                                                </select>
-
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <div>
+            
+                                                            <label for="rest_time_3">Rest Time:</label>
+                                                            <select value="{{ workout_plan.rest_time_3 }}" name="rest_time_3" id="rest_time_3">
+                                                                <option value="{{ workout_plan.rest_time_3 }}" selected>{{ workout_plan.rest_time_3 }}</option>
+                                                            </select>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="div col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="weight_used_3">Weight Used(kg):</label>
+                                                        <input value="{{ workout_plan.weight_used_3 }}" id="weight_used_3" name="weight_used_3" type="number" 
+                                                        min="3" max="50" placeholder="weight used" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
                                             </div>
-
+            
                                         </div>
 
                                     </div>
-
-                                    <div class="div col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="weight_used_6">Weight Used(kg):</label>
-                                            <input value="{{ workout_plan.weight_used_6 }}" id="weight_used_6" name="weight_used_6" type="number" 
-                                            min="3" max="50" placeholder="weight used" required>
-
-                                        </div>
-
-                                    </div>
-
+                              
                                 </div>
 
                             </div>
 
-                        </div>
+                            <div class="accordion-item">
 
-                        <div class="exercise">
+                                <h2 class="accordion-header" id="headingFour">
 
-                            <h4>Exercise</h4>
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        {{ workout_plan.exercise_name_4 }}
+                                    </button>
 
-                            <div class="workout-input">
+                                </h2>
 
-                                <label for="exercise_name_7">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_7 }}" id="exercise_name_7" name="exercise_name_7" type="text" 
-                                minlength="3" maxlength="20" placeholder="exercise name" required>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
 
-                            </div>
+                                    <div class="accordion-body">
 
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_7">Number Of Sets:</label>
-                                            <input value="{{ workout_plan.number_of_sets_7 }}" id="number_of_sets_7" name="number_of_sets_7" type="number" 
-                                            min="3" max="10" placeholder="number of sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_7">Number Of Reps:</label>
-                                            <input value="{{ workout_plan.number_of_reps_7 }}" id="number_of_reps_7" name="number_of_reps_7" type="number" 
-                                            min="1" max="20" placeholder="number of reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_7">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_7 }}" name="rest_time_7" id="rest_time_7">
-                                                    <option value="{{ workout_plan.rest_time_7 }}" selected>{{ workout_plan.rest_time_7 }}</option>
-                                                </select>
-
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_sets_4">Number Of Sets:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_4 }}" id="number_of_sets_4" name="number_of_sets_4" type="number" 
+                                                        min="3" max="10" placeholder="number of sets" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_reps_4">Number Of Reps:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_4 }}" id="number_of_reps_4" name="number_of_reps_4" type="number" 
+                                                        min="1" max="20" placeholder="number of reps" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
                                             </div>
-
+            
                                         </div>
-
-                                    </div>
-
-                                    <div class="div col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="weight_used_7">Weight Used(kg):</label>
-                                            <input value="{{ workout_plan.weight_used_7 }}" id="weight_used_7" name="weight_used_7" type="number" 
-                                            min="3" max="50" placeholder="weight used" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="exercise">
-
-                            <h4>Exercise</h4>
-
-                            <div class="workout-input">
-
-                                <label for="exercise_name_8">Exerise Name:</label><br>
-                                <input value="{{ workout_plan.exercise_name_8 }}" id="exercise_name_8" name="exercise_name_8" type="text" 
-                                minlength="3" maxlength="20" placeholder="exercise name" required>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_8">Number Of Sets:</label>
-                                            <input value="{{ workout_plan.number_of_sets_8 }}" id="number_of_sets_8" name="number_of_sets_8" type="number" 
-                                            min="3" max="10" placeholder="number of sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_8">Number Of Reps:</label>
-                                            <input value="{{ workout_plan.number_of_sets_8 }}" id="number_of_reps_8" name="number_of_reps_8" type="number" 
-                                            min="1" max="20" placeholder="number of reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-6">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_8">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_8 }}" name="rest_time_8" id="rest_time_8">
-                                                    <option value="{{ workout_plan.rest_time_8 }}" selected>{{ workout_plan.rest_time_8 }}</option>
-                                                </select>
-
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <div>
+            
+                                                            <label for="rest_time_4">Rest Time:</label>
+                                                            <select value="{{ workout_plan.rest_time_4 }}" name="rest_time_4" id="rest_time_4">
+                                                                <option value="{{ workout_plan.rest_time_4 }}" selected>{{ workout_plan.rest_time_4 }}</option>
+                                                            </select>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="div col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="weight_used_4">Weight Used(kg):</label>
+                                                        <input value="{{ workout_plan.weight_used_4 }}" id="weight_used_4" name="weight_used_4" type="number" 
+                                                        min="3" max="50" placeholder="weight used" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
                                             </div>
+            
+                                        </div>
+                                    
+                                    </div>
 
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header" id="headingFive">
+
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        {{ workout_plan.exercise_name_5 }}
+                                    </button>
+
+                                </h2>
+
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_sets_5">Number Of Sets:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_5 }}" id="number_of_sets_5" name="number_of_sets_5" type="number" 
+                                                        min="3" max="10" placeholder="number of sets" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_reps_5">Number Of Reps:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_5 }}" id="number_of_reps_5" name="number_of_reps_5" type="number" 
+                                                        min="1" max="20" placeholder="number of reps" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+            
+                                        </div>
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <div>
+            
+                                                            <label for="rest_time_5">Rest Time:</label>
+                                                            <select value="{{ workout_plan.rest_time_5 }}" name="rest_time_5" id="rest_time_5">
+                                                                <option value="{{ workout_plan.rest_time_5 }}" selected>{{ workout_plan.rest_time_5 }}</option>
+                                                            </select>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="div col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="weight_used_5">Weight Used(kg):</label>
+                                                        <input value="{{ workout_plan.weight_used_5 }}" id="weight_used_5" name="weight_used_5" type="number" 
+                                                        min="3" max="50" placeholder="weight used" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+            
+                                        </div>
+                                    
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header" id="headingSix">
+
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        {{ workout_plan.exercise_name_6 }}
+                                    </button>
+                                </h2>
+
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                
+                                    <div class="accordion-body">
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_sets_8">Number Of Sets:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_8 }}" id="number_of_sets_8" name="number_of_sets_8" type="number" 
+                                                        min="3" max="10" placeholder="number of sets" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_reps_8">Number Of Reps:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_8 }}" id="number_of_reps_8" name="number_of_reps_8" type="number" 
+                                                        min="1" max="20" placeholder="number of reps" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+            
+                                        </div>
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <div>
+            
+                                                            <label for="rest_time_8">Rest Time:</label>
+                                                            <select value="{{ workout_plan.rest_time_8 }}" name="rest_time_8" id="rest_time_8">
+                                                                <option value="{{ workout_plan.rest_time_8 }}" selected>{{ workout_plan.rest_time_8 }}</option>
+                                                            </select>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="div col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="weight_used_8">Weight Used(kg):</label>
+                                                        <input value="{{ workout_plan.weight_used_8 }}" id="weight_used_8" name="weight_used_8" type="number" 
+                                                        min="3" max="50" placeholder="weight used" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+            
                                         </div>
 
                                     </div>
+                              
+                                </div>
 
-                                    <div class="div col-6">
+                            </div>
 
-                                        <div class="exercise-input">
+                            <div class="accordion-item">
 
-                                            <label for="weight_used_8">Weight Used(kg):</label>
-                                            <input value="{{ workout_plan.weight_used_8 }}" id="weight_used_8" name="weight_used_8" type="number" 
-                                            min="3" max="50" placeholder="weight used" required>
+                                <h2 class="accordion-header" id="headingSeven">
 
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        {{ workout_plan.exercise_name_7 }}
+                                    </button>
+
+                                </h2>
+
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_sets_6">Number Of Sets:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_6 }}" id="number_of_sets_6" name="number_of_sets_6" type="number" 
+                                                        min="3" max="10" placeholder="number of sets" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_reps_6">Number Of Reps:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_6 }}" id="number_of_reps_6" name="number_of_reps_6" type="number" 
+                                                        min="1" max="20" placeholder="number of reps" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+            
                                         </div>
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <div>
+            
+                                                            <label for="rest_time_6">Rest Time:</label>
+                                                            <select value="{{ workout_plan.rest_time_6 }}" name="rest_time_8" id="rest_time_6">
+                                                                <option value="{{ workout_plan.rest_time_6 }}" selected>{{ workout_plan.rest_time_6 }}</option>
+                                                            </select>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="div col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="weight_used_6">Weight Used(kg):</label>
+                                                        <input value="{{ workout_plan.weight_used_6 }}" id="weight_used_6" name="weight_used_6" type="number" 
+                                                        min="3" max="50" placeholder="weight used" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+            
+                                        </div>
+                                    
+                                    </div>
 
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        {{ workout_plan.exercise_name_8 }}
+                                    </button>
+                                </h2>
+
+                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_sets_7">Number Of Sets:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_7 }}" id="number_of_sets_7" name="number_of_sets_7" type="number" 
+                                                        min="3" max="10" placeholder="number of sets" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="number_of_reps_7">Number Of Reps:</label>
+                                                        <input value="{{ workout_plan.number_of_sets_7 }}" id="number_of_reps_7" name="number_of_reps_7" type="number" 
+                                                        min="1" max="20" placeholder="number of reps" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+            
+                                        </div>
+            
+                                        <div class="container-fluid">
+            
+                                            <div class="row">
+            
+                                                <div class="col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <div>
+            
+                                                            <label for="rest_time_7">Rest Time:</label>
+                                                            <select value="{{ workout_plan.rest_time_7 }}" name="rest_time_7" id="rest_time_7">
+                                                                <option value="{{ workout_plan.rest_time_7 }}" selected>{{ workout_plan.rest_time_7 }}</option>
+                                                            </select>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="div col-6">
+            
+                                                    <div class="exercise-input">
+            
+                                                        <label for="weight_used_7">Weight Used(kg):</label>
+                                                        <input value="{{ workout_plan.weight_used_7 }}" id="weight_used_7" name="weight_used_7" type="number" 
+                                                        min="3" max="50" placeholder="weight used" required>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+            
+                                        </div>
+                                    
                                     </div>
 
                                 </div>

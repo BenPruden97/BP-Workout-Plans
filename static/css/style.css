@@ -27,6 +27,10 @@ dl, ol, ul {
     margin-bottom: 0;
 }
 
+div.col-12{
+    padding: 0;
+}
+
 .col-12{
     padding: 0;
 }
@@ -691,7 +695,11 @@ footer{
 }
 
 .card-workout-stats hr{
+    margin: 1rem 0;
+    color: none;
+    background-color: black;
     border: 1px solid black;
+    opacity: 1;
 }
 
 .view-workout{
