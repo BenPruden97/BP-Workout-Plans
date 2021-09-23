@@ -733,13 +733,14 @@
 
                                                 <label for="rest_time_8">Rest Time:</label>
                                                 <select value="{{ workout_plan.rest_time_8 }}" name="rest_time_8" id="rest_time_8">
-                                                {% if workout_plan.rest_time_8 == workout_plan.rest_time_8 %}
-                                                <option value="{{ workout_plan.rest_time_8 }}" selected>{{ workout_plan.rest_time_8 }}</option>
-                                                {% else %}
-                                                <option value="{{ workout_plan.rest_time }}">{{ workout_plan.rest_time }}</option>
-                                                {% endif %}
+                                                    {% for rest_time in ["15 Secs", "30 Secs", "45 Secs", "60 Secs", "75 Secs", "90 Secs", "105 Secs", "120 Secs"] %}
+                                                        {% if rest_time == workout_plan.rest_time_8 == workout_plan.rest_time_8 %}
+                                                        <option value="{{ workout_plan.rest_time_8 }}" selected>{{ workout_plan.rest_time_8 }}</option>
+                                                        {% else %}
+                                                        <option value="{{ rest_time }}">{{ rest_time }}</option>
+                                                        {% endif %}
+                                                    {% endfor %}
                                                 </select>
-
                                             </div>
 
                                         </div>
@@ -774,11 +775,13 @@
 
                                         <label for="total_exercise_amount">Total Amount of Exercises:</label>
                                         <select name="total_exercise_amount" id="total_exercise_amount" required>
-                                                {% if workout_plan.total_exercise_amount %}
+                                            {% for amount in ["1", "2", "3", "4", "5", "6", "7", "8"] %}
+                                                {% if amount == workout_plan.total_exercise_amount %}
                                                     <option value="{{ workout_plan.total_exercise_amount }}" selected>{{ workout_plan.total_exercise_amount }}</option>
                                                 {% else %}
-                                                    <option value="{{ workout_plan.total_exercise_amount }}">{{ workout_plan.total_exercise_amount }}</option>
+                                                    <option value="{{ amount }}">{{ amount }}</option>
                                                 {% endif %}
+                                            {% endfor %}
                                         </select>
 
                                     </div>
@@ -791,11 +794,13 @@
 
                                         <label for="total_workout_time">Total Workout Time:</label>
                                         <select name="total_workout_time" id="total_workout_time" required>
-                                                {% if workout_plan.total_workout_time %}
+                                            {% for time in ["15 Mins", "30 Mins", "45 Mins", "60 Mins", "75 Mins", "90 Mins", "105 Mins", "120 Mins"] %}
+                                                {% if time == workout_plan.total_workout_time %}
                                                     <option value="{{ workout_plan.total_workout_time }}" selected>{{ workout_plan.total_workout_time }}</option>
                                                 {% else %}
-                                                    <option value="{{ workout_plan.total_workout_time }}">{{ workout_plan.total_workout_time }}</option>
+                                                    <option value="{{ time }}">{{ time }}</option>
                                                 {% endif %}
+                                            {% endfor %}
                                         </select>
 
                                     </div>
