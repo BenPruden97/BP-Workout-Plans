@@ -728,49 +728,6 @@ footer{
     text-decoration: none;
 }
 
-.workout-edit-delete{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.edit-workout{
-    width: 25%;
-    background-color: #118324;
-    color: #fafafa;
-    padding: 0.5rem;
-    border: 2px solid #118324;
-    cursor: pointer;
-    margin: 0 1rem 1rem; 
-    transition: 0.5s;
-    text-decoration: none;
-    text-align: center;
-}
-
-.edit-workout:hover{
-    background-color: #fafafa;
-    color: #118324;
-    text-decoration: none;
-}
-
-.delete-workout{
-    width: 25%;
-    background-color: #db0007;
-    color: #fafafa;
-    padding: 0.5rem;
-    border: 2px solid #db0007;
-    cursor: pointer;
-    margin: 0 1rem 1rem; 
-    transition: 0.5s;
-    text-decoration: none;
-}
-
-.delete-workout:hover{
-    background-color: #fafafa;
-    color: #db0007;
-    text-decoration: none;
-}
-
 /* --------------- create_workout.html Styling ---------------*/
 
 /* ----- Create A Workout Plan Section Styling ----- */
@@ -947,6 +904,124 @@ footer{
 
 /* ----- workout_plan.html Styling ----- */
 
+.workout-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.chest-workout-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/chest-category-large.jpg") no-repeat center center;
+    width: 500px;
+    height: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chest-workout-image h3{
+    color: #fafafa;
+    padding: 0.25rem;
+}
+
+.back-workout-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/back-category-large.jpg") no-repeat center center;
+    width: 500px;
+    height: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.back-workout-image h3{
+    color: #fafafa;
+    padding: 0.25rem;
+}
+
+.arms-workout-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/arm-category-large.jpg") no-repeat center center;
+    width: 500px;
+    height: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.arms-workout-image h3{
+    color: #fafafa;
+    padding: 0.25rem;
+}
+
+.legs-workout-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/leg-category-large.jpg") no-repeat center center;
+    width: 500px;
+    height: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.legs-workout-image h3{
+    color: #fafafa;
+    padding: 0.25rem;
+}
+
+.shoulders-workout-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/shoulders-category-large.jpg") no-repeat center center;
+    width: 500px;
+    height: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.shoulders-workout-image h3{
+    color: #fafafa;
+    padding: 0.25rem;
+}
+
+div.accordion-item h2{
+    text-align: center;
+}
+
+button.accordion-button.collapsed{
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.workout-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.workout-options-section{
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
 .like-created{
     text-align: center;
     padding-bottom: 1.5rem;
@@ -956,14 +1031,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid black;
-    padding-top: 1rem;
 }
 
 .like-workout{
     background-color: #fafafa;
     color: #118324;
-    width: 85%;
+    width: 60%;
     padding: 0.5rem;
     border: 2px solid #118324;
     border-radius: 5px;
@@ -971,6 +1044,7 @@ footer{
     margin: 0.5rem;
     transition: 0.5s;
     text-align: center;
+    text-decoration: none;
 }
 
 .like-workout i{
@@ -987,7 +1061,7 @@ footer{
 .go-back{
     background-color: #fafafa;
     color: #db0007;
-    width: 75%;
+    width: 60%;
     padding: 0.5rem;
     border: 2px solid #db0007;
     border-radius: 5px;
@@ -995,6 +1069,7 @@ footer{
     margin: 0.5rem;
     transition: 0.5s;
     text-align: center;
+    text-decoration: none;
 }
 
 .go-back i{
@@ -1003,6 +1078,75 @@ footer{
 }
 
 .go-back:hover{
+    background-color: #db0007;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.workout-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.workout-edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workout-edit a{
+    background-color: #fafafa;
+    color: #118324;
+    width: 60%;
+    padding: 0.5rem;
+    border: 2px solid #118324;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: 0.5s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.workout-edit i{
+    padding-right: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.workout-edit a:hover{
+    background-color: #118324;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.workout-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workout-delete i{
+    padding-right: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.workout-delete a{
+    background-color: #fafafa;
+    color: #db0007;
+    width: 60%;
+    padding: 0.5rem;
+    border: 2px solid #db0007;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: 0.5s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.workout-delete a:hover{
     background-color: #db0007;
     color: #fafafa;
     text-decoration: none;
@@ -1366,6 +1510,7 @@ footer{
     border-bottom: 2px solid black;
     border-right: 2px solid black;
 }
+
 
 .recent-liked-plan h4{
     text-align: center;
