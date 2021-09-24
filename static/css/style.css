@@ -27,6 +27,10 @@ dl, ol, ul {
     margin-bottom: 0;
 }
 
+row.col-12{
+    padding: 0;
+}
+
 div.col-12{
     padding: 0;
 }
@@ -35,7 +39,8 @@ div.col-12{
     padding: 0;
 }
 
-.col-12.col-md-6.col-lg-4{
+.col-12.col-md-6.col-lg-4,
+.col-lg-3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,6 +115,7 @@ div.col-12{
     border: 2px solid black;
     border-radius: 10px;
     transition: 0.5s;
+    text-decoration: none;
 }
 
 .nav-logo a:hover{
@@ -329,11 +335,11 @@ footer{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     text-align: center;
-    padding: 1rem 0 2.5rem;
+    padding: 1rem 0 2rem;
 }
 
 .home-text h1{
-    padding: 1rem 0 0.5rem;
+    padding: 0 0 0.5rem;
 }
 
 .home-text h5{
@@ -341,10 +347,10 @@ footer{
 }
 
 .home-text h4{
-    padding: 0.25rem 10rem 1.5rem;
+    padding: 0.25rem 0 2rem;
 }
 
-.home-find-workout{
+.home-text a{
     width: 25%;
     background-color: #fafafa;
     color: black;
@@ -357,7 +363,7 @@ footer{
     text-decoration: none;
 }
 
-.home-find-workout:hover{
+.home-text a:hover{
     background-color: black;
     color: #fafafa;
     text-decoration: none;
@@ -909,6 +915,7 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .chest-workout-image{
@@ -920,8 +927,7 @@ footer{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/chest-category-large.jpg") no-repeat center center;
     width: 500px;
     height: 350px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 
 .chest-workout-image h3{
@@ -938,8 +944,7 @@ footer{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/back-category-large.jpg") no-repeat center center;
     width: 500px;
     height: 350px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 
 .back-workout-image h3{
@@ -956,8 +961,7 @@ footer{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/arm-category-large.jpg") no-repeat center center;
     width: 500px;
     height: 350px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 
 .arms-workout-image h3{
@@ -974,8 +978,7 @@ footer{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/leg-category-large.jpg") no-repeat center center;
     width: 500px;
     height: 350px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 
 .legs-workout-image h3{
@@ -992,13 +995,59 @@ footer{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/shoulders-category-large.jpg") no-repeat center center;
     width: 500px;
     height: 350px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 
 .shoulders-workout-image h3{
     color: #fafafa;
     padding: 0.25rem;
+}
+
+.plan-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workout-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 1rem 0.5rem 0;
+    width: 225px;
+}
+
+.workout-display h6{
+    padding-top: 0.5rem;
+}
+
+.workout-display p{
+    font-weight: bold;
+}
+
+.plan-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+    padding-bottom: 1rem;
+}
+
+.plan-description h3{
+    padding: 1rem;
+}
+
+.plan-description p{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    padding-bottom: 2rem;
+    width: 600px;
 }
 
 div.accordion-item h2{
@@ -1014,12 +1063,13 @@ button.accordion-button.collapsed{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 1rem;
     padding-bottom: 1.5rem;
 }
 
 .workout-options-section{
-    margin-top: 1rem;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .like-created{
@@ -1601,42 +1651,6 @@ button.accordion-button.collapsed{
         background-color: #db0007;
         width: 100%;
         height: 65vh;
-    }
-    .nav-logo a{
-        font-size: 1.5rem;
-    }
-    nav .nav li{
-        font-size: 0.8rem;
-        padding: 0.5rem 0.25rem;
-        padding-bottom: 1rem;
-    }
-    nav .nav li a{
-        font-size: 1rem;
-        padding: 0.3rem;
-    }
-    nav .nav li a:hover{
-        padding: 0.3rem;
-    }
-    nav .nav .contact{
-        padding: 0.3rem;
-        font-size: 1rem;
-    }
-    nav .nav .contact:hover{
-        padding: 0.3rem;
-    }
-    nav .nav .sign-up{
-        padding: 0.3rem;
-        font-size: 1rem;
-    }
-    nav .nav .sign-up:hover{
-        padding: 0.3rem;
-    } 
-    nav .nav .log-in{
-        padding: 0.3rem;
-        font-size: 1rem;
-    }
-    nav .nav .log-in:hover{
-        padding: 0.3rem;
     }
     .sign-up-card{
         justify-content: center;
