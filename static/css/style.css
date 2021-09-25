@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* ----- Padding & Margin Fixes ----- */
+
 *{
     padding: 0;
     margin: 0;
@@ -12,14 +14,18 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
+div.profile-section{
+    padding: 0;
+}
+
 .row{
     margin-right: 0;
     margin-left: 0;
 }
 
-.container-fluid{
-    padding-right: 0;
+.row>*{
     padding-left: 0;
+    padding-right: 0;
 }
 
 dl, ol, ul {
@@ -35,6 +41,10 @@ div.col-12{
     padding: 0;
 }
 
+div.col-lg-12{
+    padding: 0;
+}
+
 .col-12{
     padding: 0;
 }
@@ -45,6 +55,8 @@ div.col-12{
     justify-content: center;
     align-items: center;
 }
+
+/* ----- Flashes Styling ----- */
 
 .flashes-section{
     display: flex;
@@ -520,7 +532,7 @@ footer{
 }
 
 .search-input input{
-    width: 50%;
+    width: 650px;
     padding: 0.5rem;
     margin: 0.25rem 0 1rem;
     color: black;
@@ -553,9 +565,9 @@ footer{
     margin: 0.5rem 1rem;
     padding: 0.5rem 2rem;
     background-color: #fafafa;
-    border: 2px solid black;
+    border: 2px solid #009dff;
     border-radius: 5px;
-    color: black;
+    color: #009dff;
     cursor: pointer;
     transition: 0.5s;
     text-decoration: none;
@@ -563,7 +575,7 @@ footer{
 
 .search-input button:hover{
     color: #fafafa;
-    background-color: black;
+    background-color: #009dff;
 }
 
 .row-color{
@@ -1515,66 +1527,140 @@ button.accordion-button.collapsed{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2.5rem;
+    flex-direction: column;
+    padding: 2rem 0 2rem;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
 
 .profile-heading h1{
+    color: black;
+    text-transform: uppercase;
+}
+
+.profile-heading h3{
     text-align: center;
     background-color: #fafafa;
     color: black;
     text-transform: uppercase;
+}
+
+.profile-heading h5{
+    color: black;
+    padding: 0.5rem 0 0.5rem;
+}
+
+.profile-h2{
+    color: black;
+    border-bottom: 2px solid black;
+    padding: 1.5rem 0 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
     margin: 0;
+}
+
+.profile-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.liked-plan-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .profile-options{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+}
+
+.profile-options h4,
+.liked-plan-options h4{
+    font-size: 1.5rem;
+    padding: 1.5rem 0 0.5rem;
+}
+
+.profile-options h6,
+.liked-plan-options h6{
+    padding: 0.5rem 0 1rem;
+}
+
+.profile-options a,
+.liked-plan-options a{
+    background-color: #fafafa;
+    color: black;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: 0.5s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.profile-options a:hover,
+.liked-plan-options a:hover{
+    color: #fafafa;
     background-color: black;
 }
 
-.profile-options h4{
+.edit-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #118324;
+    color: #fafafa;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.delete-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #db0007;
+    color: #fafafa;
+    border-bottom: 2px solid black;
+}
+
+.edit-account h4,
+.delete-account h4{
+    font-size: 1.5rem;
+    padding: 1.5rem 0 0.5rem;
+}
+
+.edit-account h6,
+.delete-account h6{
+    padding: 0.5rem 0 1rem;
+}
+
+.edit-account a,
+.delete-account a{
     background-color: #fafafa;
     color: black;
-    margin: 0.5rem;
     padding: 0.5rem;
-    text-decoration: none;
-    border: 2px solid #fafafa;
+    margin-bottom: 2rem;
+    border: 2px solid black;
     border-radius: 5px;
     transition: 0.5s;
-    font-size: 1.25rem;
-}
-
-.profile-options h4:hover{
-    background-color: grey;
-    color: #fafafa;
     text-decoration: none;
-    border: 2px solid grey;
-    cursor: pointer;
-}
-
-.recent-liked-plan{
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-}
-
-
-.recent-liked-plan h4{
     text-align: center;
-    padding: 2rem 0 1rem;
 }
 
-.recent-workout-plan{
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-}
-
-.recent-workout-plan h4{
-    text-align: center;
-    padding: 2rem 0 1rem;
+.edit-account a:hover,
+.delete-account a:hover{
+    color: #fafafa;
+    background-color: black;
 }
 
 @media (max-width: 1100px) {
