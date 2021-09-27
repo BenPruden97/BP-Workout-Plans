@@ -257,6 +257,12 @@ def delete_workout(workout_plan_id):
     return redirect(url_for('find_workouts'))
 
 
+@app.route("/edit_account")
+def edit_account():
+
+    return render_template(('edit_account.html'))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

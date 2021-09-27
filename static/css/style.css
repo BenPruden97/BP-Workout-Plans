@@ -1663,6 +1663,188 @@ button.accordion-button.collapsed{
     background-color: black;
 }
 
+/* ----- Edit Account Page Stlying ----- */
+
+.edit-account-heading{
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.change-username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1.5rem 0;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.change-username h3{
+    color: black;
+    text-transform: uppercase;
+    padding: 1rem 0 1.5rem;
+}
+
+.change-username-input i{
+    color: black;
+}
+
+.change-username-input input{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.25rem;
+    width: 350px;
+}
+
+.change-username-input input::placeholder{
+    color: black;
+}
+
+.change-username-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1rem;
+}
+
+.change-username-edit a{
+    text-decoration: none;
+    color: #118324;
+    background-color: #fafafa;
+    border: 2px solid #118324;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: 0.5s;
+}
+
+.change-username-edit a:hover{
+    background-color: #118324;
+    color: #fafafa;
+}
+
+.change-cancel a{
+    text-decoration: none;
+    color: #db0007;
+    background-color: #fafafa;
+    border: 2px solid #db0007;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: 0.5s;
+}
+
+.change-cancel a:hover{
+    background-color: #db0007;
+    color: #fafafa;
+}
+
+.change-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1.5rem 0;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.change-password h3{
+    color: black;
+    text-transform: uppercase;
+    padding: 1rem 0 1.5rem;
+}
+
+.change-password-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.25rem;
+    width: 500px;
+}
+
+.new-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0
+}
+
+.new-password i{
+    color: black;
+    padding-right: 0.5rem;
+}
+
+.new-password input{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.25rem;
+    width: 350px;
+}
+
+.new-password input::placeholder{
+    color: black;
+}
+
+.new-change-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0
+}
+
+.new-change-password i{
+    color: black;
+    padding-right: 0.5rem;
+}
+
+.new-change-password input{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.25rem;
+    width: 350px;
+}
+
+.new-change-password input::placeholder{
+    color: black;
+}
+
+.change-password-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1rem;
+}
+
+.change-password-edit a{
+    text-decoration: none;
+    color: #118324;
+    background-color: #fafafa;
+    border: 2px solid #118324;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: 0.5s;
+}
+
+.change-password-edit a:hover{
+    background-color: #118324;
+    color: #fafafa;
+}
+
 @media (max-width: 1100px) {
 
     .sign-up-card{
