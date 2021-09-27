@@ -1663,6 +1663,74 @@ button.accordion-button.collapsed{
     background-color: black;
 }
 
+/* ----- Delete Account Modal ----- */
+
+.delete-modal{
+    display: none;
+    height: 108vh;
+    width: 100%;
+    position: relative;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 7;
+}
+
+.delete-modal-content{
+    background-color: #fafafa;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+}
+
+.delete-modal-content h3{
+    color: black;
+    padding-bottom: 1rem;
+}
+
+.delete-modal-content p{
+    color: black;
+    padding-bottom: 1rem;
+}
+
+.yes-delete-account{
+    text-decoration: none;
+    color: #118324;
+    background-color: #fafafa;
+    border: 2px solid #118324;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: 0.5s;
+}
+
+.yes-delete-account:hover{
+    background-color: #118324;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.no-delete-account{
+    text-decoration: none;
+    color: #db0007;
+    background-color: #fafafa;
+    border: 2px solid #db0007;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: 0.5s;
+}
+
+.no-delete-account:hover{
+    background-color: #db0007;
+    color: #fafafa;
+    text-decoration: none;
+}
+
 /* ----- Edit Account Page Stlying ----- */
 
 .edit-account-heading{

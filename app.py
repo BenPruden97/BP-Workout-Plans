@@ -263,6 +263,16 @@ def edit_account():
     return render_template(('edit_account.html'))
 
 
+@app.route("/delete_member/<username>")
+def delete_member(username):
+
+    mongo.db.members.remove({"username": username.lower()})
+    flash("Your Profile Has Been Deleted")
+    session.pop("member")
+
+    return redirect(url_for('home'))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

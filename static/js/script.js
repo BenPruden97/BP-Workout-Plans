@@ -32,3 +32,8 @@ workoutCard.addEventListener('mouseleave', e => {
     document.querySelector("#workout-options").style.display = "none";
 });
 
+function deleteAccount() {
+    document.getElementById("delete-modal").style.display = "block"
+    document.getElementsByClassName("no-delete-account").style.display = "none"
+}
+
