@@ -9,7 +9,7 @@
 
                 <h1 class="edit-account-heading">Edit Account</h1>
 
-                <div class="change-username">
+                <form class="change-username" method="POST" action="{{ url_for('edit_account', username=session['member']) }}">
 
                     <h3>Change Your Username</h3>
 
@@ -17,26 +17,28 @@
 
                         <i class="fas fa-user"></i>
 
-                        <label for="new-username"></label>
-                        <input id="new-username" name="new-username" type="text" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" placeholder="update username" required>
+                        <label for="username"></label>
+                        <input id="username" name="username" type="text" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" placeholder="update username" required>
                     
                     </div>
 
-                <div class="change-username-options">
+                    <div class="change-username-options">
 
-                    <div class="change-username-edit">
+                        <div class="change-username-edit">
 
-                        <a href="#">Update Username</a>
+                            <button type="submit">Update Username</button>
+
+                        </div>
+
+                        <div class="change-cancel">
+        
+                            <a href="{{ url_for('profile', username=session['member']) }}">Cancel</a>        
+                        
+                        </div>
 
                     </div>
-
-                    <div class="change-cancel">
-    
-                        <a href="#">Cancel</a>        
                     
-                    </div>
-
-                </div>                
+                </form>
 
             </div>
 
@@ -54,44 +56,46 @@
 
                     <h3>Change Your Password</h3>
 
-                    <div class="change-password-input">
+                    <form class="change-password-input" method="POST" action="{{ url_for('edit_account', username=session['member']) }}">
 
                         <div class="new-password">
 
                             <i class="fas fa-lock"></i>
-                            <input id="new-password" name="new-password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
+                            <label for="password"></label>
+                            <input id="password" class="new_password" name="password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
                                 placeholder="new password" onkeyup="checkNewPasswords();" required>
 
                         </div>
 
                         <div class="new-change-password">
 
+                            <i class="fas fa-shield-alt"></i>
 
-                        <i class="fas fa-shield-alt"></i>
-
-                            <label for="new-confirm_password"></label>
-                            <input id="new-confirm_password" name="new-confirm_password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
+                            <label for="confirm_password"></label>
+                            <input id="confirm_password" class="new_confirm_password" name="confirm_password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9$@$!%*?&.]{5,15}$" 
                                 placeholder="confirm updated password" onkeyup="checkNewPasswords();" required>
-                                
+
                         </div>
+
+                        <div id="new-passwords-match"></div>
                     
-                    </div>
+                        <div class="change-password-options">
 
-                    <div class="change-password-options">
+                            <div class="change-password-edit">
 
-                        <div class="change-password-edit">
+                                <button type="submit" id="new-submit" disabled>Update Password</button>
 
-                            <a href="#">Update Password</a>
+                            </div>
 
-                        </div>
-
-                        <div class="change-cancel">
-    
-                            <a href="#">Cancel</a>  
+                            <div class="change-cancel">
+        
+                                <a href="{{ url_for('profile', username=session['member']) }}">Cancel</a>  
+                            
+                            </div>
                         
                         </div>
-                    
-                    </div>
+
+                    </form>
 
                 </div> 
 

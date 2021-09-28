@@ -1383,6 +1383,11 @@ button.accordion-button.collapsed{
     font-size: 0.8rem;
 }
 
+#new-passwords-match{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 .sign-up-button{
     display: flex;
     justify-content: center;
@@ -1784,8 +1789,7 @@ button.accordion-button.collapsed{
     padding: 2rem 0 1rem;
 }
 
-.change-username-edit a{
-    text-decoration: none;
+.change-username-edit button{
     color: #118324;
     background-color: #fafafa;
     border: 2px solid #118324;
@@ -1795,7 +1799,7 @@ button.accordion-button.collapsed{
     transition: 0.5s;
 }
 
-.change-username-edit a:hover{
+.change-username-edit button:hover{
     background-color: #118324;
     color: #fafafa;
 }
@@ -1897,7 +1901,7 @@ button.accordion-button.collapsed{
     padding: 2rem 0 1rem;
 }
 
-.change-password-edit a{
+.change-password-edit button{
     text-decoration: none;
     color: #118324;
     background-color: #fafafa;
@@ -1908,7 +1912,7 @@ button.accordion-button.collapsed{
     transition: 0.5s;
 }
 
-.change-password-edit a:hover{
+.change-password-edit button:hover{
     background-color: #118324;
     color: #fafafa;
 }

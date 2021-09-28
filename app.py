@@ -257,10 +257,20 @@ def delete_workout(workout_plan_id):
     return redirect(url_for('find_workouts'))
 
 
-@app.route("/edit_account")
-def edit_account():
+@app.route("/edit_account/<username>", methods=["GET", "POST"])
+def edit_account(username):
+    if request.method == "POST":
 
-    return render_template(('edit_account.html'))
+        mongo.db.members.update_one({"username": session['member']},
+                                    {'$set': {
+                                        "username": request.form.get("username").lower(),
+                                    }})
+        flash("Your Username Has Been Updated")
+        session.pop("member")
+
+        return render_template("log_in.html")
+
+    return render_template("edit_account.html")
 
 
 @app.route("/delete_member/<username>")
