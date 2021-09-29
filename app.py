@@ -27,6 +27,18 @@ def home():
     return render_template("index.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
 
 
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+
+    query = request.form.get("query")
+
+    workout_plans = mongo.db.workout_plans.find({"$text": {"$search": query}})
+    workout_difficulties = mongo.db.workout_difficulties.find()
+    workout_categories = mongo.db.workout_categories.find()
+    return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
+
+
 @app.route("/find_workouts")
 def find_workouts():
 
@@ -43,17 +55,6 @@ def workout_plan(workout_plan_id):
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
     return render_template("workout_plan.html", workout_plan=workout_plan, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
-
-
-@app.route("/search", methods=["GET", "POST"])
-def search():
-
-    query = request.form.get("query")
-
-    workout_plans = mongo.db.workout_plans.find({"$text": {"$search": query}})
-    workout_difficulties = mongo.db.workout_difficulties.find()
-    workout_categories = mongo.db.workout_categories.find()
-    return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
 
 
 @app.route("/sign_up", methods=["GET", "POST"])
@@ -285,12 +286,22 @@ def delete_member(username):
 
 @app.route("/liked_workouts")
 def liked_workouts():
-    return render_template("liked_workouts.html")
+
+    username = mongo.db.members.find_one(
+        {"username": session["member"]})["username"]
+
+    return render_template("liked_workouts.html", username=username)
 
 
-@app.route("/my_workouts")
-def my_workouts():
-    return render_template("my_workouts.html")
+@app.route("/my_workouts/<username>", methods=["GET", "POST"])
+def my_workouts(username):
+
+    username = mongo.db.members.find_one(
+        {"username": session["member"]})["username"]
+
+    workout_plans = mongo.db.workout_plans.find({"created_by": username.lower()})
+    
+    return render_template("my_workouts.html", username=username, workout_plans=workout_plans)
 
 
 if __name__ == "__main__":

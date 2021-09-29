@@ -98,7 +98,7 @@
                         {% if session.member|lower %}
                         <li><a href="#"><i class="fas fa-user-cog"></i></a></li>
                         <li><a href="{{ url_for('liked_workouts') }}">My Liked Workout Plans</a></li>
-                        <li><a href="{{ url_for('my_workouts') }}">My Workout Plans</a></li>
+                        <li><a href="{{ url_for('my_workouts', username=session['member']) }}">My Workout Plans</a></li>
                         <li><a href="{{ url_for('profile', username=session['member']) }}">View Profile</a></li>
                         <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
                         {% endif %}

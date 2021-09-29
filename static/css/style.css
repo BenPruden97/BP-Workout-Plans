@@ -1917,6 +1917,88 @@ button.accordion-button.collapsed{
     color: #fafafa;
 }
 
+/* ----- My Workout Plans Page Styling ----- */
+
+.my-workout-text{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding: 1rem 0 2rem;
+}
+
+.my-workout-text h1{
+    text-transform: uppercase;
+    padding: 0 0 0.5rem;
+}
+
+.my-workout-text h5{
+    padding: 0.5rem 10rem;
+}
+
+.my-workout-text h6{
+    padding: 0.25rem 0 2rem;
+}
+
+.my-workout-text a{
+    width: 25%;
+    background-color: #fafafa;
+    color: black;
+    padding: 0.75rem;
+    margin: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.my-workout-text a:hover{
+    background-color: black;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+/* ----- Liked Workout Plans Page Styling ----- */
+
+.liked-workout-text{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding: 1rem 0 2rem;
+}
+
+.liked-workout-text h1{
+    text-transform: uppercase;
+    padding: 0 0 0.5rem;
+}
+
+.liked-workout-text h5{
+    padding: 0.5rem 10rem;
+}
+
+.liked-workout-text h6{
+    padding: 0.25rem 0 2rem;
+}
+
+.liked-workout-text a{
+    width: 25%;
+    background-color: #fafafa;
+    color: black;
+    padding: 0.75rem;
+    margin: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.liked-workout-text a:hover{
+    background-color: black;
+    color: #fafafa;
+    text-decoration: none;
+}
+
 @media (max-width: 1100px) {
 
     .sign-up-card{

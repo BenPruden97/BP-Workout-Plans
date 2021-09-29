@@ -7,7 +7,7 @@
 
             <div class="col-12">
 
-                <div class="home-text">
+                <div class="my-workout-text">
 
                     <h1>{{ username }}'s Workout Plans</h1>
 
@@ -20,6 +20,84 @@
                 </div>
 
             </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row row-color">
+
+            {% for workout_plan in workout_plans %}
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="workout-card">
+
+                        <div class="individual-card" id="individual-card">
+
+                            <a class="card-link" href="{{ url_for('workout_plan', workout_plan_id=workout_plan._id) }}"><div class="card-image-section">
+
+                                {% if workout_plan.workout_category == 'Chest' %}
+                                    <div class="chest-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Back' %}
+                                    <div class="back-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Arms' %}
+                                    <div class="arms-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% elif workout_plan.workout_category == 'Legs' %}
+                                    <div class="legs-image-section">
+                                        <h5>{{ workout_plan.workout_name }}</h5>
+                                    </div>
+                                {% else %}
+                                <div class="shoulders-image-section">
+                                    <h5>{{ workout_plan.workout_name }}</h5>
+                                </div>
+                                {% endif %}
+
+                            </div></a>
+
+                            <div class="card-workout-stats">
+
+                                <p>Muscle Group: {{ workout_plan.workout_category }}</p>
+
+                                <hr>
+
+                                <p>Workout Difficulty: {{ workout_plan.workout_difficulty }}</p>
+
+                                <hr>
+
+                                <p>Total Exercise Amount: {{ workout_plan.total_exercise_amount }}</p>
+
+                                <hr>
+
+                                <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
+
+                                <hr>
+
+                                <p>Created By: {{ workout_plan.created_by }}</p>
+
+                            </div>
+                            
+                            <div class="view-workout">
+
+                                <a href="{{ url_for('workout_plan', workout_plan_id=workout_plan._id) }}">View Workout</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
 
         </div>
 
