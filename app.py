@@ -283,6 +283,16 @@ def delete_member(username):
     return redirect(url_for('home'))
 
 
+@app.route("/liked_workouts")
+def liked_workouts():
+    return render_template("liked_workouts.html")
+
+
+@app.route("/my_workouts")
+def my_workouts():
+    return render_template("my_workouts.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

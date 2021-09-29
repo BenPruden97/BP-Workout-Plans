@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="home-text">
+
+                    <h1>{{ username }}'s Workout Plans</h1>
+
+                    <h5>Here are all of the workout plans you have created!</h5>
+
+                    <h6>If you currently don't have any workout plans, you can create your own workout plan to share with the BP Workout Plans Community.</h6>
+
+                    <a href="{{ url_for('create_workout') }}">Create A Workout Plan</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
