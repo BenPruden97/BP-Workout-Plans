@@ -1120,6 +1120,31 @@ button.accordion-button.collapsed{
     text-decoration: none;
 }
 
+.remove-workout{
+    background-color: #fafafa;
+    color: #db0007;
+    width: 60%;
+    padding: 0.5rem;
+    border: 2px solid #db0007;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: 0.5s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.remove-workout i{
+    padding-right: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.remove-workout:hover{
+    background-color: #db0007;
+    color: #fafafa;
+    text-decoration: none;
+}
+
 .go-back{
     background-color: #fafafa;
     color: #db0007;

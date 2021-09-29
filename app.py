@@ -27,7 +27,6 @@ def home():
     return render_template("index.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
 
 
-
 @app.route("/search", methods=["GET", "POST"])
 def search():
 
@@ -71,6 +70,7 @@ def sign_up():
             "username": request.form.get("username").lower(),
             "email": request.form.get("email").lower(),
             "password": generate_password_hash(request.form.get("password")),
+            "liked_workout_plans": []
         }
         mongo.db.members.insert_one(sign_up)
 
@@ -253,7 +253,10 @@ def edit_workout(workout_plan_id):
 
 @app.route("/delete_workout/<workout_plan_id>")
 def delete_workout(workout_plan_id):
-    mongo.db.workout_plans.remove({"_id": ObjectId(workout_plan_id)})
+
+    mongo.db.workout_plans.remove(
+        {"_id": ObjectId(workout_plan_id)})
+
     flash("Workout Plan Successfully Deleted")
     return redirect(url_for('find_workouts'))
 
@@ -284,13 +287,92 @@ def delete_member(username):
     return redirect(url_for('home'))
 
 
-@app.route("/liked_workouts")
-def liked_workouts():
+@app.route("/liked_workouts/<username>", methods=["GET", "POST"])
+def liked_workouts(username):
+
+    username = mongo.db.members.find_one(
+        {"username": session["member"]})
+
+    member = mongo.db.members.find_one({"username": session["member"]})
+
+    likes = mongo.db.members.find(member)
+
+    liked_workouts = member["liked_workout_plans"]
+
+    liked = mongo.db.workout_plans.find({"_id": {"$in": liked_workouts}})
+
+    return render_template("liked_workouts.html", username=username, likes=likes, liked=liked)
+
+
+@app.route("/add_liked_workouts/<workout_plan_id>", methods=["GET", "POST"])
+def add_liked_workouts(workout_plan_id):
 
     username = mongo.db.members.find_one(
         {"username": session["member"]})["username"]
 
-    return render_template("liked_workouts.html", username=username)
+    workout_plan = mongo.db.workout_plans.find_one(
+        {"_id": ObjectId(workout_plan_id)})
+
+    liked = username["liked_workout_plans"]
+
+    if session["member"] != workout_plan["created_by"]:
+        username = mongo.db.member.find_one(
+            {"username": session["member"]})
+
+        if ObjectId(workout_plan_id) not in liked:
+
+            mongo.db.members.update_one({"username": session["member"]},
+                                        {"push": {
+                                            "liked_workout_plans": ObjectId
+                                            (workout_plan_id)
+                                        }})
+        else:
+            flash("This Workout Plan Has Already Been Liked")
+            return redirect(url_for('workout_plan', workout_plan_id=workout_plan_id))
+
+        flash("Workout Plan Has Been Added To Your Liked Workout Plans")
+        return render_template("liked_workouts.html", workout_plan=workout_plan)
+
+    else:
+        flash("This Workout Plan Is One Of Your Own")
+        return render_template("workout_plan", workout_plan_id=workout_plan_id, liked=liked)
+
+
+@app.route("/remove_liked_workouts/<workout_plan_id>", methods=["GET", "POST"])
+def remove_liked_workouts(workout_plan_id):
+
+    username = mongo.db.members.find_one(
+        {"username": session["member"]})["username"]
+
+    workout_plan = mongo.db.workout_plans.find_one(
+        {"_id": ObjectId(workout_plan_id)})
+
+    if session["member"] != workout_plan["created_by"]:
+
+        username = mongo.db.member.find_one(
+            {"username": session["member"]})
+
+        liked = username["liked_workout_plans"]
+
+        if ObjectId(workout_plan_id) in liked:
+
+            mongo.db.members.update({"username": session["member"]},
+                                    {"pull": {
+                                        "liked_workout_plans": ObjectId
+                                        (workout_plan_id)
+                                    }})
+
+            flash("Workout Plan Has Been Removed From My Liked Workout Plans")
+
+        else:
+
+            flash("Workout Plan Is Not In My Liked Workout Plans")
+            return redirect(url_for('workout_plan', workout_plan_id=workout_plan_id))
+
+    else:
+
+        flash("This Workout Plan Is One Of Your Own")
+        return render_template("workout_plan", workout_plan_id=workout_plan_id)
 
 
 @app.route("/my_workouts/<username>", methods=["GET", "POST"])
@@ -299,8 +381,8 @@ def my_workouts(username):
     username = mongo.db.members.find_one(
         {"username": session["member"]})["username"]
 
-    workout_plans = mongo.db.workout_plans.find({"created_by": username.lower()})
-    
+    workout_plans = mongo.db.workout_plans.find(
+        {"created_by": username.lower()})
     return render_template("my_workouts.html", username=username, workout_plans=workout_plans)
 
 

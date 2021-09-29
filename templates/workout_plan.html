@@ -918,15 +918,29 @@
 
                     {% if session.member %}
 
-                    <div class="col-6">
+                        {% if liked %}
 
-                        <div class="like-workout-styling">
+                        <div class="col-6">
 
-                            <a class="like-workout" href="{{ url_for('find_workouts') }}"><i class="fas fa-heart"></i> Like Workout</a>
+                            <div class="like-workout-styling">
+
+                                <a class="like-workout" href="{{ url_for('add_liked_workouts', workout_plan_id=workout_plan_id) }}"><i class="fas fa-heart"></i> Like Workout</a>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                        {% else %}
+
+                        <div class="col-6">
+
+                            <div class="like-workout-styling">
+
+                                <a class="remove-workout" href="{{ url_for('remove_liked_workouts', workout_plan_id=workout_plan_id) }}"><i class="fas fa-heart"></i> Remove Liked Workout</a>
+
+                            </div>
+
+                        </div>
 
                     {% else %}
 
