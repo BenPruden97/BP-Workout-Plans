@@ -56,7 +56,7 @@
 
                     <h3>Change Your Password</h3>
 
-                    <form class="change-password-input" method="POST" action="{{ url_for('edit_account', username=session['member']) }}">
+                    <form class="change-password-input" method="POST" action="{{ url_for('update_password', username=session['member']) }}">
 
                         <div class="new-password">
 

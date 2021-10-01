@@ -13,7 +13,7 @@
 
                 <a href="{{ url_for('delete_member', username=session['member']) }}" class="yes-delete-account">Yes, Delete My Account</a>
 
-                <a href="{{ url_for('profile', username=session['member']) }}" class="no-delete-account">No, I Would Like To Keep My Account</a>
+                <a href="{{ url_for('profile', username=session['member']) }}" class="no-delete-account">No, Go Back</a>
 
             </div>
 
@@ -114,7 +114,7 @@
 
                         <h6>View all of your workout plans that you created so far</h6>
 
-                        <a href="#">View Your Workout Plans</a>
+                        <a href="{{ url_for('my_workouts', username=session['member']) }}">View Your Workout Plans</a>
 
                     </div>
 

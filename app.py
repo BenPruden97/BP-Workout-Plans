@@ -277,6 +277,22 @@ def edit_account(username):
     return render_template("edit_account.html")
 
 
+@app.route("/update_password/<username>", methods=["GET", "POST"])
+def update_password(username):
+    if request.method == "POST":
+
+        mongo.db.members.update_one({"username": session['member']},
+                                    {'$set': {
+                                        "password": generate_password_hash(request.form.get("password")),
+                                    }})
+        flash("Your Password Has Been Updated")
+        session.pop("member")
+
+        return render_template("log_in.html")
+
+    return render_template("edit_account.html")
+
+
 @app.route("/delete_member/<username>")
 def delete_member(username):
 
