@@ -22,6 +22,8 @@ function checkPasswords() {
     }
 };
 
+/* ----- Function to make sure the updated passwords match before submitting ----- */
+
 function checkNewPasswords() {
     if (document.querySelector(".new_password").value ===
     document.querySelector(".new_confirm_password").value) {
@@ -35,18 +37,29 @@ function checkNewPasswords() {
     }
 };
 
-const workoutCard = document.getElementById("individual-card");
+/* ----- Email JS Contact Form ----- */
 
-workoutCard.addEventListener('mouseenter', e => {
-    document.querySelector("#workout-options").style.display = "block";
-});
+function contactMessage() {
 
-workoutCard.addEventListener('mouseleave', e => {
-    document.querySelector("#workout-options").style.display = "none";
-});
+    swal({
+        title: "Thank You!",
+        text: "Your message was sent successfully",
+        icon: "success",
+        button: false,
+        timer: 2500
+    });
 
-function deleteAccount() {
-    document.getElementById("delete-modal").style.display = "block"
-    document.getElementsByClassName("no-delete-account").style.display = "none"
-}
+    sendMail();
 
+};
+
+function sendMail() {
+
+    var templateParams = {
+        member_name: document.getElementById("name"),
+        member_email: document.getElementById("email"),
+        member_message: document.getElementById("message")
+    };
+    emailjs.send('gmail', 'bp_workout_plans', templateParams)
+
+};

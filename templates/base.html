@@ -23,6 +23,19 @@
     <script src="https://kit.fontawesome.com/e8142a821e.js" crossorigin="anonymous"></script>
     <!----- style.css Sheet ----->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+
+
+    <!----- Email JS Contact Form Link ----->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    (function () {
+        emailjs.init("user_8vBZjxGRThwYy1BQa2nqH");
+    })();
+    </script>
+
+    <!----- Sweet Alert JS Link ----->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <title>BP Workout Plans</title>
 </head>
 <body>

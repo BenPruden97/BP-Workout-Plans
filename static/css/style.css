@@ -1302,6 +1302,8 @@ button.accordion-button.collapsed{
     border: none;
     border-bottom: 2px solid black;
     background-color: #fafafa;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
 }
 
 .message textarea::placeholder{

@@ -124,7 +124,7 @@ def log_out():
     return redirect(url_for("log_in"))
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
     return render_template("contact.html")
 
