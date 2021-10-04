@@ -37,6 +37,20 @@ function checkNewPasswords() {
     }
 };
 
+/* ----- Delete Account Confirmation Modal ----- */
+
+function deleteAccount() {
+    document.getElementById("delete-modal").style.display = "block"
+    document.getElementsByClassName("no-delete-account").style.display = "none"
+}
+
+/* ----- Delete Workout Plan Confirmation Modal ----- */
+
+function deleteWorkoutPlan() {
+    document.getElementById("delete-workout-modal").style.display = "block"
+    document.getElementsByClassName("no-delete-workout-plan").style.display = "none"
+}
+
 /* ----- Email JS Contact Form ----- */
 
 function contactMessage() {

@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <div class="delete-workout-modal" id="delete-workout-modal">
+
+        <div class="delete-workout-modal-content">
+
+            <h3>Are you sure you would like to delete this workout plan?</h3>
+
+            <div class="delete-options">
+
+                <a href="{{ url_for('delete_workout', workout_plan_id=workout_plan._id) }}" class="yes-delete-workout-plan">Yes, Delete This Workout Plan</a>
+
+                <a href="{{ url_for('workout_plan', workout_plan_id=workout_plan._id) }}" class="no-delete-workout-plan">No, Go Back</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <div class="container-fluid">
 
         <div class="row">
@@ -131,7 +149,7 @@
 
             <div class="row">
 
-                <div class="col-md-6 col-12">
+                <div class="col-12 workout-plan-styling">
 
                     <div class="accordion-item">
 
@@ -223,7 +241,11 @@
 
                 </div>
 
-                <div class="col-md-6 col-12">
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 workout-plan-styling">
 
                     <div class="accordion-item">
 
@@ -324,7 +346,7 @@
 
             <div class="row">
 
-                <div class="col-md-6 col-12">
+                <div class="col-12 workout-plan-styling">
 
                     <div class="accordion-item">
 
@@ -416,7 +438,11 @@
 
                 </div>
 
-                <div class="col-md-6 col-12">
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 workout-plan-styling">
 
                     <div class="accordion-item">
 
@@ -516,7 +542,7 @@
 
             <div class="row">
 
-                <div class="col-md-6 col-12">
+                <div class="col-12 workout-plan-styling">
 
                     <div class="accordion-item">
 
@@ -609,7 +635,11 @@
 
                 </div>
 
-                <div class="col-md-6 col-12">
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 workout-plan-styling">
 
                     <div class="accordion-item">
 
@@ -709,7 +739,7 @@
 
             <div class="row">
 
-                <div class="col-md-6 col-12">
+                <div class="col-12 workout-plan-styling">
 
                     <div class="accordion-item">
 
@@ -801,7 +831,11 @@
 
                 </div>
 
-                <div class="col-md-6 col-12">
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 workout-plan-styling">
 
                     <div class="accordion-item">
 
@@ -917,14 +951,14 @@
                     </div>
 
                     {% if session.member %}
-
+                    
                         {% if liked %}
 
                         <div class="col-6">
 
                             <div class="like-workout-styling">
 
-                                <a class="like-workout" href="{{ url_for('add_liked_workouts', workout_plan_id=workout_plan_id) }}"><i class="fas fa-heart"></i> Like Workout</a>
+                                <a class="remove-workout" href="{{ url_for('remove_liked_workouts', workout_plan_id=workout_plan._id) }}"><i class="fas fa-heart"></i> Remove Liked Workout</a>
 
                             </div>
 
@@ -936,11 +970,13 @@
 
                             <div class="like-workout-styling">
 
-                                <a class="remove-workout" href="{{ url_for('remove_liked_workouts', workout_plan_id=workout_plan_id) }}"><i class="fas fa-heart"></i> Remove Liked Workout</a>
+                                <a class="like-workout" href="{{ url_for('add_liked_workouts', workout_plan_id=workout_plan._id) }}"><i class="fas fa-heart"></i> Like Workout</a>
 
                             </div>
 
                         </div>
+
+                        {% endif %}
 
                     {% else %}
 
@@ -952,7 +988,7 @@
 
                         </div>
 
-                    </div>
+                    </div>                 
 
                     {% endif %}
 
@@ -981,7 +1017,7 @@
                         <div class="workout-delete">
 
                             {% if session.member|lower == workout_plan.created_by|lower or session.member|lower == "admin"|lower %}
-                                <a href="{{ url_for('delete_workout', workout_plan_id=workout_plan._id) }}"><i class="fas fa-trash-alt"></i> Delete</a>                                        
+                                <a href="#" onclick="deleteWorkoutPlan()"><i class="fas fa-trash-alt"></i> Delete</a>                                        
                             {% endif %}
 
                         </div>

@@ -1062,13 +1062,50 @@ footer{
     width: 600px;
 }
 
+.workout-plan-styling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.accordion-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 1rem;
+    border: 1px solid black;
+    width: 750px;
+}
+
 div.accordion-item h2{
     text-align: center;
 }
 
-button.accordion-button.collapsed{
+button.accordion-button{
     border: 1px solid black;
+    color: black;
+    background-color: #fafafa;
+}
+
+button.accordion-button:focus {
+    z-index: 3;
+    border: 1px solid black;
+    outline: 0;
+    box-shadow: none;
+    color: black;
+    background-color: #fafafa;
+}
+
+.accordion-button::after{
+    color: black;
+}
+
+button.accordion-button.collapsed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
+    width: 750px;
 }
 
 .workout-name{
@@ -1093,6 +1130,17 @@ button.accordion-button.collapsed{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cannot-like-workout{
+    background-color: #fafafa;
+    color: black;
+    width: 60%;
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0.5rem;
+    text-align: center;
 }
 
 .like-workout{
@@ -1234,6 +1282,71 @@ button.accordion-button.collapsed{
 }
 
 .workout-delete a:hover{
+    background-color: #db0007;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+/* ----- Delete Workout Plan Modal Styling ----- */
+
+/* ----- Delete Account Modal ----- */
+
+.delete-workout-modal{
+    display: none;
+    height: 105vh;
+    width: 100%;
+    position: relative;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 7;
+}
+
+.delete-workout-modal-content{
+    background-color: #fafafa;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    text-align: center;
+}
+
+.delete-workout-modal-content h3{
+    color: black;
+    padding-bottom: 2rem;
+}
+
+.yes-delete-workout-plan{
+    text-decoration: none;
+    color: #118324;
+    background-color: #fafafa;
+    border: 2px solid #118324;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: 0.5s;
+}
+
+.yes-delete-workout-plan:hover{
+    background-color: #118324;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.no-delete-workout-plan{
+    text-decoration: none;
+    color: #db0007;
+    background-color: #fafafa;
+    border: 2px solid #db0007;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: 0.5s;
+}
+
+.no-delete-workout-plan:hover{
     background-color: #db0007;
     color: #fafafa;
     text-decoration: none;

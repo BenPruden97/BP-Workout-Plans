@@ -317,7 +317,7 @@ def liked_workouts(username):
 
     liked = mongo.db.workout_plans.find({"_id": {"$in": liked_workouts}})
 
-    return render_template("liked_workouts.html", username=username, likes=likes, liked=liked)
+    return render_template("liked_workouts.html", username=username, likes=likes, liked_workouts=liked_workouts ,liked=liked)
 
 
 @app.route("/add_liked_workouts/<workout_plan_id>", methods=["GET", "POST"])
