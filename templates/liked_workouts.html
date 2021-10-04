@@ -29,6 +29,7 @@
 
         <div class="row row-color">
 
+            {% for workout in liked_workouts %}
             {% for workout_plan in workout_plans %}
 
                 <div class="col-12 col-md-6 col-lg-4">
@@ -97,6 +98,7 @@
 
                 </div>
 
+            {% endfor %}
             {% endfor %}
 
         </div>

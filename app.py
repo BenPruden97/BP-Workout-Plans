@@ -307,27 +307,40 @@ def delete_member(username):
 def liked_workouts(username):
 
     username = mongo.db.members.find_one(
-        {"username": session["member"]})
+        {"username": session["member"]})["username"]
 
     member = mongo.db.members.find_one({"username": session["member"]})
-
+    
     likes = mongo.db.members.find(member)
 
     liked_workouts = member["liked_workout_plans"]
 
     liked = mongo.db.workout_plans.find({"_id": {"$in": liked_workouts}})
 
-    return render_template("liked_workouts.html", username=username, likes=likes, liked_workouts=liked_workouts ,liked=liked)
+    liked_workouts_list = []
+
+    #for liked_workout in liked_workouts:
+        #workout = mongo.db.workout_plans.find_one(
+            #{"_id": ObjectId(liked_workout)})
+    #liked_workouts_list.append(workout)
+
+    print(liked_workouts)
+
+    return render_template("liked_workouts.html", username=username, likes=likes, liked_workouts=liked_workouts, liked=liked, liked_workouts_list=liked_workouts_list)
 
 
 @app.route("/add_liked_workouts/<workout_plan_id>", methods=["GET", "POST"])
 def add_liked_workouts(workout_plan_id):
 
     username = mongo.db.members.find_one(
-        {"username": session["member"]})["username"]
+        {"username": session["member"]})
 
-    workout_plan = mongo.db.workout_plans.find_one(
-        {"_id": ObjectId(workout_plan_id)})
+    liked_workouts_list = []
+
+    for liked_workout in liked_workouts:
+        workout = mongo.db.workout_plans.find_one(
+            {"_id": ObjectId(liked_workout)})
+    liked_workouts_list.append(workout)
 
     liked = username["liked_workout_plans"]
 
@@ -338,16 +351,15 @@ def add_liked_workouts(workout_plan_id):
         if ObjectId(workout_plan_id) not in liked:
 
             mongo.db.members.update_one({"username": session["member"]},
-                                        {"push": {
+                                        {"$push": {
                                             "liked_workout_plans": ObjectId
                                             (workout_plan_id)
                                         }})
+            flash("Workout Plan Has Been Added To Your Liked Workout Plans")
+            return render_template("liked_workouts.html", liked_workouts_list=liked_workouts_list)
         else:
             flash("This Workout Plan Has Already Been Liked")
             return redirect(url_for('workout_plan', workout_plan_id=workout_plan_id))
-
-        flash("Workout Plan Has Been Added To Your Liked Workout Plans")
-        return render_template("liked_workouts.html", workout_plan=workout_plan)
 
     else:
         flash("This Workout Plan Is One Of Your Own")
@@ -358,7 +370,7 @@ def add_liked_workouts(workout_plan_id):
 def remove_liked_workouts(workout_plan_id):
 
     username = mongo.db.members.find_one(
-        {"username": session["member"]})["username"]
+        {"username": session["member"]})
 
     workout_plan = mongo.db.workout_plans.find_one(
         {"_id": ObjectId(workout_plan_id)})
@@ -373,7 +385,7 @@ def remove_liked_workouts(workout_plan_id):
         if ObjectId(workout_plan_id) in liked:
 
             mongo.db.members.update({"username": session["member"]},
-                                    {"pull": {
+                                    {"$pull": {
                                         "liked_workout_plans": ObjectId
                                         (workout_plan_id)
                                     }})
@@ -381,12 +393,10 @@ def remove_liked_workouts(workout_plan_id):
             flash("Workout Plan Has Been Removed From My Liked Workout Plans")
 
         else:
-
             flash("Workout Plan Is Not In My Liked Workout Plans")
             return redirect(url_for('workout_plan', workout_plan_id=workout_plan_id))
 
     else:
-
         flash("This Workout Plan Is One Of Your Own")
         return render_template("workout_plan", workout_plan_id=workout_plan_id)
 
@@ -398,7 +408,7 @@ def my_workouts(username):
         {"username": session["member"]})["username"]
 
     workout_plans = mongo.db.workout_plans.find(
-        {"created_by": username.lower()})
+        {"created_by": username})
     return render_template("my_workouts.html", username=username, workout_plans=workout_plans)
 
 

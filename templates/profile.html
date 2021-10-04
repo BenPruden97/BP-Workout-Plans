@@ -99,7 +99,7 @@
 
                         <h6>View all of the workout plans you have liked that was created by other members</h6>
 
-                        <a href="#">View Your Liked Workout Plans</a>
+                        <a href="{{ url_for('liked_workouts', username=session['member']) }}">View Your Liked Workout Plans</a>
 
                     </div>
 
