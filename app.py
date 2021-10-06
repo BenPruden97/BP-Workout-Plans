@@ -1,7 +1,8 @@
 import os
 from flask import (
     Flask, flash, render_template, redirect, request, session, url_for)
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, DESCENDING
+from flask_paginate import Pagination, get_page_args
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -16,12 +17,32 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# ----- Page Pagination -----
+
+PER_PAGE = 9
+
+def paginated(workout_plans):
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return workout_plans[offset: offset + PER_PAGE]
+
+
+def pagination_args(workout_plans):
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page')
+    total = len(workout_plans)
+
+    return Pagination(page=page, per_page=PER_PAGE,
+                      css_framework='bootstrap4', total=total)
+
 
 @app.route("/")
 @app.route("/home")
 def home():
 
-    workout_plans = mongo.db.workout_plans.find().sort("_id", 1).limit(6)
+    workout_plans = mongo.db.workout_plans.find().sort("_id", DESCENDING).limit(6)
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
     return render_template("index.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
@@ -44,7 +65,11 @@ def find_workouts():
     workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
-    return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
+    
+    workout_plans_paginated = paginated(workout_plans)
+    pagination = pagination_args(workout_plans)
+    return render_template("find_workouts.html", workout_plans=workout_plans_paginated, workout_difficulties=workout_difficulties, 
+        workout_categories=workout_categories, pagination=pagination)
 
 
 @app.route("/workout_plan/<workout_plan_id>")
