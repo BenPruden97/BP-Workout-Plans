@@ -837,6 +837,16 @@ footer{
     margin: 0.5rem;
 }
 
+.exercise-input p{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fafafa;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
 .exercise-input input{
     border: 2px solid black;
     border-radius: 5px;
@@ -1050,16 +1060,19 @@ footer{
 }
 
 .plan-description h3{
-    padding: 1rem;
+    padding: 2rem 1rem 1rem;
 }
 
 .plan-description p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid black;
     border-radius: 5px;
-    padding-top: 0.25rem;
-    padding-left: 0.25rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
     width: 600px;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .workout-plan-styling{
@@ -1068,23 +1081,30 @@ footer{
     align-items: center;
 }
 
+.accordion{
+    border-bottom: 2px solid black;
+    padding-bottom: 3rem;
+}
+
 div.accordion-item{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 0.5rem 1rem;
     border: 1px solid black;
     width: 750px;
 }
 
-div.accordion-item h2{
-    text-align: center;
+div.accordion-body{
+    width: 550px;
 }
 
 button.accordion-button{
     border: 1px solid black;
     color: black;
     background-color: #fafafa;
+    width: 100%;
 }
 
 button.accordion-button:focus {
@@ -1093,11 +1113,16 @@ button.accordion-button:focus {
     outline: 0;
     box-shadow: none;
     color: black;
+    font-weight: bold;
     background-color: #fafafa;
 }
 
 .accordion-button::after{
     color: black;
+}
+
+.accordion-button:not(.collapsed) {
+    width: 750px;
 }
 
 button.accordion-button.collapsed{
@@ -1112,7 +1137,7 @@ button.accordion-button.collapsed{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
 }
 
