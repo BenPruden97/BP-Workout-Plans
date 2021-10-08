@@ -19,23 +19,23 @@ mongo = PyMongo(app)
 
 # ----- Page Pagination -----
 
-PER_PAGE = 9
+#PER_PAGE = 9
 
-def paginated(workout_plans):
-    page, per_page, offset = get_page_args(
-        page_parameter='page', per_page_parameter='per_page')
-    offset = page * PER_PAGE - PER_PAGE
+#def paginated(workout_plans):
+    #page, per_page, offset = get_page_args(
+        #page_parameter='page', per_page_parameter='per_page')
+    #offset = page * PER_PAGE - PER_PAGE
 
-    return workout_plans[offset: offset + PER_PAGE]
+    #return workout_plans[offset: offset + PER_PAGE]
 
 
-def pagination_args(workout_plans):
-    page, per_page, offset = get_page_args(
-        page_parameter='page', per_page_parameter='per_page')
-    total = len(workout_plans)
+#def pagination_args(workout_plans):
+ #   page, per_page, offset = get_page_args(
+  #      page_parameter='page', per_page_parameter='per_page')
+   # total = len(workout_plans)
 
-    return Pagination(page=page, per_page=PER_PAGE,
-                      css_framework='bootstrap4', total=total)
+   # return Pagination(page=page, per_page=PER_PAGE,
+                      #css_framework='bootstrap4', total=total)
 
 
 @app.route("/")
@@ -66,10 +66,10 @@ def find_workouts():
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
     
-    workout_plans_paginated = paginated(workout_plans)
-    pagination = pagination_args(workout_plans)
-    return render_template("find_workouts.html", workout_plans=workout_plans_paginated, workout_difficulties=workout_difficulties, 
-        workout_categories=workout_categories, pagination=pagination)
+    #workout_plans_paginated = paginated(workout_plans)
+    #pagination = pagination_args(workout_plans)
+    return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, 
+        workout_categories=workout_categories)
 
 
 @app.route("/workout_plan/<workout_plan_id>")

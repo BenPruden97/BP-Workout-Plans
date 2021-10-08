@@ -47,33 +47,29 @@
 
             <h3 class="profile-h2">Find or Create A Workout Plan</h3>
 
-            <div class="profile-section">
+            <div class="col-md-6 col-12">
+            
+                <div class="liked-plan-options">
 
-                <div class="col-md-6 col-12">
-                
-                    <div class="liked-plan-options">
+                    <h4>Find A Workout Plan</h4>
 
-                        <h4>Find A Workout Plan</h4>
+                    <h6>Find the perfect workout plan for you whether you are a beginner, intermediate or advanced!</h6>
 
-                        <h6>Find the perfect workout plan for you whether you are a beginner, intermediate or advanced!</h6>
-
-                        <a href="{{ url_for('find_workouts') }}">Find A Workout Plan</a>
-
-                    </div>
+                    <a href="{{ url_for('find_workouts') }}">Find A Workout Plan</a>
 
                 </div>
 
-                <div class="col-md-6 col-12">
+            </div>
 
-                    <div class="profile-options">
+            <div class="col-md-6 col-12">
 
-                        <h4>Create A Workout Plan</h4>
+                <div class="profile-options">
 
-                        <h6>Create your very own workout plan and share it with the rest of the community</h6>
+                    <h4>Create A Workout Plan</h4>
 
-                        <a href="{{ url_for('create_workout') }}">Create A Workout Plan</a>
+                    <h6>Create your very own workout plan and share it with the rest of the BP Workout Plan community</h6>
 
-                    </div>
+                    <a href="{{ url_for('create_workout') }}">Create A Workout Plan</a>
 
                 </div>
 
@@ -89,33 +85,29 @@
 
             <h3 class="profile-h2">Your Liked & Created Workout Plans</h3>
 
-            <div class="profile-section">
+            <div class="col-md-6 col-12">
+            
+                <div class="liked-plan-options">
 
-                <div class="col-md-6 col-12">
-                
-                    <div class="liked-plan-options">
+                    <h4>Your Workout Plans</h4>
 
-                        <h4>Your Liked Workout Plans</h4>
+                    <h6>View all of your very own workout plans that you created so far</h6>
 
-                        <h6>View all of the workout plans you have liked that was created by other members</h6>
-
-                        <a href="{{ url_for('liked_workouts', username=session['member']) }}">View Your Liked Workout Plans</a>
-
-                    </div>
+                    <a href="{{ url_for('my_workouts', username=session['member']) }}">View Your Workout Plans</a>
 
                 </div>
 
-                <div class="col-md-6 col-12">
+            </div>
 
-                    <div class="profile-options">
+            <div class="col-md-6 col-12">
 
-                        <h4>Your Workout Plans</h4>
+                <div class="profile-options">
 
-                        <h6>View all of your workout plans that you created so far</h6>
+                    <h4>Your Liked Workout Plans</h4>
 
-                        <a href="{{ url_for('my_workouts', username=session['member']) }}">View Your Workout Plans</a>
+                    <h6>View all of the workout plans you have liked from other members</h6>
 
-                    </div>
+                    <a href="{{ url_for('liked_workouts', username=session['member']) }}">View Your Liked Workout Plans</a>
 
                 </div>
 
@@ -131,33 +123,29 @@
 
             <h3 class="profile-h2">Account Details</h3>
 
-            <div class="profile-section">
+            <div class="col-md-6 col-12">
 
-                <div class="col-md-6 col-12">
+                <div class="edit-account">
 
-                    <div class="edit-account">
+                    <h4>Edit Your Account</h4>
 
-                        <h4>Edit Your Account</h4>
+                    <h6>Made a mistake or want a change? Edit your account details</h6>
 
-                        <h6>Made a mistake or want a change? Edit your account details</h6>
-
-                        <a href="{{ url_for('edit_account', username=session['member']) }}">Edit Account</a>
-
-                    </div>
+                    <a href="{{ url_for('edit_account', username=session['member']) }}">Edit Account</a>
 
                 </div>
 
-                <div class="col-md-6 col-12">
+            </div>
 
-                    <div class="delete-account">
+            <div class="col-md-6 col-12">
 
-                        <h4>Delete Your Account</h4>
+                <div class="delete-account">
 
-                        <h6>No longer want to be a member? Delete your account with us</h6>
+                    <h4>Delete Your Account</h4>
 
-                        <a href="#" onclick="deleteAccount()">Delete Account</a>
+                    <h6>No longer want to be a member? Delete your account with us</h6>
 
-                    </div>
+                    <a href="#" onclick="deleteAccount()">Delete Account</a>
 
                 </div>
 
