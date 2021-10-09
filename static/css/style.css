@@ -33,6 +33,11 @@ dl, ol, ul {
     margin-bottom: 0;
 }
 
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
 row.col-12{
     padding: 0;
 }
@@ -1084,6 +1089,7 @@ footer{
 .accordion{
     border-bottom: 2px solid black;
     padding-bottom: 3rem;
+    background-color: #fafafa;
 }
 
 div.accordion-item{
@@ -1157,21 +1163,10 @@ button.accordion-button.collapsed{
     align-items: center;
 }
 
-.cannot-like-workout{
-    background-color: #fafafa;
-    color: black;
-    width: 60%;
-    padding: 0.5rem;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: 0.5rem;
-    text-align: center;
-}
-
 .like-workout{
     background-color: #fafafa;
     color: #118324;
-    width: 60%;
+    width: 500px;
     padding: 0.5rem;
     border: 2px solid #118324;
     border-radius: 5px;
@@ -1196,7 +1191,7 @@ button.accordion-button.collapsed{
 .remove-workout{
     background-color: #fafafa;
     color: #db0007;
-    width: 60%;
+    width: 500px;
     padding: 0.5rem;
     border: 2px solid #db0007;
     border-radius: 5px;
@@ -1221,7 +1216,7 @@ button.accordion-button.collapsed{
 .go-back{
     background-color: #fafafa;
     color: #db0007;
-    width: 60%;
+    width: 500px;
     padding: 0.5rem;
     border: 2px solid #db0007;
     border-radius: 5px;
@@ -1259,7 +1254,7 @@ button.accordion-button.collapsed{
 .workout-edit a{
     background-color: #fafafa;
     color: #118324;
-    width: 60%;
+    width: 500px;
     padding: 0.5rem;
     border: 2px solid #118324;
     border-radius: 5px;
@@ -1295,7 +1290,7 @@ button.accordion-button.collapsed{
 .workout-delete a{
     background-color: #fafafa;
     color: #db0007;
-    width: 60%;
+    width: 500px;
     padding: 0.5rem;
     border: 2px solid #db0007;
     border-radius: 5px;
@@ -1782,7 +1777,7 @@ button.accordion-button.collapsed{
     background-color: black;
 }
 
-.edit-account{
+.edit-profile-account{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1795,7 +1790,7 @@ button.accordion-button.collapsed{
     padding: 0.5rem 2rem;
 }
 
-.delete-account{
+.delete-profile-account{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1807,19 +1802,19 @@ button.accordion-button.collapsed{
     padding: 0.5rem 2rem;
 }
 
-.edit-account h4,
-.delete-account h4{
+.edit-profile-account h4,
+.delete-profile-account h4{
     font-size: 1.5rem;
     padding: 1.5rem 0 0.5rem;
 }
 
-.edit-account h6,
-.delete-account h6{
+.edit-profile-account h6,
+.delete-profile-account h6{
     padding: 0.5rem 0 1rem;
 }
 
-.edit-account a,
-.delete-account a{
+.edit-profile-account a,
+.delete-profile-account a{
     background-color: #fafafa;
     color: black;
     padding: 0.5rem;
@@ -1831,8 +1826,8 @@ button.accordion-button.collapsed{
     text-align: center;
 }
 
-.edit-account a:hover,
-.delete-account a:hover{
+.edit-profile-account a:hover,
+.delete-profile-account a:hover{
     color: #fafafa;
     background-color: black;
 }
@@ -2228,9 +2223,11 @@ button.accordion-button.collapsed{
         height: 7vh;
         padding-top: 0.5rem;
     }
+
     .home-text h5{
         padding: 0.5rem 3.5rem;
     }
+
     footer{
         display: flex;
         justify-content: center;
@@ -2333,6 +2330,76 @@ button.accordion-button.collapsed{
         background-color: black;
     }
 
+    /* ----- workout_plan.html Styling ----- */
+
+    .workout-display{
+        margin: 1rem 0.25rem 0;
+        width: 150px;
+    }
+
+    .workout-display h6{
+        padding-top: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .workout-display p{
+        font-size: 0.75rem;
+    }
+
+    .plan-description p{
+        width: 500px;
+        font-size: 0.9rem;
+    }
+
+    div.accordion-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem;
+        border: 1px solid black;
+        width: 500px;
+    }
+
+    div.accordion-body{
+        width: 500px;
+    }
+
+    button.accordion-button{
+        border: 1px solid black;
+        color: black;
+        background-color: #fafafa;
+        width: 500px;
+    }
+
+    .accordion-button:not(.collapsed) {
+        width: 500px;
+    }
+
+    button.accordion-button.collapsed{
+        width: 500px;
+    }
+
+    .like-workout{
+        width: 200px;
+    }
+
+    .remove-workout{
+        width: 200px;
+    }
+
+    .go-back{
+        width: 200px;
+    }
+
+    .workout-edit a{
+        width: 200px;
+    }
+
+    .workout-delete a{
+        width: 200px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -2378,6 +2445,11 @@ button.accordion-button.collapsed{
 
     /* ----- index.html Styling ----- */
 
+    .home-text{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
     .home-text h1{
         font-size: 1.25rem;
     }
@@ -2389,6 +2461,11 @@ button.accordion-button.collapsed{
 
     .home-text h4{
         font-size: 1.25rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .create-home{
+        margin-top: 1rem;
     }
 
     .create-home h1{
@@ -2397,12 +2474,12 @@ button.accordion-button.collapsed{
 
     .create-home h5{
         padding: 0.5rem 2rem;
-        font-size: 0.75rem;
+        font-size: 0.9rem;
         text-align: center;
     }
 
-    .create-home h4{
-        font-size: 1.25rem;
+    .create-home a{
+        margin: 0.5rem 0 1.5rem;
     }
 
     /* ----- create workout html styling ----- */
@@ -2485,6 +2562,16 @@ button.accordion-button.collapsed{
         transition: 0.5s;
     }
 
+    /* ----- Profile Section Styling ----- */
+
+    .liked-plan-options{
+        border-right: none;
+    }
+
+    .edit-profile-account{
+        border-right: none;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -2494,7 +2581,7 @@ button.accordion-button.collapsed{
     }
     
     .nav-logo{
-        height: 10vh;
+        height: 15vh;
         padding: 0;
     }
 
@@ -2540,7 +2627,8 @@ button.accordion-button.collapsed{
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/search-bar-image.jpg") no-repeat center center;
         background-size: cover;
         width: 100vw;
-        height: 400px;
+        height: 300px;
+        margin: 1rem 0;
     }
 
     .search-input{
@@ -2667,7 +2755,7 @@ button.accordion-button.collapsed{
 
     footer{
         width: 100%;
-        height: 15vh;
+        height: 20vh;
     }
 
     /* ----- Footer Paragraph Styling ----- */
@@ -2675,13 +2763,20 @@ button.accordion-button.collapsed{
     .designer p{
         text-align: center;
         font-size: 0.6rem;
-        padding: 0.5rem 0 0 0;
+        padding: 0.5rem 0.25;
+        margin: 0.5rem;
     }
 
     /* ----- Footer Social Links Styling ----- */
 
     .fa-facebook-f{
         font-size: 0.75rem;
+    }
+
+    .social-links ul{
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-bottom: 0.5rem;
     }
 
     .social-links li{
@@ -2736,6 +2831,234 @@ button.accordion-button.collapsed{
         font-size: 0.75rem;
         padding: 0.25rem;
         transition: 0.5s;
+    }
+
+    /* ----- Edit Account Page Stlying ----- */
+
+    .edit-account-heading{
+        padding: 1.5rem 0;
+    }
+
+    .change-username{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .change-username h3{
+        padding: 1rem 0 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .change-username-input input{
+        padding: 0.15rem;
+        width: 200px;
+    }
+
+    .change-username-options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem 0 1rem;
+        padding: 0.25rem 0;
+    }
+
+    .change-username-edit button{
+        margin: 1rem;
+        padding: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    .change-cancel a{
+        margin: 1rem;
+        padding: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    .change-password-input{
+        width: 300px;
+    }
+
+    .change-password{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        padding: 1.5rem 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .change-password h3{
+        padding: 1rem 0 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .new-password input{
+        padding: 0.15rem;
+        width: 200px;
+    }
+
+    .new-change-password input{
+        padding: 0.15rem;
+        width: 200px;
+    }
+
+    .change-password-options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .change-password-edit button{
+        margin: 1rem;
+        padding: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    /* ----- workout_plan.html Styling ----- */
+
+    .workout-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .chest-workout-image{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .chest-workout-image h3{
+        font-size: 1.2rem;
+    }
+    
+    .back-workout-image{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .back-workout-image h3{
+        font-size: 1.2rem;
+    }
+    
+    .arms-workout-image{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .arms-workout-image h3{
+        font-size: 1.2rem;
+    }
+    
+    .legs-workout-image{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .legs-workout-image h3{
+        font-size: 1.2rem;
+    }
+    
+    .shoulders-workout-image{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .shoulders-workout-image h3{
+        font-size: 1.2rem;
+    }
+
+    .plan-options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .workout-display{
+        margin: 1rem 0.25rem 0;
+        width: 250px;
+    }
+
+    .workout-display h6{
+        font-size: 0.8rem;
+    }
+
+    .workout-display p{
+        font-size: 0.8rem;
+    }
+
+    .plan-description p{
+        width: 300px;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    div.accordion-item{
+        width: 300px;
+    }
+
+    div.accordion-body{
+        width: 300px;
+    }
+
+    button.accordion-button{
+        border: 1px solid black;
+        color: black;
+        background-color: #fafafa;
+        width: 300px;
+    }
+
+    .accordion-button:not(.collapsed) {
+        width: 300px;
+    }
+
+    button.accordion-button.collapsed{
+        width: 300px;
+    }
+
+    .workout-options-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .workout-options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .like-workout{
+        width: 250px;
+    }
+
+    .remove-workout{
+        width: 250px;
+    }
+
+    .go-back{
+        width: 250px;
+    }
+
+    .workout-edit a{
+        width: 250px;
+    }
+
+    .workout-delete a{
+        width: 250px;
     }
 
 }
