@@ -1385,7 +1385,7 @@ button.accordion-button.collapsed{
     align-items: center;
     background-color: #009dff;
     width: 100%;
-    height: 66vh;
+    height: 64vh;
 }
 
 .contact-header{
@@ -1488,7 +1488,7 @@ button.accordion-button.collapsed{
     align-items: center;
     background-color: #db0007;
     width: 100%;
-    height: 66vh;
+    height: 64vh;
 }
 
 .sign-up-header{
@@ -1629,7 +1629,7 @@ button.accordion-button.collapsed{
     align-items: center;
     background-color: #118324;
     padding: 1rem;
-    height: 490px;
+    height: 64vh;
 }
 
 .log-in-header{
@@ -2220,6 +2220,10 @@ button.accordion-button.collapsed{
         padding-top: 0.5rem;
     }
 
+    nav.navbar.navbar-expand-md{
+        display: none;
+    }
+
     .home-text h5{
         padding: 0.5rem 3.5rem;
     }
@@ -2238,12 +2242,7 @@ button.accordion-button.collapsed{
     /* ----- Contact Section Styling ----- */
 
     .contact-section{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        background-color: #009dff;
-        width: 100%;
-        height: 66vh;
+        height: 500px;
     }
 
     .contact-card{
@@ -2277,6 +2276,10 @@ button.accordion-button.collapsed{
 
     /* ----- Sign Up Section Styling ----- */
 
+    .sign-up-section{
+        height: 500px;
+    }
+
     .sign-up-card{
         height: 450px;
     }
@@ -2297,6 +2300,14 @@ button.accordion-button.collapsed{
     .account-already p{
         text-align: center;
         padding: 0.4rem;
+    }
+
+    /* --------------- log_in.html Styling ---------------*/
+
+    /* ----- Log In Section Styling ----- */
+
+    .log-in-section{
+        height: 475px;
     }
 
     /* ----- Footer Section Styling ----- */
@@ -2457,12 +2468,17 @@ button.accordion-button.collapsed{
 
     .navbar-collapse li{
         list-style-type: none;
-        padding: 0.5rem;
+        padding: 1.25rem;
     }
 
     .navbar-collapse a{
+        background-color: #fafafa;
+        color: black;
+        padding: 0.6rem 2rem;
         text-decoration: none;
-        color: #fafafa;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
     }
 
     nav.navbar.navbar-expand-md{
@@ -2475,7 +2491,7 @@ button.accordion-button.collapsed{
     /* ----- index.html Styling ----- */
 
     .home-text{
-        margin-top: 1rem;
+        margin-top: 0rem;
         margin-bottom: 1rem;
     }
 
@@ -2511,6 +2527,43 @@ button.accordion-button.collapsed{
         margin: 0.5rem 0 1.5rem;
     }
 
+    .log-in-home{
+        border-top: none;
+        border-left: none;
+    }
+
+    /* --------------- contact.html Styling ---------------*/
+
+    /* ----- Contact Section Styling ----- */
+
+    .contact-header{
+        margin-top: 0;
+    }
+
+    .contact-section{
+        height: 500px;
+    }
+
+    .contact-card{
+        width: 400px;
+    }
+
+    /* --------------- sign_up.html Styling ---------------*/
+
+    /* ----- Sign Up Section Styling ----- */
+
+    .sign-up-header{
+        margin-top: 0;
+    }
+
+    .sign-up-section{
+        height: 500px;
+    }
+
+    .sign-up-card{
+        width: 400px;
+    }
+
     /* --------------- log_in.html Styling ---------------*/
 
     /* ----- Log In Section Styling ----- */
@@ -2520,10 +2573,7 @@ button.accordion-button.collapsed{
     }
 
     .log-in-section{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        background-color: #118324;
+        height: 500px;
     }
 
     .log-in-card{
@@ -2644,6 +2694,40 @@ button.accordion-button.collapsed{
 
     .nav-logo a{
         font-size: 1.5rem;
+    }
+
+    /* --------------- contact.html Styling ---------------*/
+
+    /* ----- Contact Section Styling ----- */
+
+    .contact-header{
+        font-size: 1rem;
+    }
+
+    .contact-section{
+        height: 500px;
+    }
+
+    .contact-card{
+        height: 425px;
+        width: 300px;
+    }
+
+    /* --------------- sign_up.html Styling ---------------*/
+
+    /* ----- Sign Up Section Styling ----- */
+
+    .sign-up-header{
+        font-size: 0.9rem;
+    }
+
+    .sign-up-section{
+        height: 500px;
+    }
+
+    .sign-up-card{
+        height: 400px;
+        width: 300px;
     }
 
     /* --------------- log_in.html Styling ---------------*/
