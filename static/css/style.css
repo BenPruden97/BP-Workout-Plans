@@ -114,13 +114,17 @@ div.col-lg-12{
 
 /* ----- Navigation Logo Styling ----- */
 
+nav.navbar.navbar-expand-md{
+    display: none;
+}
+
 .nav-logo{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fafafa;
     width: 100%;
-    height: 12vh;
+    height: 125px;
 }
 
 .nav-logo a{
@@ -149,7 +153,7 @@ nav .nav{
     align-items: center;
     background-color: #fafafa;
     width: 100%;
-    height: 5vh;
+    height: 50px;
     margin: 0.25rem 0;
 }
 
@@ -2202,7 +2206,7 @@ button.accordion-button.collapsed{
         align-items: center;
         background-color: #fafafa;
         width: 100%;
-        height: 10vh;
+        height: 100px;
         padding: 0.5rem 0 0;
     }
     
@@ -2212,7 +2216,7 @@ button.accordion-button.collapsed{
         align-items: center;
         background-color: #fafafa;
         width: 100%;
-        height: 7vh;
+        height: 50px;
         padding-top: 0.5rem;
     }
 
@@ -2226,7 +2230,7 @@ button.accordion-button.collapsed{
         align-items: center;
         background-color: #fafafa;
         width: 100%;
-        height: 15vh;
+        height: 125px;
     }
 
     /* --------------- contact.html Styling ---------------*/
@@ -2421,7 +2425,7 @@ button.accordion-button.collapsed{
     /* ----- base.html Styling ----- */
 
     .nav-logo{
-        height: 10vh;
+        height: 100px;
         padding: 0;
     }
 
@@ -2429,32 +2433,43 @@ button.accordion-button.collapsed{
         font-size: 2rem;
     }
 
-    nav .nav{
+    div.nav{
+        display: none;
+    }
+
+    div.user-links{
+        display: none;
+    }
+
+    button.navbar-toggler{
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-collapse{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: #fafafa;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        overflow: hidden;
-        z-index: 1;
+        background-color: black;
+        color: #fafafa;
+        padding: 1rem;
     }
 
-    nav ul{
+    .navbar-collapse li{
+        list-style-type: none;
+        padding: 0.5rem;
+    }
+
+    .navbar-collapse a{
+        text-decoration: none;
+        color: #fafafa;
+    }
+
+    nav.navbar.navbar-expand-md{
         display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 25%;
-        width: 100%;
-    }
-
-    nav.navbar.navbar-expand-md.navbar-light.bg-light::after{
-        content: '';
+        justify-content: center;
+        align-items: center;
         background-color: #fafafa;
-        height: 1vh;
-        width: 100%;
     }
 
     /* ----- index.html Styling ----- */
@@ -2499,6 +2514,10 @@ button.accordion-button.collapsed{
     /* --------------- log_in.html Styling ---------------*/
 
     /* ----- Log In Section Styling ----- */
+
+    .log-in-header{
+        margin-top: 0;
+    }
 
     .log-in-section{
         display: grid;
@@ -2619,7 +2638,7 @@ button.accordion-button.collapsed{
     }
     
     .nav-logo{
-        height: 15vh;
+        height: 75px;
         padding: 0;
     }
 
@@ -2627,41 +2646,13 @@ button.accordion-button.collapsed{
         font-size: 1.5rem;
     }
 
-    nav .nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #fafafa;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        overflow: hidden;
-        z-index: 1;
-    }
-
-    nav ul{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 25%;
-        width: 100%;
-    }
-
-    nav.navbar.navbar-expand-md.navbar-light.bg-light::after{
-        content: '';
-        background-color: #fafafa;
-        height: 1vh;
-        width: 100%;
-    }
-
-    div.user-links{
-        display: none;
-    }
-
     /* --------------- log_in.html Styling ---------------*/
 
     /* ----- Log In Section Styling ----- */
+
+    .log-in-header{
+        font-size: 0.9rem;
+    }
 
     .log-in-section{
         height: 500px;
@@ -2677,8 +2668,8 @@ button.accordion-button.collapsed{
     }
 
     .log-in-button button{
-        width: 50%;
-        padding: 0.4rem;
+        width: 150px;
+        padding: 0.25rem;
         margin: 1rem;
     }
 
@@ -2695,7 +2686,7 @@ button.accordion-button.collapsed{
         background-size: cover;
         width: 100vw;
         height: 300px;
-        margin: 1rem 0;
+        margin: 0;
     }
 
     .search-input{
@@ -2767,7 +2758,7 @@ button.accordion-button.collapsed{
     }
 
     .individual-card{
-        margin: 0.5rem 0;
+        margin: 1rem 0;
     }
 
     /* ----- My Workout Plans Page Styling ----- */
@@ -2799,7 +2790,7 @@ button.accordion-button.collapsed{
 
     footer{
         width: 100%;
-        height: 20vh;
+        height: 100px;
     }
 
     /* ----- Footer Paragraph Styling ----- */
