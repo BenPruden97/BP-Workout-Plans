@@ -194,16 +194,7 @@ def create_workout():
             "number_of_reps_6": request.form.get("number_of_reps_6"),
             "rest_time_6": request.form.get("rest_time_6"),
             "weight_used_6": request.form.get("weight_used_6"),
-            "exercise_name_7": request.form.get("exercise_name_7"),
-            "number_of_sets_7": request.form.get("number_of_sets_7"),
-            "number_of_reps_7": request.form.get("number_of_reps_7"),
-            "rest_time_7": request.form.get("rest_time_7"),
-            "weight_used_7": request.form.get("weight_used_7"),
-            "exercise_name_8": request.form.get("exercise_name_8"),
-            "number_of_sets_8": request.form.get("number_of_sets_8"),
-            "number_of_reps_8": request.form.get("number_of_reps_8"),
-            "rest_time_8": request.form.get("rest_time_8"),
-            "weight_used_8": request.form.get("weight_used_8"),
+            "total_workout_time": request.form.get("total_workout_time"),
             "created_by": session["member"]
         }
         mongo.db.workout_plans.insert_one(workout_plan)
@@ -254,17 +245,6 @@ def edit_workout(workout_plan_id):
             "number_of_reps_6": request.form.get("number_of_reps_6"),
             "rest_time_6": request.form.get("rest_time_6"),
             "weight_used_6": request.form.get("weight_used_6"),
-            "exercise_name_7": request.form.get("exercise_name_7"),
-            "number_of_sets_7": request.form.get("number_of_sets_7"),
-            "number_of_reps_7": request.form.get("number_of_reps_7"),
-            "rest_time_7": request.form.get("rest_time_7"),
-            "weight_used_7": request.form.get("weight_used_7"),
-            "exercise_name_8": request.form.get("exercise_name_8"),
-            "number_of_sets_8": request.form.get("number_of_sets_8"),
-            "number_of_reps_8": request.form.get("number_of_reps_8"),
-            "rest_time_8": request.form.get("rest_time_8"),
-            "weight_used_8": request.form.get("weight_used_8"),
-            "total_exercise_amount": request.form.get("total_exercise_amount"),
             "total_workout_time": request.form.get("total_workout_time"),
             "created_by": session["member"]
         }
