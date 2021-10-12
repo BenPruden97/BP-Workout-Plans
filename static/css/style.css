@@ -754,6 +754,40 @@ footer{
     text-decoration: none;
 }
 
+ul.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.pagination > li > a{
+    background-color: #fafafa;
+    color: black;
+    border: 1px solid black;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover{
+    background-color: black;
+    color: #fafafa;
+    border: 1px solid black;
+}
+
+.pagination > .active > a{
+    background-color: black !important;
+    color: #fafafa !important;
+    border: 1px solid black !important;
+}
+
+.pagination > li.page-item.disabled span{
+    background-color: #fafafa;
+    color: black;
+    border: 1px solid black;
+}
+
 /* --------------- create_workout.html Styling ---------------*/
 
 /* ----- Create A Workout Plan Section Styling ----- */
@@ -863,6 +897,7 @@ footer{
     padding: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
 .exercise-input input::placeholder{
     color: black;
 }
@@ -891,6 +926,19 @@ footer{
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.exercise-options input{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fafafa;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.exercise-options input::placeholder{
+    color: black;
 }
 
 .form-button{
@@ -2429,6 +2477,20 @@ button.accordion-button.collapsed{
         width: 200px;
     }
 
+}
+
+@media (max-width: 770px) {
+
+    nav.navbar.navbar-expand-md.navbar-light{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button.navbar-toggler{
+        display: block;
+    }
+    
 }
 
 @media (max-width: 768px) {

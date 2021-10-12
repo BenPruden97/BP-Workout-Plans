@@ -616,16 +616,9 @@
 
                                     <div class="exercise-options">
 
-                                        <label for="total_workout_time">Total Workout Time:</label>
-                                        <select name="total_workout_time" id="total_workout_time" required>
-                                            {% for time in ["15 Mins", "30 Mins", "45 Mins", "60 Mins", "75 Mins", "90 Mins", "105 Mins", "120 Mins"] %}
-                                                {% if time == workout_plan.total_workout_time %}
-                                                    <option value="{{ workout_plan.total_workout_time }}" selected>{{ workout_plan.total_workout_time }}</option>
-                                                {% else %}
-                                                    <option value="{{ time }}">{{ time }}</option>
-                                                {% endif %}
-                                            {% endfor %}
-                                        </select>
+                                        <label for="total_workout_time">Total Workout Time: (Mins)</label>
+                                        <input id="total_workout_time" name="total_workout_time" type="number" 
+                                            min="15" max="120" placeholder="Total Workout Time" required>
 
                                     </div>
 

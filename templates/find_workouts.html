@@ -84,11 +84,13 @@
 
                                 <hr>
 
-                                <p>Total Workout Time: {{ workout_plan.total_workout_time }}</p>
+                                <p value="{{ workout_plan.total_workout_time }}">Total Workout Time: {{ workout_plan.total_workout_time }}</p>
 
                                 <hr>
 
                                 <p>Created By: {{ workout_plan.created_by }}</p>
+
+                                <hr>
 
                             </div>
                             
@@ -105,6 +107,20 @@
                 </div>
 
             {% endfor %}
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row row-color">
+
+            <div class="col-12">
+
+                {{ pagination.links }}
+
+            </div>
 
         </div>
 
