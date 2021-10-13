@@ -1396,7 +1396,6 @@ button.accordion-button.collapsed{
     border-bottom: 2px solid black;
     text-transform: uppercase;
     padding: 1.25rem;
-    margin-top: 0.5rem;
     margin-bottom: 0;
     text-align: center;
 }
@@ -1406,7 +1405,7 @@ button.accordion-button.collapsed{
     display: block;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 475px;
     width: 500px;
     background-color: #fafafa;
     border: 2px solid black;
@@ -1499,7 +1498,6 @@ button.accordion-button.collapsed{
     border-bottom: 2px solid black;
     text-transform: uppercase;
     padding: 1.25rem;
-    margin-top: 0.5rem;
     margin-bottom: 0;
     text-align: center;
 }
@@ -1640,7 +1638,6 @@ button.accordion-button.collapsed{
     border-bottom: 2px solid black;
     text-transform: uppercase;
     padding: 1.5rem;
-    margin-top: 0.5rem;
     margin-bottom: 0;
     text-align: center;
 }

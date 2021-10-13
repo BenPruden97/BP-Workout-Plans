@@ -21,7 +21,7 @@
 
             <div class="col-12">
 
-                <form class="contact-section" method="POST">
+                <form class="contact-section">
 
                     <div class="contact-card">
 
@@ -50,7 +50,7 @@
 
                             <div class="contact-button">
 
-                                <button type="submit" onclick="contactMessage()">
+                                <button type="submit">
                                     Send Message
                                 </button>
 
@@ -65,5 +65,8 @@
         </div>
 
     </div>
+
+    <!----- contact.js file ----->
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
 
 {% endblock %}
