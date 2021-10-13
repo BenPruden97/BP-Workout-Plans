@@ -917,7 +917,7 @@ ul.pagination{
     border-top: 2px solid black;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
-    margin: 0.5rem;
+    margin: 1.5rem 0.5rem 0.5rem;
 }
 
 .exercise-options select{
@@ -957,7 +957,7 @@ ul.pagination{
     border-radius: 5px;
     cursor: pointer;
     margin: 0.5rem;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     transition: 0.5s;
     text-decoration: none;
     text-align: center;
@@ -978,7 +978,6 @@ ul.pagination{
     border-radius: 5px;
     cursor: pointer;
     margin: 0.5rem;
-    margin-top: 1.5rem;
     transition: 0.5s;
 }
 
@@ -1209,13 +1208,14 @@ button.accordion-button.collapsed{
     padding-bottom: 1.5rem;
 }
 
-.like-workout-styling{
+.workout-options-styling{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
 }
 
-.like-workout{
+.workout-plan-options{
     background-color: #fafafa;
     color: #118324;
     width: 500px;
@@ -1223,44 +1223,19 @@ button.accordion-button.collapsed{
     border: 2px solid #118324;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0.5rem;
+    margin: 1rem 0 0.5rem;
     transition: 0.5s;
     text-align: center;
     text-decoration: none;
 }
 
-.like-workout i{
+.workout-plan-options i{
     padding-right: 0.25rem;
     font-size: 1.1rem;
 }
 
-.like-workout:hover{
+.workout-plan-options:hover{
     background-color: #118324;
-    color: #fafafa;
-    text-decoration: none;
-}
-
-.remove-workout{
-    background-color: #fafafa;
-    color: #db0007;
-    width: 500px;
-    padding: 0.5rem;
-    border: 2px solid #db0007;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0.5rem;
-    transition: 0.5s;
-    text-align: center;
-    text-decoration: none;
-}
-
-.remove-workout i{
-    padding-right: 0.25rem;
-    font-size: 1.1rem;
-}
-
-.remove-workout:hover{
-    background-color: #db0007;
     color: #fafafa;
     text-decoration: none;
 }
@@ -1273,7 +1248,7 @@ button.accordion-button.collapsed{
     border: 2px solid #db0007;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0.5rem;
+    margin: 1rem 0 0.5rem;
     transition: 0.5s;
     text-align: center;
     text-decoration: none;
@@ -1290,20 +1265,7 @@ button.accordion-button.collapsed{
     text-decoration: none;
 }
 
-.workout-options{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-}
-
 .workout-edit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.workout-edit a{
     background-color: #fafafa;
     color: #118324;
     width: 500px;
@@ -1311,7 +1273,6 @@ button.accordion-button.collapsed{
     border: 2px solid #118324;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0.5rem;
     transition: 0.5s;
     text-align: center;
     text-decoration: none;
@@ -1322,16 +1283,10 @@ button.accordion-button.collapsed{
     font-size: 1.1rem;
 }
 
-.workout-edit a:hover{
+.workout-edit:hover{
     background-color: #118324;
     color: #fafafa;
     text-decoration: none;
-}
-
-.workout-delete{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .workout-delete i{
@@ -1339,7 +1294,7 @@ button.accordion-button.collapsed{
     font-size: 1.1rem;
 }
 
-.workout-delete a{
+.workout-delete{
     background-color: #fafafa;
     color: #db0007;
     width: 500px;
@@ -1347,13 +1302,12 @@ button.accordion-button.collapsed{
     border: 2px solid #db0007;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0.5rem;
     transition: 0.5s;
     text-align: center;
     text-decoration: none;
 }
 
-.workout-delete a:hover{
+.workout-delete:hover{
     background-color: #db0007;
     color: #fafafa;
     text-decoration: none;
@@ -1814,7 +1768,6 @@ button.accordion-button.collapsed{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-right: 2px solid black;
     border-bottom: 2px solid black;
     text-align: center;
     padding: 1rem 2.5rem;
@@ -2206,47 +2159,6 @@ button.accordion-button.collapsed{
     text-decoration: none;
 }
 
-/* ----- Liked Workout Plans Page Styling ----- */
-
-.liked-workout-text{
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    text-align: center;
-    padding: 1rem 0 2rem;
-}
-
-.liked-workout-text h1{
-    text-transform: uppercase;
-    padding: 0 0 0.5rem;
-}
-
-.liked-workout-text h5{
-    padding: 0.5rem 10rem;
-}
-
-.liked-workout-text h6{
-    padding: 0.25rem 0 2rem;
-}
-
-.liked-workout-text a{
-    width: 25%;
-    background-color: #fafafa;
-    color: black;
-    padding: 0.75rem;
-    margin: 1rem;
-    border: 2px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.5s;
-    text-decoration: none;
-}
-
-.liked-workout-text a:hover{
-    background-color: black;
-    color: #fafafa;
-    text-decoration: none;
-}
-
 @media (max-width: 992px) {
 
     .nav-logo{
@@ -2463,24 +2375,20 @@ button.accordion-button.collapsed{
         width: 500px;
     }
 
-    .like-workout{
-        width: 200px;
-    }
-
-    .remove-workout{
-        width: 200px;
+    .workout-plan-options{
+        width: 300px;
     }
 
     .go-back{
-        width: 200px;
+        width: 300px;
     }
 
-    .workout-edit a{
-        width: 200px;
+    .workout-edit{
+        width: 300px;
     }
 
-    .workout-delete a{
-        width: 200px;
+    .workout-delete{
+        width: 300px;
     }
 
 }
@@ -3221,30 +3129,25 @@ button.accordion-button.collapsed{
         flex-direction: column;
     }
 
-    .workout-options{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    .workout-options-styling{
+        padding: 0.25rem 0;
     }
 
-    .like-workout{
+    .workout-plan-options{
         width: 250px;
-    }
-
-    .remove-workout{
-        width: 250px;
+        margin: 0;
     }
 
     .go-back{
         width: 250px;
+        margin-top: 0.75rem;
     }
 
-    .workout-edit a{
+    .workout-edit{
         width: 250px;
     }
 
-    .workout-delete a{
+    .workout-delete{
         width: 250px;
     }
 
