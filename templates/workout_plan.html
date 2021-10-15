@@ -727,7 +727,7 @@
 
                     <div class="workout-options-styling">
 
-                        <a class="workout-plan-options" href="{{ url_for('log_in') }}"><i class="fas fa-heart"></i> Create A Workout Plan</a>
+                        <a class="workout-plan-options" href="{{ url_for('log_in') }}"><i class="fas fa-plus-circle"></i> Create A Workout Plan</a>
 
                     </div>
 
@@ -739,7 +739,7 @@
 
                     <div class="workout-options-styling">
 
-                        <a class="workout-plan-options" href="{{ url_for('log_in') }}"><i class="fas fa-user-edit"></i> Log In To Edit Workout</a>
+                        <a class="workout-plan-options" href="{{ url_for('log_in') }}"><i class="fas fa-user-edit"></i> Log In To Create A Workout</a>
 
                     </div>
 
@@ -756,7 +756,7 @@
                 <div class="workout-options-styling">
             
                     {% if session.member|lower == workout_plan.created_by|lower or session.member|lower == "admin"|lower %}
-                        <a class="workout-edit" href="{{ url_for('edit_workout', workout_plan_id=workout_plan._id) }}"><i class="fas fa-edit"></i> Edit</a>                                     
+                        <a class="workout-edit" href="{{ url_for('edit_workout', workout_plan_id=workout_plan._id) }}"><i class="fas fa-edit"></i> Edit Workout Plan</a>                                     
                     {% endif %}
 
                 </div>
@@ -769,7 +769,7 @@
 
 
                     {% if session.member|lower == workout_plan.created_by|lower or session.member|lower == "admin"|lower %}
-                        <a class="workout-delete" href="#" onclick="deleteWorkoutPlan()"><i class="fas fa-trash-alt"></i> Delete</a>                                        
+                        <a class="workout-delete" href="#" onclick="deleteWorkoutPlan()"><i class="fas fa-trash-alt"></i> Delete Workout Plan</a>                                        
                     {% endif %}
 
                 </div>

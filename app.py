@@ -58,7 +58,12 @@ def search():
     workout_plans = mongo.db.workout_plans.find({"$text": {"$search": query}})
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
-    return render_template("find_workouts.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
+
+    workout_plans_paginated = paginated(workout_plans)
+    pagination = pagination_args(workout_plans)
+
+    return render_template("find_workouts.html", workout_plans=workout_plans_paginated, workout_difficulties=workout_difficulties, 
+    workout_categories=workout_categories, pagination=pagination)
 
 
 @app.route("/find_workouts")
