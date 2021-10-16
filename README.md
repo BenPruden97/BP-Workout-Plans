@@ -8,10 +8,16 @@
 
 # Table of Contents
 
-#[UX](#UX)
-  * [Project Goals)(#project-goals)
+#[UX](#ux)
+  * [Project Goals](#project-goals)
   * [User Goals](#user-goals)
   * [User Stories](#user-stories)
+#[Five Development Planes](#five-development-planes)
+  * [Strategy Development Plane](#strategy-development-plane)
+  * [Scope Development Plane](#scope-development-plane)
+  * [Structure Development Plane](#structure-development-plane)
+  * [Skeleton Development Plane](#skeleton-development-plane)
+  * [Surface Development Plane](#surface-development-plane)
 
 # Project Goals
 
@@ -70,5 +76,145 @@ The primary goal of BP Workout Plans is to provide a web-based fitness community
 * Be able to edit any workout plans created by members.
 * Be able to delete any workout plans created by members if necessary.
 * Create workout plans like any other member.
+
+[Back to Table of Contents](#table-of-contents)
+
+# Five Development Planes
+
+## 1. Strategy Development Plane
+
+Here is how I broke down the Strategy Development Plane:
+
+1. Users/ Members
+   * Users (not registered/ not signed up)
+   * Members (signed up/ logged in)
+
+2. Demographic/ Target Audience
+   * Loves going to the gym/ working out
+   * Gym goers looking for workout plans
+   * Gym goers of all ages
+   * Gym goers of all levels
+
+3. The website will need to enable a user to:
+   * Sign Up for an account
+   * Log into their account once signed up
+   * Contact the site owner/ Developer using the contact form
+   * Find workout plans created by members
+   * View members workout plans
+   * Search using the search bar input for specific workout plans
+
+4. The website will need to enable a member to:
+   * Log into their account
+   * Contact the site owner/ Developer using the contact form
+   * Find workout plans created by other members
+   * View other members workout plans
+   * Search using the seach bar input for specific workout plans
+   * Create their own workout plans to share with the community
+   * Edit their own workout plans to make changes
+   * Delete their own workout plans (if needed)
+   * View their profile
+   * Edit their account to change either their username or password
+   * Delete their account if they would like to
+   * View their own workout plans created by themselves
+
+With the above strategy options in mind, I have created a User & Member strategy table (below) to show the importance and viability for all of the following options:
+
+### User Strategy Table
+
+
+
+### Member Strategy Table
+
+
+
+## 2. Scope Development Plane
+
+Here is how I broke down the Scope Development Plane in order to align with the Strategy Development Plane listed above. The Scope Development Plane is broken down into two categories:
+
+### 1. Content Requirements
+
+
+### 2. Functionality Requirements
+
+
+## 3. Structure Development Plane
+
+Within the Structure Development Plane I have created a hierarchial structure chart to show how the users & members of BP Workout Plans can navigate around the site with ease and efficiency, the hierarchial structure chart is displayed below:
+
+### User Structure Chart
+
+
+
+### Member Structure Chart
+
+
+
+## 4. Skeleton Development Plane
+
+The wireframe mockups for BP Workout Plans were created using Adobe XD with the User Experience and User Interface in mind:
+
+### Home Page
+
+
+
+### Sign Up Page
+
+
+
+### Log In Page
+
+
+
+### Contact Page
+
+
+
+### Find Workout Plans Page
+
+
+
+### Create A Workout Plan Page
+
+
+
+### Edit Workout Plan Page
+
+
+
+### Workout Plan Page
+
+
+
+### My Workout Plans Page
+
+
+
+### View Profile Page
+
+
+
+### Edit Account Page
+
+
+
+### Member Navigation Bar
+
+
+
+# 5. Surface Development Plane
+
+### Colors
+
+
+
+### Typography
+
+The primary font used with BP Workout Plans was "Poppins". I wanted the font to match well with the UI of the website with its simplicity but was also very easy to read and understand.
+
+The secondary font used was "San Serif" which would display if the primary font was not able to load onto the user/ members device.
+
+### Images/ Screenshots
+
+The images/ screenshots used within BP Workout Plans or the README.md file were created using Adobe XD. Using Adobe XD for the entirety of my project allowed me to keep a good consistency throughout.
 
 [Back to Table of Contents](#table-of-contents)
