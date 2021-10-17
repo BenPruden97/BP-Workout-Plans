@@ -759,7 +759,10 @@ ul.pagination{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem;
+    margin: 0.5rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid black;
+    border-radius: 0;
 }
 
 .pagination > li > a{
@@ -1174,10 +1177,6 @@ button.accordion-button:focus {
     background-color: #fafafa;
 }
 
-.accordion-button::after{
-    color: black;
-}
-
 .accordion-button:not(.collapsed) {
     width: 750px;
 }
@@ -1188,6 +1187,7 @@ button.accordion-button.collapsed{
     align-items: center;
     font-weight: bold;
     width: 750px;
+    color: black;
 }
 
 .workout-name{
@@ -2194,6 +2194,79 @@ button.accordion-button.collapsed{
     text-decoration: none;
 }
 
+.my-no-workout-text{
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding: 1rem 0 2rem;
+}
+
+.my-no-workout-text h1{
+    text-transform: uppercase;
+    padding: 0 0 0.5rem;
+}
+
+.my-no-workout-text h5{
+    padding: 0.5rem 2rem;
+}
+
+.my-no-workout-text h6{
+    padding: 0.25rem 2rem 2rem;
+}
+
+.my-no-workout-text a{
+    width: 25%;
+    background-color: #fafafa;
+    color: black;
+    padding: 0.75rem;
+    margin: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.my-no-workout-text a:hover{
+    background-color: black;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.my-workout-text-contact{
+    text-align: center;
+    padding: 1rem 0 2rem;
+    background-color: #009dff;
+    color: #fafafa;
+}
+
+.my-workout-text-contact h1{
+    text-transform: uppercase;
+    padding: 0 0 0.5rem;
+}
+
+.my-workout-text-contact h5{
+    padding: 0.5rem 2rem 1.5rem;
+}
+
+.my-workout-text-contact a{
+    width: 25%;
+    background-color: #fafafa;
+    color: black;
+    padding: 0.75rem;
+    margin: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.my-workout-text-contact a:hover{
+    background-color: black;
+    color: #fafafa;
+    text-decoration: none;
+}
+
 @media (max-width: 992px) {
 
     .nav-logo{
@@ -2889,6 +2962,45 @@ button.accordion-button.collapsed{
 
     .my-workout-text h6{
         padding: 0.25rem 2rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .my-no-workout-text{
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding: 1rem 0 2rem;
+    }
+
+    .my-no-workout-text h1{
+        text-transform: uppercase;
+        padding: 0 0 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .my-no-workout-text h5{
+        padding: 0.5rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .my-no-workout-text h6{
+        padding: 0.25rem 2rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .my-workout-text-contact{
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding: 1rem 0 2rem;
+    }
+
+    .my-workout-text-contact h1{
+        text-transform: uppercase;
+        padding: 0 0 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .my-workout-text-contact h5{
+        padding: 0.5rem 2rem;
         font-size: 1.1rem;
     }
 

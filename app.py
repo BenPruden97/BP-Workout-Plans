@@ -55,7 +55,7 @@ def search():
 
     query = request.form.get("query")
 
-    workout_plans = mongo.db.workout_plans.find({"$text": {"$search": query}})
+    workout_plans = list(mongo.db.workout_plans.find({"$text": {"$search": query}}))
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
 
