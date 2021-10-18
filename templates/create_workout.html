@@ -16,7 +16,8 @@
                         <div class="workout-input">
 
                             <label for="workout_category">Choose Muscle Group:</label><br>
-                            <select name="workout_category" id="workout_category" required>
+                            <select name="workout_category" id="workout_category">
+                                <option value="">Select Your Muscle Group</option>
                                 {% for category in workout_categories %}
                                     <option value="{{ category.workout_category }}">{{ category.workout_category }}</option>
                                 {% endfor %}
@@ -27,7 +28,8 @@
                         <div class="workout-input">
 
                             <label for="workout_difficulty">Choose Workout Difficulty:</label><br>
-                            <select name="workout_difficulty" id="workout_difficulty" required>
+                            <select name="workout_difficulty" id="workout_difficulty">
+                                <option value="">Select Your Workout Difficulty</option>
                                 {% for difficulty in workout_difficulties %}
                                     <option value="{{ difficulty.workout_difficulty }}">{{ difficulty.workout_difficulty }}</option>
                                 {% endfor %}
@@ -35,11 +37,11 @@
 
                         </div>
 
-                        <div class="workout-input form-row">
+                        <div class="workout-input">
 
                             <label for="workout_name">Workout Name:</label><br>
                             <input id="workout_name" name="workout_name" type="text" 
-                            minlength="5" maxlength="35" placeholder="Workout Name" class="form-control" required>
+                            minlength="5" maxlength="35" placeholder="Workout Name" required>
 
                         </div>
 
@@ -50,8 +52,7 @@
                             minlength="5" maxlength="150" placeholder="Workout Description" required></textarea>
 
                         </div>
-
-                        
+                     
                         <div class="exercise">
 
                             <h4>Exercise 1:</h4>
@@ -500,7 +501,7 @@
 
                             </div>
 
-                        </div>   
+                        </div>
 
                         <div class="exercise">
 

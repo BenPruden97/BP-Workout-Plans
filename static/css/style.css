@@ -865,6 +865,10 @@ ul.pagination{
     margin-bottom: 0.5rem;
 }
 
+.workout-input textarea::placeholder{
+    color: black;
+}
+
 .exercise{
     display: block;
     justify-content: center;
@@ -2600,7 +2604,7 @@ button.accordion-button.collapsed{
     .navbar-collapse a{
         background-color: #fafafa;
         color: black;
-        padding: 0.6rem 2rem;
+        padding: 0.6rem;
         text-decoration: none;
         border-radius: 5px;
         transition: 0.5s;
@@ -2984,6 +2988,7 @@ button.accordion-button.collapsed{
     }
 
     .form-button a{
+        width: 150px;
         margin: 0 0 0.5rem;
     }
     

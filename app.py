@@ -500,7 +500,8 @@ def my_workouts(username):
 
 
 # ----- Error Handler Pages -----
-# ----- I used this website to help me with the error handler pages: https://flask.palletsprojects.com/en/1.1.x/errorhandling/
+# ----- I used this website to help me with the error handler pages: 
+# https://flask.palletsprojects.com/en/1.1.x/errorhandling/
 
 @app.errorhandler(404)
 def page_error(e):
