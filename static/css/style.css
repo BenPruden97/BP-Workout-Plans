@@ -1335,24 +1335,29 @@ button.accordion-button.collapsed{
 
 .delete-workout-modal{
     display: none;
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 750px;
     position: relative;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 7;
+    border-radius: 10px;
 }
 
 .delete-workout-modal-content{
+    position: absolute;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     background-color: #fafafa;
     border: 2px solid black;
     border-radius: 10px;
     padding: 3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -75%);
-    text-align: center;
 }
 
 .delete-workout-modal-content h3{
@@ -1927,28 +1932,29 @@ button.accordion-button.collapsed{
 
 .delete-modal{
     display: none;
-    height: 650px;
-    width: 100vw;
+    height: 500px;
+    width: 750px;
     position: relative;
     position: absolute;
-    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -31.5%);
+    transform: translate(-50%, -25%);
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 7;
+    border-radius: 10px;
 }
 
 .delete-modal-content{
+    position: absolute;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     background-color: #fafafa;
     border: 2px solid black;
     border-radius: 10px;
     padding: 3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    text-align: center;
 }
 
 .delete-modal-content h3{
@@ -2565,6 +2571,66 @@ button.accordion-button.collapsed{
         width: 300px;
     }
 
+    /* ----- Delete Workout Plan Modal Styling ----- */
+
+    /* ----- Delete Workout Plan Modal ----- */
+
+    .delete-workout-modal{
+        display: none;
+        height: 400px;
+        width: 650px;
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 25%);
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 7;
+        border-radius: 10px;
+    }
+
+    .delete-workout-modal-content{
+        position: absolute;
+        width: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: #fafafa;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 3rem;
+    }
+
+    /* ----- Delete Account Modal ----- */
+
+    .delete-modal{
+        display: none;
+        height: 400px;
+        width: 650px;
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 7;
+        border-radius: 10px;
+    }
+
+    .delete-modal-content{
+        position: absolute;
+        width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: #fafafa;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 3rem;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -2834,6 +2900,66 @@ button.accordion-button.collapsed{
         transition: 0.5s;
         text-decoration: none;
         text-align: center;
+    }
+
+    /* ----- Delete Workout Plan Modal Styling ----- */
+
+    /* ----- Delete Workout Plan Modal ----- */
+
+    .delete-workout-modal{
+        display: none;
+        height: 400px;
+        width: 650px;
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 25%);
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 7;
+        border-radius: 10px;
+    }
+
+    .delete-workout-modal-content{
+        position: absolute;
+        width: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: #fafafa;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 3rem;
+    }
+
+    /* ----- Delete Account Modal ----- */
+
+    .delete-modal{
+        display: none;
+        height: 400px;
+        width: 650px;
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 7;
+        border-radius: 10px;
+    }
+
+    .delete-modal-content{
+        position: absolute;
+        width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: #fafafa;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 3rem;
     }
 
 }
@@ -3432,6 +3558,148 @@ button.accordion-button.collapsed{
     .error-message a:hover{
         background-color: black;
         color: #fafafa;
+    }
+
+    /* ----- Delete Workout Plan Modal Styling ----- */
+
+    /* ----- Delete Workout Plan Modal ----- */
+
+    .delete-workout-modal{
+        display: none;
+        height: 350px;
+        width: 320px;
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 25%);
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 7;
+        border-radius: 10px;
+    }
+
+    .delete-workout-modal-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        height: 250px;
+        width: 270px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: #fafafa;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    .delete-workout-modal-content h3{
+        color: black;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .yes-delete-workout-plan{
+        text-decoration: none;
+        color: #118324;
+        background-color: #fafafa;
+        border: 2px solid #118324;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        transition: 0.5s;
+        font-size: 0.75rem;
+    }
+
+    .no-delete-workout-plan{
+        text-decoration: none;
+        color: #db0007;
+        background-color: #fafafa;
+        border: 2px solid #db0007;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        transition: 0.5s;
+        font-size: 0.75rem;
+    }
+
+    /* ----- Delete Account Modal ----- */
+
+    .delete-modal{
+        display: none;
+        height: 650px;
+        width: 320px;
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 7;
+        border-radius: 10px;
+    }
+
+    .delete-modal-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        height: 500px;
+        width: 275px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: #fafafa;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    .delete-modal-content h3{
+        color: black;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .delete-modal-content p{
+        color: black;
+        padding-bottom: 1rem;
+    }
+
+    .delete-options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .yes-delete-account{
+        text-decoration: none;
+        color: #118324;
+        background-color: #fafafa;
+        border: 2px solid #118324;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        transition: 0.5s;
+        font-size: 0.75rem;
+    }
+
+    .no-delete-account{
+        text-decoration: none;
+        color: #db0007;
+        background-color: #fafafa;
+        border: 2px solid #db0007;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        transition: 0.5s;
+        font-size: 0.75rem;
     }
 
 }

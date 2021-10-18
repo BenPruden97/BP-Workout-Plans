@@ -1,20 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="delete-modal" id="delete-modal">
+    <div class="container-fluid">
+        
+        <div class="row">
 
-        <div class="delete-modal-content">
+            <div class="col-12">
 
-            <h3>Are you sure you would like to delete your account with us?</h3>
+                <div class="delete-modal" id="delete-modal">
 
-            <p>Reminder: Deleting your account will remove all of your account data</p>
+                    <div class="delete-modal-content">
 
-            <div class="delete-options">
+                        <h3>Are you sure you would like to delete your account with us?</h3>
 
-                <a href="{{ url_for('delete_member', username=session['member']) }}" class="yes-delete-account">Yes, Delete My Account</a>
+                        <p>Reminder: Deleting your account will remove all of your account data</p>
 
-                <a href="{{ url_for('profile', username=session['member']) }}" class="no-delete-account">No, Go Back</a>
+                        <div class="delete-options">
 
+                            <a href="{{ url_for('delete_member', username=session['member']) }}" class="yes-delete-account">Yes, Delete My Account</a>
+
+                            <a href="{{ url_for('profile', username=session['member']) }}" class="no-delete-account">No, Go Back</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            
             </div>
 
         </div>
