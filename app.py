@@ -22,6 +22,7 @@ mongo = PyMongo(app)
 
 PER_PAGE = 6
 
+
 def paginated(workout_plans):
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page')
@@ -44,10 +45,15 @@ def pagination_args(workout_plans):
 @app.route("/home")
 def home():
 
-    workout_plans = mongo.db.workout_plans.find().sort("_id", DESCENDING).limit(6)
+    workout_plans = mongo.db.workout_plans.find().sort(
+        "_id", DESCENDING).limit(6)
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
-    return render_template("index.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
+    return render_template(
+        "index.html", workout_plans=workout_plans,
+        workout_difficulties=workout_difficulties,
+        workout_categories=workout_categories
+    )
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -55,15 +61,19 @@ def search():
 
     query = request.form.get("query")
 
-    workout_plans = list(mongo.db.workout_plans.find({"$text": {"$search": query}}))
+    workout_plans = list(mongo.db.workout_plans.find(
+        {"$text": {"$search": query}}))
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
 
     workout_plans_paginated = paginated(workout_plans)
     pagination = pagination_args(workout_plans)
 
-    return render_template("find_workouts.html", workout_plans=workout_plans_paginated, workout_difficulties=workout_difficulties, 
-    workout_categories=workout_categories, pagination=pagination)
+    return render_template(
+        "find_workouts.html", workout_plans=workout_plans_paginated,
+        workout_difficulties=workout_difficulties,
+        workout_categories=workout_categories, pagination=pagination
+    )
 
 
 @app.route("/find_workouts")
@@ -72,21 +82,29 @@ def find_workouts():
     workout_plans = list(mongo.db.workout_plans.find())
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
-    
+
     workout_plans_paginated = paginated(workout_plans)
     pagination = pagination_args(workout_plans)
 
-    return render_template("find_workouts.html", workout_plans=workout_plans_paginated, workout_difficulties=workout_difficulties, 
-        workout_categories=workout_categories, pagination=pagination)
+    return render_template(
+        "find_workouts.html", workout_plans=workout_plans_paginated,
+        workout_difficulties=workout_difficulties,
+        workout_categories=workout_categories, pagination=pagination
+    )
 
 
 @app.route("/workout_plan/<workout_plan_id>")
 def workout_plan(workout_plan_id):
 
-    workout_plan = mongo.db.workout_plans.find_one({"_id": ObjectId(workout_plan_id)})
+    workout_plan = mongo.db.workout_plans.find_one(
+        {"_id": ObjectId(workout_plan_id)})
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
-    return render_template("workout_plan.html", workout_plan=workout_plan, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
+    return render_template(
+        "workout_plan.html", workout_plan=workout_plan,
+        workout_difficulties=workout_difficulties,
+        workout_categories=workout_categories
+    )
 
 
 @app.route("/sign_up", methods=["GET", "POST"])
@@ -107,7 +125,9 @@ def sign_up():
         mongo.db.members.insert_one(sign_up)
 
         session["member"] = request.form.get("username").lower()
-        flash("Welcome to the community {}".format(request.form.get("username")))
+        flash("Welcome to the community {}".format(
+            request.form.get("username")))
+
         return redirect(url_for("profile", username=session["member"]))
 
     return render_template("sign_up.html")
@@ -121,18 +141,30 @@ def log_in():
 
         if existing_member:
 
-            if check_password_hash(existing_member["password"], request.form.get("password")):
+            if check_password_hash(
+                existing_member["password"],
+                    request.form.get("password")):
                 session["member"] = request.form.get("username").lower()
                 flash("Welcome Back {}!".format(
                     request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["member"]))
             else:
-                flash("Incorrect Username and/or Password Entered, please try again")
+                flash(
+                    """
+                    Username already exists,
+                    please try again
+                    """
+                    )
                 return redirect(url_for("log_in"))
 
         else:
-            flash("Incorrect Username and/or Password Entered, please try again")
+            flash(
+                """
+                Incorrect Username and/or
+                Password Entered, please try again
+                """
+                )
             return redirect(url_for("log_in"))
 
     return render_template("log_in.html")
@@ -209,7 +241,11 @@ def create_workout():
     workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
-    return render_template("create_workout.html", workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
+    return render_template(
+        "create_workout.html", workout_plans=workout_plans,
+        workout_difficulties=workout_difficulties,
+        workout_categories=workout_categories
+    )
 
 
 @app.route("/edit_workout/<workout_plan_id>", methods=["GET", "POST"])
@@ -253,14 +289,20 @@ def edit_workout(workout_plan_id):
             "total_workout_time": request.form.get("total_workout_time"),
             "created_by": session["member"]
         }
-        mongo.db.workout_plans.update({"_id": ObjectId(workout_plan_id)}, submit)
+        mongo.db.workout_plans.update(
+            {"_id": ObjectId(workout_plan_id)}, submit)
         flash("Workout Plan Successfully Updated")
 
-    workout_plan = mongo.db.workout_plans.find_one({"_id": ObjectId(workout_plan_id)})
+    workout_plan = mongo.db.workout_plans.find_one(
+        {"_id": ObjectId(workout_plan_id)})
     workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
-    return render_template("edit_workout.html", workout_plan=workout_plan, workout_plans=workout_plans, workout_difficulties=workout_difficulties, workout_categories=workout_categories)
+    return render_template(
+        "edit_workout.html", workout_plan=workout_plan,
+        workout_plans=workout_plans, workout_difficulties=workout_difficulties,
+        workout_categories=workout_categories
+    )
 
 
 @app.route("/delete_workout/<workout_plan_id>")
@@ -279,7 +321,8 @@ def edit_account(username):
 
         mongo.db.members.update_one({"username": session['member']},
                                     {'$set': {
-                                        "username": request.form.get("username").lower(),
+                                        "username": request.form.get(
+                                            "username").lower(),
                                     }})
         flash("Your Username Has Been Updated")
         session.pop("member")
@@ -295,7 +338,8 @@ def update_password(username):
 
         mongo.db.members.update_one({"username": session['member']},
                                     {'$set': {
-                                        "password": generate_password_hash(request.form.get("password")),
+                                        "password": generate_password_hash(
+                                            request.form.get("password")),
                                     }})
         flash("Your Password Has Been Updated")
         session.pop("member")
@@ -327,7 +371,10 @@ def my_workouts(username):
     workout_plans_paginated = paginated(workout_plans)
     pagination = pagination_args(workout_plans)
 
-    return render_template("my_workouts.html", username=username, workout_plans=workout_plans_paginated, pagination=pagination)
+    return render_template(
+        "my_workouts.html", username=username,
+        workout_plans=workout_plans_paginated, pagination=pagination
+    )
 
 
 if __name__ == "__main__":
