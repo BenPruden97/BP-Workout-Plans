@@ -119,7 +119,7 @@ div.col-lg-12{
 
 /* ----- Navigation Logo Styling ----- */
 
-nav.navbar.navbar-expand-md{
+nav.navbar.navbar-expand-lg{
     display: none;
 }
 
@@ -159,10 +159,10 @@ nav .nav{
     background-color: #fafafa;
     width: 100%;
     height: 50px;
-    margin: 0.75rem 0;
+    margin-bottom: 0.5rem;
 }
 
-nav.navbar.navbar-expand-md.navbar-light.bg-light{
+nav.navbar.navbar-expand-lg.navbar-light.bg-light{
     padding: 0;
 }
 
@@ -257,7 +257,7 @@ nav .nav .log-in:hover{
     list-style-type: none;
     height: 50px;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .user-links ul{
@@ -805,6 +805,7 @@ ul.pagination{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #fafafa;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -2366,7 +2367,7 @@ button.accordion-button.collapsed{
         margin-bottom: 0.5rem;
     }
 
-    nav.navbar.navbar-expand-md{
+    nav.navbar.navbar-expand-lg{
         display: none;
     }
 
@@ -2683,7 +2684,7 @@ button.accordion-button.collapsed{
         text-decoration: none;
     }
 
-    nav.navbar.navbar-expand-md{
+    nav.navbar.navbar-expand-lg{
         display: flex;
         justify-content: center;
         align-items: center;

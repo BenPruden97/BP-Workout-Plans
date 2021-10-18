@@ -13,111 +13,83 @@
 
                         <h3>Create A Workout Plan</h3>
 
-                        <div class="workout-input">
-
-                            <label for="workout_category">Choose Muscle Group:</label><br>
-                            <select name="workout_category" id="workout_category">
-                                <option value="">Select Your Muscle Group</option>
-                                {% for category in workout_categories %}
-                                    <option value="{{ category.workout_category }}">{{ category.workout_category }}</option>
-                                {% endfor %}
-                            </select>
-
-                        </div>
-
-                        <div class="workout-input">
-
-                            <label for="workout_difficulty">Choose Workout Difficulty:</label><br>
-                            <select name="workout_difficulty" id="workout_difficulty">
-                                <option value="">Select Your Workout Difficulty</option>
-                                {% for difficulty in workout_difficulties %}
-                                    <option value="{{ difficulty.workout_difficulty }}">{{ difficulty.workout_difficulty }}</option>
-                                {% endfor %}
-                            </select>
-
-                        </div>
-
-                        <div class="workout-input">
-
-                            <label for="workout_name">Workout Name:</label><br>
-                            <input id="workout_name" name="workout_name" type="text" 
-                            minlength="5" maxlength="35" placeholder="Workout Name" required>
-
-                        </div>
-
-                        <div class="workout-input">
-
-                            <label for="workout_description">Workout Description:</label><br>
-                            <textarea name="workout_description" id="workout_description" cols="30" rows="5"
-                            minlength="5" maxlength="150" placeholder="Workout Description" required></textarea>
-
-                        </div>
+                        <div class="form-row">
                      
-                        <div class="exercise">
+                            <div class="workout-input">
 
-                            <h4>Exercise 1:</h4>
+                                <label for="workout_category">Choose Muscle Group:</label><br>
+                                <select name="workout_category" id="workout_category" required>
+                                    <option value="">Select Your Muscle Group</option>
+                                    {% for category in workout_categories %}
+                                        <option value="{{ category.workout_category }}">{{ category.workout_category }}</option>
+                                    {% endfor %}
+                                </select>
+
+                            </div>
 
                             <div class="workout-input">
 
-                                <label for="exercise_name_1">Exerise Name:</label><br>
-                                <input id="exercise_name_1" name="exercise_name_1" type="text" 
-                                minlength="3" maxlength="30" placeholder="Exercise Name" required>
+                                <label for="workout_difficulty">Choose Workout Difficulty:</label><br>
+                                <select name="workout_difficulty" id="workout_difficulty" required>
+                                    <option value="">Select Your Workout Difficulty</option>
+                                    {% for difficulty in workout_difficulties %}
+                                        <option value="{{ difficulty.workout_difficulty }}">{{ difficulty.workout_difficulty }}</option>
+                                    {% endfor %}
+                                </select>
 
                             </div>
 
-                            <div class="container-fluid">
+                            <div class="workout-input">
 
-                                <div class="row">
+                                <label for="workout_name">Workout Name:</label><br>
+                                <input id="workout_name" name="workout_name" type="text" 
+                                minlength="5" maxlength="35" placeholder="Workout Name" required>
 
-                                    <div class="col-md-6 col-12">
+                            </div>
 
-                                        <div class="exercise-input">
+                            <div class="workout-input">
 
-                                            <label for="number_of_sets_1">Number Of Sets:</label>
-                                            <input id="number_of_sets_1" name="number_of_sets_1" type="number" 
-                                            min="3" max="10" placeholder="Number Of Sets" required>
+                                <label for="workout_description">Workout Description:</label><br>
+                                <textarea name="workout_description" id="workout_description" cols="30" rows="5"
+                                minlength="5" maxlength="150" placeholder="Workout Description" required></textarea>
 
-                                        </div>
+                            </div>
+                            
+                            <div class="exercise">
 
-                                    </div>
+                                <h4>Exercise 1:</h4>
 
-                                    <div class="col-md-6 col-12">
+                                <div class="workout-input">
 
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_1">Number Of Reps:</label>
-                                            <input id="number_of_reps_1" name="number_of_reps_1" type="number" 
-                                            min="1" max="20" placeholder="Number Of Reps" required>
-
-                                        </div>
-
-                                    </div>
+                                    <label for="exercise_name_1">Exerise Name:</label><br>
+                                    <input id="exercise_name_1" name="exercise_name_1" type="text" 
+                                    minlength="3" maxlength="30" placeholder="Exercise Name" required>
 
                                 </div>
 
-                            </div>
+                                <div class="container-fluid">
 
-                            <div class="container-fluid">
+                                    <div class="row">
 
-                                <div class="row">
+                                        <div class="col-md-6 col-12">
 
-                                    <div class="col-md-6 col-12">
+                                            <div class="exercise-input">
 
-                                        <div class="exercise-input">
+                                                <label for="number_of_sets_1">Number Of Sets:</label>
+                                                <input id="number_of_sets_1" name="number_of_sets_1" type="number" 
+                                                min="3" max="10" placeholder="Number Of Sets" required>
 
-                                            <div>
+                                            </div>
 
-                                                <label for="rest_time_1">Rest Time:</label>
-                                                <select name="rest_time_1" id="rest_time_1">
-                                                    <option>15 Secs</option>
-                                                    <option>30 Secs</option>
-                                                    <option>45 Secs</option>
-                                                    <option>60 Secs</option>
-                                                    <option>75 Secs</option>
-                                                    <option>90 Secs</option>
-                                                    <option>105 Secs</option>
-                                                    <option>120 Secs</option>
-                                                </select>
+                                        </div>
+
+                                        <div class="col-md-6 col-12">
+
+                                            <div class="exercise-input">
+
+                                                <label for="number_of_reps_1">Number Of Reps:</label>
+                                                <input id="number_of_reps_1" name="number_of_reps_1" type="number" 
+                                                min="1" max="20" placeholder="Number Of Reps" required>
 
                                             </div>
 
@@ -125,13 +97,45 @@
 
                                     </div>
 
-                                    <div class="col-md-6 col-12">
+                                </div>
 
-                                        <div class="exercise-input">
+                                <div class="container-fluid">
 
-                                            <label for="weight_used_1">Weight Used(kg):</label>
-                                            <input id="weight_used_1" name="weight_used_1" type="number" 
-                                            min="3" max="50" placeholder="Weight Used" required>
+                                    <div class="row">
+
+                                        <div class="col-md-6 col-12">
+
+                                            <div class="exercise-input">
+
+                                                <div>
+
+                                                    <label for="rest_time_1">Rest Time:</label>
+                                                    <select name="rest_time_1" id="rest_time_1">
+                                                        <option>15 Secs</option>
+                                                        <option>30 Secs</option>
+                                                        <option>45 Secs</option>
+                                                        <option>60 Secs</option>
+                                                        <option>75 Secs</option>
+                                                        <option>90 Secs</option>
+                                                        <option>105 Secs</option>
+                                                        <option>120 Secs</option>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 col-12">
+
+                                            <div class="exercise-input">
+
+                                                <label for="weight_used_1">Weight Used(kg):</label>
+                                                <input id="weight_used_1" name="weight_used_1" type="number" 
+                                                min="3" max="50" placeholder="Weight Used" required>
+
+                                            </div>
 
                                         </div>
 
@@ -140,98 +144,100 @@
                                 </div>
 
                             </div>
+                        
+                            <div class="exercise">
+
+                                <h4>Exercise 2:</h4>
+
+                                <div class="workout-input">
+
+                                    <label for="exercise_name_2">Exerise Name:</label><br>
+                                    <input id="exercise_name_2" name="exercise_name_2" type="text" 
+                                    minlength="3" maxlength="30" placeholder="Exercise Name" required>
+
+                                </div>
+
+                                <div class="container-fluid">
+
+                                    <div class="row">
+
+                                        <div class="col-md-6 col-12">
+
+                                            <div class="exercise-input">
+
+                                                <label for="number_of_sets_2">Number Of Sets:</label>
+                                                <input id="number_of_sets_2" name="number_of_sets_2" type="number" 
+                                                min="3" max="10" placeholder="Number Of Sets" required>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 col-12">
+
+                                            <div class="exercise-input">
+
+                                                <label for="number_of_reps_2">Number Of Reps:</label>
+                                                <input id="number_of_reps_2" name="number_of_reps_2" type="number" 
+                                                min="1" max="20" placeholder="Number Of Reps" required>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="container-fluid">
+
+                                    <div class="row">
+
+                                        <div class="col-md-6 col-12">
+
+                                            <div class="exercise-input">
+
+                                                <div>
+
+                                                    <label for="rest_time_2">Rest Time:</label>
+                                                    <select name="rest_time_2" id="rest_time_2">
+                                                        <option>15 Secs</option>
+                                                        <option>30 Secs</option>
+                                                        <option>45 Secs</option>
+                                                        <option>60 Secs</option>
+                                                        <option>75 Secs</option>
+                                                        <option>90 Secs</option>
+                                                        <option>105 Secs</option>
+                                                        <option>120 Secs</option>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 col-12">
+
+                                            <div class="exercise-input">
+
+                                                <label for="weight_used_2">Weight Used(kg):</label>
+                                                <input id="weight_used_2" name="weight_used_2" type="number" 
+                                                min="3" max="50" placeholder="Weight Used" required>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <button class="btn btn-primary" type="submit">Submit form</button>
 
                         </div>
-                        
-                        <div class="exercise">
-
-                            <h4>Exercise 2:</h4>
-
-                            <div class="workout-input">
-
-                                <label for="exercise_name_2">Exerise Name:</label><br>
-                                <input id="exercise_name_2" name="exercise_name_2" type="text" 
-                                minlength="3" maxlength="30" placeholder="Exercise Name" required>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-md-6 col-12">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_sets_2">Number Of Sets:</label>
-                                            <input id="number_of_sets_2" name="number_of_sets_2" type="number" 
-                                            min="3" max="10" placeholder="Number Of Sets" required>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-md-6 col-12">
-
-                                        <div class="exercise-input">
-
-                                            <label for="number_of_reps_2">Number Of Reps:</label>
-                                            <input id="number_of_reps_2" name="number_of_reps_2" type="number" 
-                                            min="1" max="20" placeholder="Number Of Reps" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-fluid">
-
-                                <div class="row">
-
-                                    <div class="col-md-6 col-12">
-
-                                        <div class="exercise-input">
-
-                                            <div>
-
-                                                <label for="rest_time_2">Rest Time:</label>
-                                                <select name="rest_time_2" id="rest_time_2">
-                                                    <option>15 Secs</option>
-                                                    <option>30 Secs</option>
-                                                    <option>45 Secs</option>
-                                                    <option>60 Secs</option>
-                                                    <option>75 Secs</option>
-                                                    <option>90 Secs</option>
-                                                    <option>105 Secs</option>
-                                                    <option>120 Secs</option>
-                                                </select>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-md-6 col-12">
-
-                                        <div class="exercise-input">
-
-                                            <label for="weight_used_2">Weight Used(kg):</label>
-                                            <input id="weight_used_2" name="weight_used_2" type="number" 
-                                            min="3" max="50" placeholder="Weight Used" required>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>   
 
                         <div class="exercise">
 
@@ -591,7 +597,7 @@
 
                             </div>
 
-                        </div>     
+                        </div>
 
                         <div class="container-fluid">
 
