@@ -728,7 +728,7 @@ footer{
 
 .card-workout-stats hr{
     margin: 1rem 0;
-    color: none;
+    color: transparent;
     background-color: black;
     border: 1px solid black;
     opacity: 1;
@@ -3210,7 +3210,7 @@ button.accordion-button.collapsed{
     .designer p{
         text-align: center;
         font-size: 0.6rem;
-        padding: 0.5rem 0.25;
+        padding: 0.5rem 0.25rem;
         margin: 0.5rem;
     }
 
