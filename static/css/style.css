@@ -14,6 +14,11 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
 div.profile-section{
     padding: 0;
 }
@@ -154,7 +159,7 @@ nav .nav{
     background-color: #fafafa;
     width: 100%;
     height: 50px;
-    margin: 0.25rem 0;
+    margin: 0.75rem 0;
 }
 
 nav.navbar.navbar-expand-md.navbar-light.bg-light{
@@ -2294,7 +2299,7 @@ button.accordion-button.collapsed{
     flex-direction: column;
     text-align: center;
     background-color: #fafafa;
-    height: 62vh;
+    height: 70vh;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
@@ -2347,6 +2352,7 @@ button.accordion-button.collapsed{
         width: 100%;
         height: 50px;
         padding-top: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     .user-links{
@@ -3383,6 +3389,49 @@ button.accordion-button.collapsed{
 
     .workout-delete{
         width: 250px;
+    }
+
+    /* ----- Error Handlers Styling ----- */
+
+    .error-message{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: #fafafa;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .error-message h1{
+        font-size: 1.5rem;
+        color: #db0007;
+    }
+
+    .error-message h2, h4{
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        color: black;
+    }
+
+    .error-message a{
+        width: 175px;
+        background-color: #fafafa;
+        color: black;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.5s;
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+
+    .error-message a:hover{
+        background-color: black;
+        color: #fafafa;
     }
 
 }
