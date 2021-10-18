@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="error-message">
+
+                    <h1>404</h1>
+
+                    <h1>PAGE NOT FOUND</h1>
+
+                    <h2>The Page You Are Looking For Does Not Exist!</h2>
+
+                    <h4>Go Back To BP Workout Plans</h4>
+
+                    <a href="{{ url_for('home') }}">Back To Home Page</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

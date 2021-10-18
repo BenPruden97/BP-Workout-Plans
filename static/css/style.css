@@ -2281,6 +2281,48 @@ button.accordion-button.collapsed{
     text-decoration: none;
 }
 
+/* ----- Error Handlers Styling ----- */
+
+.error-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fafafa;
+    height: 62vh;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.error-message h1{
+    font-size: 4rem;
+    color: #db0007;
+}
+
+.error-message h2, h4{
+    padding: 0.5rem;
+    color: black;
+}
+
+.error-message a{
+    width: 300px;
+    background-color: #fafafa;
+    color: black;
+    padding: 0.75rem;
+    margin: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.error-message a:hover{
+    background-color: black;
+    color: #fafafa;
+}
+
 @media (max-width: 992px) {
 
     .nav-logo{

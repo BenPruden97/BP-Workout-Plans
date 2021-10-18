@@ -314,6 +314,7 @@ def create_workout():
         flash("Workout Plan Successfully Added")
         return redirect(url_for('find_workouts'))
 
+
     workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
@@ -495,6 +496,23 @@ def my_workouts(username):
         "my_workouts.html", username=username,
         workout_plans=workout_plans_paginated, pagination=pagination
     )
+
+
+
+# ----- Error Handler Pages -----
+# ----- I used this website to help me with the error handler pages: https://flask.palletsprojects.com/en/1.1.x/errorhandling/
+
+@app.errorhandler(404)
+def page_error(e):
+
+    return render_template("404.html"), 404
+
+
+@app.errorhandler(500)
+def server_error(e):
+
+    return render_template("500.html"), 500
+
 
 
 # ----- Declaration of Special Variables -----
