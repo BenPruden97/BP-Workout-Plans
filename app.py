@@ -41,9 +41,15 @@ def pagination_args(workout_plans):
                       css_framework='bootstrap4', total=total)
 
 
+# ----- Home Page -----
+
+
 @app.route("/")
 @app.route("/home")
 def home():
+    """
+    The home page which displays 6 workout plans created by members
+    """
 
     workout_plans = mongo.db.workout_plans.find().sort(
         "_id", DESCENDING).limit(6)
@@ -56,8 +62,15 @@ def home():
     )
 
 
+# ----- Search Input -----
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    This is the search query to allow users/members
+    to search for workout plans by category and difficulty
+    """
 
     query = request.form.get("query")
 
@@ -76,8 +89,15 @@ def search():
     )
 
 
+# ----- Find Workouts Page -----
+
+
 @app.route("/find_workouts")
 def find_workouts():
+    """
+    The find workouts page which allows users/ members
+    to find different workout plans created by members
+    """
 
     workout_plans = list(mongo.db.workout_plans.find())
     workout_difficulties = mongo.db.workout_difficulties.find()
@@ -93,8 +113,15 @@ def find_workouts():
     )
 
 
+# ----- Workout Plan Page -----
+
+
 @app.route("/workout_plan/<workout_plan_id>")
 def workout_plan(workout_plan_id):
+    """
+    The workout plan page which displays the members
+    workout plan for users/ members to see
+    """
 
     workout_plan = mongo.db.workout_plans.find_one(
         {"_id": ObjectId(workout_plan_id)})
@@ -107,8 +134,17 @@ def workout_plan(workout_plan_id):
     )
 
 
+# ----- Sign Up Page -----
+
+
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
+    """
+    The sign up page to allow the user to sign up to
+    BP Workout Plans and become a member
+    """
+
+
     if request.method == "POST":
         existing_member = mongo.db.members.find_one(
             {"username": request.form.get("username").lower()})
@@ -133,8 +169,17 @@ def sign_up():
     return render_template("sign_up.html")
 
 
+# ----- Log In Page -----
+
+
 @app.route("/log_in", methods=["GET", "POST"])
 def log_in():
+    """
+    The log in page to allow the user to log into their account
+    using the username and password fields
+    """
+
+
     if request.method == "POST":
         existing_member = mongo.db.members.find_one(
             {"username": request.form.get("username").lower()})
@@ -170,8 +215,29 @@ def log_in():
     return render_template("log_in.html")
 
 
+# ----- Contact Page -----
+
+
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    """
+    Contact page to allow the user to contact the developer/
+    site owner
+    """
+
+    return render_template("contact.html")
+
+
+# ----- Profile Page -----
+
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    The profile page that displays the member's profile.
+    The member can update or delete their account from this page
+    """
+
     username = mongo.db.members.find_one(
         {"username": session["member"]})["username"]
 
@@ -181,20 +247,30 @@ def profile(username):
     return redirect("log_in")
 
 
+# ----- Log Out Functionality -----
+
+
 @app.route("/log_out")
 def log_out():
+    """
+    Allows the member to log out of their account
+    """
+
     flash("You have been logged out")
     session.pop("member")
     return redirect(url_for("log_in"))
 
 
-@app.route("/contact", methods=["GET", "POST"])
-def contact():
-    return render_template("contact.html")
+# ----- Create A Workout Plan Page -----
 
 
 @app.route("/create_workout", methods=["GET", "POST"])
 def create_workout():
+    """
+    This page allows the member to create their own
+    workout plan to share with the community
+    """
+
     if request.method == "POST":
         workout_plan = {
             "workout_category": request.form.get("workout_category"),
@@ -248,8 +324,16 @@ def create_workout():
     )
 
 
+# ----- Edit Workout Plan Page -----
+
+
 @app.route("/edit_workout/<workout_plan_id>", methods=["GET", "POST"])
 def edit_workout(workout_plan_id):
+    """
+    This page allows the member to edit any of
+    their own workout plans to make changes
+    """
+
     if request.method == "POST":
         submit = {
             "workout_category": request.form.get("workout_category"),
@@ -305,8 +389,15 @@ def edit_workout(workout_plan_id):
     )
 
 
+# ----- Delete Workout Plan Functionality -----
+
+
 @app.route("/delete_workout/<workout_plan_id>")
 def delete_workout(workout_plan_id):
+    """
+    Allows the member to delete any of their own
+    workout plans if they no longer want them
+    """
 
     mongo.db.workout_plans.remove(
         {"_id": ObjectId(workout_plan_id)})
@@ -315,8 +406,16 @@ def delete_workout(workout_plan_id):
     return redirect(url_for('find_workouts'))
 
 
+# ----- Edit Account Page -----
+
+
 @app.route("/edit_account/<username>", methods=["GET", "POST"])
 def edit_account(username):
+    """
+    Allows the member to edit their account
+    by changing their username
+    """
+
     if request.method == "POST":
 
         mongo.db.members.update_one({"username": session['member']},
@@ -332,8 +431,16 @@ def edit_account(username):
     return render_template("edit_account.html")
 
 
+# ----- Update Password Functionality -----
+
+
 @app.route("/update_password/<username>", methods=["GET", "POST"])
 def update_password(username):
+    """
+    Allows the member to edit their account
+    by changing their password
+    """
+
     if request.method == "POST":
 
         mongo.db.members.update_one({"username": session['member']},
@@ -349,8 +456,15 @@ def update_password(username):
     return render_template("edit_account.html")
 
 
+# Delete Member Functionality
+
+
 @app.route("/delete_member/<username>")
 def delete_member(username):
+    """
+    Allows the member to delete their account
+    if they longer want to have one
+    """
 
     mongo.db.members.remove({"username": username.lower()})
     flash("Your Profile Has Been Deleted")
@@ -359,9 +473,15 @@ def delete_member(username):
     return redirect(url_for('home'))
 
 
+# ----- Member's Workout Plans Page -----
+
+
 @app.route("/my_workouts/<username>", methods=["GET", "POST"])
 def my_workouts(username):
-
+    """
+    This page will display all of the 
+    workout plans created by this member
+    """
     username = mongo.db.members.find_one(
         {"username": session["member"]})["username"]
 
@@ -375,6 +495,9 @@ def my_workouts(username):
         "my_workouts.html", username=username,
         workout_plans=workout_plans_paginated, pagination=pagination
     )
+
+
+# ----- Declaration of Special Variables -----
 
 
 if __name__ == "__main__":
