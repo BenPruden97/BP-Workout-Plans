@@ -74,8 +74,8 @@ def search():
 
     query = request.form.get("query")
 
-    workout_plans = list(mongo.db.workout_plans.find(
-        {"$text": {"$search": query}}))
+    workout_plans = list(
+        mongo.db.workout_plans.find({"$text": {"$search": query}}))
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
 
@@ -144,7 +144,6 @@ def sign_up():
     BP Workout Plans and become a member
     """
 
-
     if request.method == "POST":
         existing_member = mongo.db.members.find_one(
             {"username": request.form.get("username").lower()})
@@ -178,7 +177,6 @@ def log_in():
     The log in page to allow the user to log into their account
     using the username and password fields
     """
-
 
     if request.method == "POST":
         existing_member = mongo.db.members.find_one(
@@ -313,7 +311,6 @@ def create_workout():
         mongo.db.workout_plans.insert_one(workout_plan)
         flash("Workout Plan Successfully Added")
         return redirect(url_for('find_workouts'))
-
 
     workout_plans = mongo.db.workout_plans.find()
     workout_difficulties = mongo.db.workout_difficulties.find()
@@ -480,9 +477,10 @@ def delete_member(username):
 @app.route("/my_workouts/<username>", methods=["GET", "POST"])
 def my_workouts(username):
     """
-    This page will display all of the 
+    This page will display all of the
     workout plans created by this member
     """
+
     username = mongo.db.members.find_one(
         {"username": session["member"]})["username"]
 
@@ -498,9 +496,8 @@ def my_workouts(username):
     )
 
 
-
 # ----- Error Handler Pages -----
-# ----- I used this website to help me with the error handler pages: 
+# ----- I used this website to help me with the error handler pages:
 # https://flask.palletsprojects.com/en/1.1.x/errorhandling/
 
 @app.errorhandler(404)
@@ -513,7 +510,6 @@ def page_error(e):
 def server_error(e):
 
     return render_template("500.html"), 500
-
 
 
 # ----- Declaration of Special Variables -----
