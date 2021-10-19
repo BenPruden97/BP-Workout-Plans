@@ -32,71 +32,75 @@
 
     </div>
 
-    <div class="container-fluid">
+    {% if workout_plans|length > 0 %}
 
-        <div class="row row-color">
+        <div class="container-fluid">
 
-            {% for workout_plan in workout_plans %}
+            <div class="row row-color">
 
-                <div class="col-12 col-md-6 col-lg-4">
+                {% for workout_plan in workout_plans %}
 
-                    <div class="workout-card">
+                    <div class="col-12 col-md-6 col-lg-4">
 
-                        <div class="individual-card" id="individual-card">
+                        <div class="workout-card">
 
-                            <a class="card-link" href="{{ url_for('workout_plan', workout_plan_id=workout_plan._id) }}"><div class="card-image-section">
+                            <div class="individual-card" id="individual-card">
 
-                                {% if workout_plan.workout_category == 'Chest' %}
-                                    <div class="chest-image-section">
+                                <a class="card-link" href="{{ url_for('workout_plan', workout_plan_id=workout_plan._id) }}"><div class="card-image-section">
+
+                                    {% if workout_plan.workout_category == 'Chest' %}
+                                        <div class="chest-image-section">
+                                            <h5>{{ workout_plan.workout_name }}</h5>
+                                        </div>
+                                    {% elif workout_plan.workout_category == 'Back' %}
+                                        <div class="back-image-section">
+                                            <h5>{{ workout_plan.workout_name }}</h5>
+                                        </div>
+                                    {% elif workout_plan.workout_category == 'Arms' %}
+                                        <div class="arms-image-section">
+                                            <h5>{{ workout_plan.workout_name }}</h5>
+                                        </div>
+                                    {% elif workout_plan.workout_category == 'Legs' %}
+                                        <div class="legs-image-section">
+                                            <h5>{{ workout_plan.workout_name }}</h5>
+                                        </div>
+                                    {% else %}
+                                    <div class="shoulders-image-section">
                                         <h5>{{ workout_plan.workout_name }}</h5>
                                     </div>
-                                {% elif workout_plan.workout_category == 'Back' %}
-                                    <div class="back-image-section">
-                                        <h5>{{ workout_plan.workout_name }}</h5>
-                                    </div>
-                                {% elif workout_plan.workout_category == 'Arms' %}
-                                    <div class="arms-image-section">
-                                        <h5>{{ workout_plan.workout_name }}</h5>
-                                    </div>
-                                {% elif workout_plan.workout_category == 'Legs' %}
-                                    <div class="legs-image-section">
-                                        <h5>{{ workout_plan.workout_name }}</h5>
-                                    </div>
-                                {% else %}
-                                <div class="shoulders-image-section">
-                                    <h5>{{ workout_plan.workout_name }}</h5>
+                                    {% endif %}
+
+                                </div></a>
+
+                                <div class="card-workout-stats">
+
+                                    <p>Muscle Group: {{ workout_plan.workout_category }}</p>
+
+                                    <hr>
+
+                                    <p>Workout Difficulty: {{ workout_plan.workout_difficulty }}</p>
+
+                                    <hr>
+
+                                    <p>Total Exercise Amount: 6</p>
+
+                                    <hr>
+
+                                    <p>Total Workout Time: {{ workout_plan.total_workout_time }} Mins</p>
+
+                                    <hr>
+
+                                    <p>Created By: {{ workout_plan.created_by }}</p>
+
+                                    <hr>
+
                                 </div>
-                                {% endif %}
+                                
+                                <div class="view-workout">
 
-                            </div></a>
+                                    <a href="{{ url_for('workout_plan', workout_plan_id=workout_plan._id) }}">View Workout</a>
 
-                            <div class="card-workout-stats">
-
-                                <p>Muscle Group: {{ workout_plan.workout_category }}</p>
-
-                                <hr>
-
-                                <p>Workout Difficulty: {{ workout_plan.workout_difficulty }}</p>
-
-                                <hr>
-
-                                <p>Total Exercise Amount: 6</p>
-
-                                <hr>
-
-                                <p>Total Workout Time: {{ workout_plan.total_workout_time }} Mins</p>
-
-                                <hr>
-
-                                <p>Created By: {{ workout_plan.created_by }}</p>
-
-                                <hr>
-
-                            </div>
-                            
-                            <div class="view-workout">
-
-                                <a href="{{ url_for('workout_plan', workout_plan_id=workout_plan._id) }}">View Workout</a>
+                                </div>
 
                             </div>
 
@@ -104,13 +108,51 @@
 
                     </div>
 
-                </div>
+                {% endfor %}
 
-            {% endfor %}
+            </div>
 
         </div>
 
-    </div>
+    {% else %}
+
+        <div class="container-fluid">
+
+            <div class="row row-color">
+
+                <div class="col-12">
+
+                    <div class="query-results">
+
+                        <h1>0 Results Found Were Found</h1>
+
+                        <h5>We found 0 results for your search query, please search again</h5>
+
+
+                        <h6>Here are some keywords to help with your next query:</h6>
+
+                        <div class="query-rec">
+
+                            <p>Chest</p>
+                            <p>Back</p>
+                            <p>Arms</p>
+                            <p>Legs</p>
+                            <p>Shoulders</p>
+                            <p>Beginner</p>
+                            <p>Intermediate</p>
+                            <p>Advanced</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    {% endif %}
 
     <div class="container-fluid">
 

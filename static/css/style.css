@@ -527,6 +527,7 @@ footer{
 .search-image{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0 ,0, 0, 0.6)), url("/static/images/search-bar-image.jpg") no-repeat center center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 400px;
 }
@@ -590,6 +591,62 @@ footer{
 .search-input button:hover{
     color: #fafafa;
     background-color: #009dff;
+}
+
+.query-results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+    color: black;
+    background-color: #fafafa;
+    border-bottom: 2px solid black;
+}
+
+.query-results h1{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #db0007;
+}
+
+.query-results h5{
+    padding: 1.5rem;
+}
+
+.query-results h6{
+    padding-bottom: 1rem;
+}
+
+.query-results a{
+    width: 300px;
+    background-color: #fafafa;
+    color: black;
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 1rem 1rem; 
+    transition: 0.5s;
+    text-decoration: none;
+    text-align: center;
+}
+    
+.query-results a:hover{
+    background-color: black;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.query-rec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.query-rec p{
+    margin: 0 0.5rem;
+    font-weight: bold;
 }
 
 .row-color{
@@ -3071,7 +3128,7 @@ button.accordion-button.collapsed{
     }
 
     .search-input input{
-        width: 250px;
+        width: 300px;
         padding: 0.25rem;
         margin: 0.25rem 0 1rem;
         color: black;
@@ -3091,6 +3148,66 @@ button.accordion-button.collapsed{
     .search-input button{
         padding: 0.5rem 1rem;
         font-size: 1rem;
+    }
+
+    .query-results{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 500px;
+        padding: 1rem 0 0;
+        color: black;
+        background-color: #fafafa;
+        border-bottom: 2px solid black;
+        text-align: center;
+    }
+    
+    .query-results h1{
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        color: #db0007;
+    }
+    
+    .query-results h5{
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .query-results h6{
+        padding-bottom: 0.5rem;
+    }
+    
+    .query-results a{
+        width: 300px;
+        background-color: #fafafa;
+        color: black;
+        padding: 0.5rem;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 1rem 1rem; 
+        transition: 0.5s;
+        text-decoration: none;
+        text-align: center;
+    }
+        
+    .query-results a:hover{
+        background-color: black;
+        color: #fafafa;
+        text-decoration: none;
+    }
+    
+    .query-rec{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .query-rec p{
+        margin: 0 0.5rem;
+        font-weight: bold;
     }
 
     /* ----- create workout html styling ----- */
