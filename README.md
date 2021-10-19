@@ -8,11 +8,11 @@
 
 # Table of Contents
 
-#[UX](#ux)
+[UX](#ux)
   * [Project Goals](#project-goals)
   * [User Goals](#user-goals)
   * [User Stories](#user-stories)
-#[Five Development Planes](#five-development-planes)
+[Five Development Planes](#five-development-planes)
   * [Strategy Development Plane](#strategy-development-plane)
   * [Scope Development Plane](#scope-development-plane)
   * [Structure Development Plane](#structure-development-plane)
@@ -121,11 +121,11 @@ With the above strategy options in mind, I have created a User & Member strategy
 
 ### User Strategy Table
 
-
+![User Strategy Table](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/user-strategy-table.png)
 
 ### Member Strategy Table
 
-
+![Member Strategy Table](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/member-strategy-table.png)
 
 ## 2. Scope Development Plane
 
@@ -133,9 +133,44 @@ Here is how I broke down the Scope Development Plane in order to align with the 
 
 ### 1. Content Requirements
 
+* Easily readable primary and secondary font
+* Buttons and links are easily visible and clickable
+* Headings and text can are easily visible
+* Aesthetic colors that work well together
+* Easy Naviagtion
+* Responsive design for all devices
+* * Sign Up Page
+* Log In Page
+* Contact Page
+* View Workout Plans
+* Search for Workout Plans
 
 ### 2. Functionality Requirements
 
+* Sign Up for an account
+* Log In to account
+* Contact Developer/ Site Owner
+* Customise and update username & password
+* Edit Profile
+* Delete Profile
+* View Workout Plans
+* Search for Workout Plans
+* Edit Workout Plans
+* Delete Workout Plans
+* My Workout Plans Page
+* Create Workout Plan
+  * Workout Plan Muscle Group
+  * Workout Plan Difficulty
+  * Workout Plan Name
+  * Workout Plan Description
+  * Exercise Names
+  * Exercise Sets
+  * Exercise Reps
+  * Exercise Rest Time
+  * Exercise Weight Used
+  * Total Exercise Amount
+  * Total Workout Time
+  * Created By
 
 ## 3. Structure Development Plane
 
@@ -143,69 +178,69 @@ Within the Structure Development Plane I have created a hierarchial structure ch
 
 ### User Structure Chart
 
-
+![User Structure Chart](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/user-hierarchial-structure-chart.png)
 
 ### Member Structure Chart
 
-
+![Member Structure Chart](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/member-hierarchial-structure-chart.png)
 
 ## 4. Skeleton Development Plane
 
 The wireframe mockups for BP Workout Plans were created using Adobe XD with the User Experience and User Interface in mind:
 
-### Home Page
+### Home Page Wireframe
 
+![Home Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/home-page-wireframe.png)
 
+### Sign Up Page Wireframe
 
-### Sign Up Page
+![Sign Up Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/sign-up-page-wireframe.png)
 
+### Log In Page Wireframe
 
+![Log In Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/log-in-page-wireframe.png)
 
-### Log In Page
+### Contact Page Wireframe
 
+![Contact Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/contact-page-wireframe.png)
 
+### Find Workout Plans Page Wireframe
 
-### Contact Page
+![Find Workout Plans Page](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/find-workout-page-wireframe.png)
 
+### Create A Workout Plan Page Wireframe
 
+![Create A Workout Plan Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/create-workout-plan-page-wireframe.png)
 
-### Find Workout Plans Page
+### Edit Workout Plan Page Wireframe
 
-
-
-### Create A Workout Plan Page
-
-
-
-### Edit Workout Plan Page
-
-
+![Edit Workout Plan Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/edit-workout-plan-page-wireframe.png)
 
 ### Workout Plan Page
 
+![Workout Plan Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/workout-plan-page-wireframe.png)
 
+### Member Workout Plans Page Wireframe
 
-### My Workout Plans Page
+![Member Workout Plans Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/member-workout-plans-page-wireframe.png)
 
+### Member Profile Page Wireframe
 
+![Member Profile Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/member-profile-page-wireframe.png)
 
-### View Profile Page
+### Edit Account Page Wireframe
 
+![Edit Account Page Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/edit-account-page-wireframe.png)
 
+### Member Navigation Bar Wireframe
 
-### Edit Account Page
-
-
-
-### Member Navigation Bar
-
-
+![Member Navbar Wireframe](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/member-navbar-wireframe.png)
 
 # 5. Surface Development Plane
 
 ### Colors
 
-
+![Project Colors](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/project-colors.png)
 
 ### Typography
 
