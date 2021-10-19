@@ -8,16 +8,21 @@
 
 # Table of Contents
 
-[UX](#ux)
+* [UX](#ux)
   * [Project Goals](#project-goals)
   * [User Goals](#user-goals)
   * [User Stories](#user-stories)
-[Five Development Planes](#five-development-planes)
+* [Five Development Planes](#five-development-planes)
   * [Strategy Development Plane](#strategy-development-plane)
   * [Scope Development Plane](#scope-development-plane)
   * [Structure Development Plane](#structure-development-plane)
   * [Skeleton Development Plane](#skeleton-development-plane)
   * [Surface Development Plane](#surface-development-plane)
+* [Data Schema](#data-schema)
+  * [Member Collection](#members-collection)
+  * [Workout Plans Collection](#workout-plans-collection)
+  * [Workout Plans Category Collection](#workout-plans-category-collection)
+  * [Workout Plans Difficulty Collection](#workout-plans-difficulty-collection)
 
 # Project Goals
 
@@ -253,3 +258,55 @@ The secondary font used was "San Serif" which would display if the primary font 
 The images/ screenshots used within BP Workout Plans or the README.md file were created using Adobe XD. Using Adobe XD for the entirety of my project allowed me to keep a good consistency throughout.
 
 [Back to Table of Contents](#table-of-contents)
+
+# Data Schema
+
+I used MongoDB  to store my data for my BP Workout Plans project. Within MongoDB I created four collections to store different types of data for different members and workout plans. The four data collections are displayed below:
+
+1[Data Scheme Tables](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/data-schema.png)
+
+## Members Collection
+
+The Members collection stored the following data for the Sign Up Page to allow the user to create an account and be able to Log In once created:
+
+* Username (Unique username used to log in using the log in page)
+* Email Address
+* Password (Unique password used to log in using the log in page)
+
+## Workout Plans Collection
+
+The Workout Plans collection stored the following data to allow members to Create, Read, Update & Delete Workout Plans to share with the community
+
+* Workout Plan Muscle Group (Workout Plan Category Collection)
+* Workout Plan Difficulty (Workout Plan Difficulty Collection)
+* Workout Plan Name
+* Workout Plan Description
+* Exercise Name: 1, 2, 3, 4, 5 & 6
+* Number Of Sets: 1, 2, 3, 4, 5 & 6
+* Number Of Sets: 1, 2, 3, 4, 5 & 6
+* Rest Time: 1, 2, 3, 4, 5 & 6
+* Weight Used: 1, 2, 3, 4, 5 & 6
+* Total Workout Time
+* Created By
+
+## Workout Plans Category Collection
+
+The Workout Plan Category Collection stores five muscle groups that the member can choose from to base their workout plan around. Those five options are:
+
+* Chest
+* Back
+* Arms
+* Legs
+* Shoulders
+
+Each category has its own image selected for users/ members to tell which muscle group each workout plan is based around.
+
+## Workout Plans Difficulty Collection
+
+The Workout Plan Difficulty Collection stores three difficulty options for the member to choose from. Those three options are:
+
+* Beginner
+* Intermediate
+* Advanced
+
+Having this option allows for users/ members of all fitness levels to feel included.
