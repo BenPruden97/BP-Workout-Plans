@@ -26,6 +26,17 @@
 * [Project Features](#project-features)
   * [Design Features](#design-features)
   * [Navigation Bar Features](#navigation-bar-features)
+  * [Home Page Features](#navigation-bar-features)
+  * [Sign Up Page Features](#navigation-bar-features)
+  * [Log In Page Features](#navigation-bar-features)
+  * [Contact Page Features](#navigation-bar-features)
+  * [Find Workout Plans Page Features](#find-workout-plans-page-features)
+  * [Create A Workout Plan Page Features](#create-a-workout-plan-page-features)
+  * [Edit Workout Plan Page Features](#edit-workout-plan-page-features)
+  * [Workout Plan Page Features](#workout-plan-page-features)
+  * [My Workout Plans Page Features](#my-workout-plans-page-features)
+  * [Profile Page Features](#profile-page-features)
+  * [Edit Account Page Features](#edit-account-page-features)
 
 # Project Goals
 
@@ -266,7 +277,7 @@ The images/ screenshots used within BP Workout Plans or the README.md file were 
 
 I used MongoDB  to store my data for my BP Workout Plans project. Within MongoDB I created four collections to store different types of data for different members and workout plans. The four data collections are displayed below:
 
-1[Data Scheme Tables](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/data-schema.png)
+![Data Schema Tables](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/data-schema.png)
 
 ## Members Collection
 
@@ -342,7 +353,7 @@ The Navigation Bar is split into three sections. Theses sections are listed belo
   * Log In Page (Allows the user to log into their account)
   * Contact Page (Allows the user to contact the developer/ site owner for any questions, queries or assistance)
 
-![User Navigation Bar Screenshot](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/user-burger-menu.png)
+![User Navigation Bar Screenshot](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/user-navigation-bar.png)
 
 * The Member Navigation Bar:
   * Home Page
@@ -364,53 +375,145 @@ The Navigation Bar is split into three sections. Theses sections are listed belo
 
 ## Home Page Features
 
+The Home Page features are as follows:
 
+* User & Member Navigation Bar
+* Display a limit of 6 Workout Plans from the database that has been created by Members.
+  * The workout plans are clickable which will take the user/ member to that workout plans id page to view all of that workout plan's information/ details.
+* A Sign Up & Log In Section to allow the user to Sign Up for an account or Log Into their account if they are already a member (User Only).
+* Create A Workout Plan Section to encourage the member to create their own workout plan to share with the community (Member Only).
+* Footer Section
 
 ## Sign Up Page Features
 
-
+* User & Member Navigation Bar
+* Sign Up Section to allow the user to sign up for an account to become a member of BP Workout Plans.
+  * Input Fields to allow the user to enter their information.
+    * The required attribute is used to allow the user/ member to fill in the required fields before submitting.
+  * Icons to identify each input field.
+  * Password Authentication - Werkzeug was used to hash the password on entry.
+  * Password Validation was used to make sure the user was entering the same password twice for security purposes. The sign up button was disabled until passwords were a match.
+* Footer Section
 
 ## Log In Page Features
 
-
+* User & Member Navigation Bar
+* Log In Section to allow the user to log into their account if they are already a member of BP Workout Plans.
+  * Input Fields to allow the user to enter their information.
+    * The required attribute is used to allow the user/ member to fill in the required fields before submitting.
+  * Icons to identify each input field.
+  * Password Authentication - Werkzeug was used to un-hash the password on entry for login verification.
+* Footer Section
 
 ## Contact Page Features
 
+* User & Member Navigation Bar
+* Contact Form Section to allow the user/ member to send a message to the developer/ site owner.
+  * Input Fields to allow the user to enter their information.
+    * The required attribute is used to allow the user/ member to fill in the required fields before submitting.
+  * Icons to identify each input field.
+  * Text Area section to allow the user to type in their message.
+* Footer Section
 
+## Find Workout Plans Page Features
 
-## Find Workout Plans Features
-
-
+* User & Member Navigation Bar
+* Search Input Section
+  * Query Search input to allow the user/ member to search either the Workout Plan Category or Difficulty and will display the workout plans with those queries.
+  * 0 Search Results section which lets the user/ member know that there are 0 results and to research with recommended keywords given.
+  * A Reset Link to reset the search query.
+  * A Search Button with icon to search for the query by the user/ member
+* Workout Plans Display Section to display all of the current workout plans from the MongoDB database within the Workout Plans Collection
+* Page Pagination Links: This displays only 6 workout Plans per page and has pagination links at the bottom of that section for the user/ member to move onto the next or           previous pages.
+* Footer Section
 
 ## Create A Workout Plan Page Features
 
-
+* Member Navigation Bar
+* Create A Workout Plan Form Section.
+  * Input Fields to allow the member to enter information.
+    * The required attribute is used to allow the user/ member to fill in the required fields before submitting.
+  * Select Options to allow the member to choose from the options available for their workout plan.
+    * The required attribute is used to allow the user/ member to fill in the required fields before submitting.
+  * Text Area for the Workout Plan Description.
+  * Each Field has its own label to let the member know which information is needed.
+  * A Cancel Button so the member can cancel creating the workout plan.
+  * A Create Workout Plan Button which will create the workout plan and add onto the MongoDB Database.
+* Footer Section
 
 ## Edit Workout Plan Page Features
 
+The member will only be able to edit workout plans that they have created themselves. They are not able to edit other member's workout plans.
 
+* Member Navigation Bar
+* Create A Workout Plan Form Section.
+  * Input Fields to allow the member to edit the information they had entered when creating the workout plan.
+  * Select Options to allow the member to edit the option chosen when creating the workout plan.
+  * Text Area to edit the Workout Plan Description entered when creating the workout plan.
+  * Each Field has its own label to let the member know which information they are editing.
+  * A Cancel Button so the member can cancel editing the workout plan.
+  * An Edit Workout Plan Button which will update all of the fields changed and update the workout on the MongoDB Database.
+  * A Delete Workout Plan button which will remove the workout plan from the MongoDB database if the member wishes to do so.
+* Footer Section
 
 ## Workout Plan Page Features
 
-
+* Member Navigation Bar
+* Image Section with the image for the muscle group category chosen by the member
+  * The Workout Name that the member inputted is displayed
+  * The name of the member is also displayed to let users and other members know who created that workout plan
+* The Workout Plan Category, Difficulty, Total Exercise Amount & Total Workout Time is displayed
+* The Workout Plan Description is displayed
+* Each Exercise is then displayed using the accordion element from Bootstrap. The exercise sections include:
+  * The Exercise Name inputted by the member
+  * The Number Of Sets inputted by the member
+  * The Number Of Reps inputted by the member
+  * The Rest Time inputted by the member
+  * The Weight Used inputted by the member
+* There are then some options to choose from:
+  * Go Back Button (For Both A User & Member)
+  * Log In To Create A Workout Plan Button (For Users or non logged in Members)
+  * Create A Workout Plan Button (For Members Only)
+  * Edit Workout Plan Button (For Member who Created that Workout Plan Only)
+  * Delete Workout Plan Button which will display a delete workout plan modal with a confirmation message (For Member who Created that Workout Plan Only)
+* Footer Section
 
 ## My Workout Plans Page Features
 
-
+* Member Navigation Bar
+* Create A Workout Plan Section to allow the member to create a workout plan
+* Displays all of the Member's Workout Plans that they have created
+* Page Pagination Links: This displays only 6 workout Plans per page and has pagination links at the bottom of that section for the member to move onto the next or previous       pages.
+* Footer Section
 
 ## Profile Page Features
 
-
+* Member Navigation Bar
+* Welcome Back Message for the member
+* Find A Workout Plan Section for the member to find other member's workout plans
+* Create A Workout Plan Section to encourage a Workout Plan to share with the community
+* My Workout Plans section which will take the member to their workout plans page
+* Edit Account section which will take the member to the Edit Account Page
+* Delete Account Modal Which will allow the member to delete their account with a confirmation message.
+* Footer Section
 
 ## Edit Account Page Features
 
+* Member Navigation Bar.
+* Update Username Section which allows the member to update their current username.
+  * Username input field to update their current username.
+    * The required attribute is used to allow the member to fill in the required fields before submitting.
+  * Username icon to identify the input field.
+  * A Cancel button to cancel updating the member's username.
+  * An Update Username Button which will update the member's current username to the updated username. This will also log the member out and ask the member to log back in using     their updated/ new username.
+* Update Password Section which allows the member to update their current password.
+  * Password input field to update their current password.
+    * The required attribute is used to allow the member to fill in the required fields before submitting.
+  * Password Icon to identify the input field.
+  * Password Authentication - Werkzeug was used to hash the password on entry.
+  * Password Validation was used to make sure the member was entering the same password twice for security purposes. The Update Password button was disabled until passwords were     a match.
+  * A Cancel Button to cancel updating the member's current password.
+  * An Update Password Button which will update the member's current password to the updated password. This will also log the member out and ask the member to log back in using     their updated/ new password.
+* Footer Section
 
-
-## Features To Implement In The Future
-
-
-
-
-
-
-
+[Back to Table of Contents](#table-of-contents)
