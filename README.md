@@ -37,6 +37,7 @@
   * [My Workout Plans Page Features](#my-workout-plans-page-features)
   * [Profile Page Features](#profile-page-features)
   * [Edit Account Page Features](#edit-account-page-features)
+* [Features To Implement In The Future](#features-to-implement-in-the-future)
 
 # Project Goals
 
@@ -515,5 +516,41 @@ The member will only be able to edit workout plans that they have created themse
   * A Cancel Button to cancel updating the member's current password.
   * An Update Password Button which will update the member's current password to the updated password. This will also log the member out and ask the member to log back in using     their updated/ new password.
 * Footer Section
+
+[Back to Table of Contents](#table-of-contents)
+
+# Features To Implement In The Future
+
+1. Email Verification/ Forgotten Password
+
+* Email Verification:
+
+Once the user signs up to an account with BP Workout Plans, a verification email will be sent to the user using the email address they have provided. The user will then have to verify their email address before being able to log in as a member.
+
+* Forgotten Password
+
+If the member has forgotten their password then they can select the forgotten password option on the log in page. The member will then receive an email to provide their username and email address they used when signing up. If the information provided is validated, the member will then have the option to change their password and log back in using their username and updated password.
+
+2. Be Able To Like Other Members Workout Plans
+
+On the workout plan id page there will be an option for the member to like that workout plan which will then display within the member's liked workout plans. This allows members to save other member's workout plans that they may find helpful or useful.
+
+3. Have Workout Category And Workout Difficulty Fitler Options
+
+This option will give the user/ member options on what they can search for instead of having to type in the correct keywords into the search bar to display the workout plans they are trying to search for.
+
+For example: I want to find all workout plans that were created for Beginners for the Chest Muscle Group. I can then select the Chest and Beginner options and only workout plans that have a workout difficulty of Beginner and workout category of Chestwill display. This will save the user/ member time on finding the workout plans they are looking for and makes sure they are getting the correct results.
+
+4. Give The Member The Option To Remove And Add Exercises To Their Workout Plan
+
+When a member is currently creating a workout plan they have by default 6 exercises to fill in before completing the workout plan. This option will give the member more flexibility on how many exercises they would like to have for their workout plan. The minimum amount of exercises per workout plan would now be 3 and the max amount of exercises would be 8. 
+
+With this new feature, as soon as the member creates a workout plan the default amount of exercises will now be 3. The member can then add more exercises as they go on by clicking on the plus button until they reach the max amount of 8 exercise which the plus button will then not be available. The member can also remove exercises if they have created too many by using the minus button. 
+
+This will allow more customisation and flexibility when creating and viewing workout plans.
+
+5. A Comment Section Under Each Workout Plan For Suggestions And Help
+
+The comment section would be displayed underneath the options for each workout plan. This will allow other members to give their opinion on member's workout plans and maybe offer some advice or point out errors or mistakes the member who created the workout plan has made. The member who created the workout plan will have authority over which comments they can keep or remove for the workout plan.
 
 [Back to Table of Contents](#table-of-contents)
