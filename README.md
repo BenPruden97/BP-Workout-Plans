@@ -23,6 +23,9 @@
   * [Workout Plans Collection](#workout-plans-collection)
   * [Workout Plans Category Collection](#workout-plans-category-collection)
   * [Workout Plans Difficulty Collection](#workout-plans-difficulty-collection)
+* [Project Features](#project-features)
+  * [Design Features](#design-features)
+  * [Navigation Bar Features](#navigation-bar-features)
 
 # Project Goals
 
@@ -310,3 +313,104 @@ The Workout Plan Difficulty Collection stores three difficulty options for the m
 * Advanced
 
 Having this option allows for users/ members of all fitness levels to feel included.
+
+# Project Features
+
+## Design Features
+
+Jinja templating was used to extend the base.html template across every page for BP Workout Plans. This is to keep consistency and functionality for each page that extends the base.html template. The sections within the base.html template that are implemented for each page are:
+
+* The Navigation Bar (Both User & Member Navigation Bars)
+* The Footer Section - Includes social links
+* The Flash Messages - Used to flash messages to let a user/ member know an action they have completed (e.g: Succession of signing up for an acccount)
+* The Burger Menu - Used to display the Navigation Links on Tablet and Mobile Devices
+
+#### Base Template Example
+
+Here is an example of the base.html template for the Log In Page. At the top of the page {% extends "base.html" %} is used to display the content from the base.html page which is the Navigation Bar & Footer Section. The {% block content %} is then used to display the content from each page between the Navigation Bar & Footer Section.
+
+![Base Template Example Screenshot](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/base-template.png)
+
+## Navigation Bar Features
+
+The Navigation Bar is split into three sections. Theses sections are listed below:
+
+* The User Navigation Bar:
+  * Home Page
+  * Find Workout Plans Page (Allows the user to find workout plans created by BP Workout Plan's Members)
+  * Sign Up Page (Allows the user to sign up for an account)
+  * Log In Page (Allows the user to log into their account)
+  * Contact Page (Allows the user to contact the developer/ site owner for any questions, queries or assistance)
+
+![User Navigation Bar Screenshot](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/user-burger-menu.png)
+
+* The Member Navigation Bar:
+  * Home Page
+  * Find Workout Plans Page (Allows the member to find workout plans created by other BP Workout Plan's Members)
+  * Create A Workout Plan Page (Allows the member to create a workout plan to share with the community
+  * Contact Page (Allows the member to contact the developer/ site owner for any questions, queries or assistance)
+  * My Workout Plans Page (Allows the member to view all of the workout plans created by that member)
+  * View Profile (Allows the member to view their member profile to edit or delete their profile)
+  * Log Out Functionality (Allows the member to log out of their account)
+
+![Member Navigation Bar Screenshot](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/member-navigation-bar.png)
+
+* Burger Menu Navigation Bar:
+  * Displays the user navigation links if a user of BP Workout Plans for Tablet & Mobile Devices
+  * Displays the member navigation links if a member of BP Workout Plans for Tablet & Mobile Devices
+
+![User Burger Menu Screenshot](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/user-burger-menu.png)
+![Member Burger Menu Screenshot](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/member-burger-menu.png)
+
+## Home Page Features
+
+
+
+## Sign Up Page Features
+
+
+
+## Log In Page Features
+
+
+
+## Contact Page Features
+
+
+
+## Find Workout Plans Features
+
+
+
+## Create A Workout Plan Page Features
+
+
+
+## Edit Workout Plan Page Features
+
+
+
+## Workout Plan Page Features
+
+
+
+## My Workout Plans Page Features
+
+
+
+## Profile Page Features
+
+
+
+## Edit Account Page Features
+
+
+
+## Features To Implement In The Future
+
+
+
+
+
+
+
