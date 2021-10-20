@@ -41,6 +41,8 @@
 * [Issues And Bugs](#issues-and-bugs)
 * [Technologies Used](#technologies-used)
 * [Testing.md File](TESTING.md)
+* [Project Deployment](#project-deployment)
+* [Credits](#credits)
 
 # Project Goals
 
@@ -654,7 +656,7 @@ I had created a seperate js file for flash messages to only display on the pages
 
 * The testing for BP Workout Plans was created in a separate file. The TESTING.md file can be found here - [TESTING.md File](TESTING.md)
 
-# Deployment
+# Project Deployment
 
 ### 1. MongoDB Database Deployment/ Creation
 
@@ -746,10 +748,15 @@ Once you have completed these steps:
 12. Once open you will want to Keys & Values:
 
 | Key | Values |
+| ------------ |
 | IP | 0.0.0.0 |
+| ------------ |
 | PORT | 5000 |
+| ------------ |
 | SECRET_KEY | <your_secret_key> |
+| ------------ |
 | MONGO_URI | <your_connection_string> |
+| ------------ |
 | MONGO_DBNAME | <your_mongdb_name> |
  
 13. Navigate back to the 'Deploy' navaigation link
@@ -758,5 +765,28 @@ Once you have completed these steps:
 Your Project is now deployed onto Heroku and any code pushed to GitHub will also be pushed to the Heroku App.
  
 You can preview your app at anytime by clicking on the 'Open App' button at the top right hand side of the page.
+
+[Back to Table of Contents](#table-of-contents)
+
+# Credits
+
+### Websites Used For Help
+
+Here is a list of the websites that the developer has used for any help or solutions
+
+1. [YouTube](https://www.youtube.com/)
+2. [Bootstrap](https://getbootstrap.com/)
+3. [W3Schools](https://www.w3schools.com/)
+4. [Stack Overflow](https://stackoverflow.com/)
+5. [CSS Tricks](https://css-tricks.com/)
+
+### Mentors
+
+Seun & Brian (Last Session Call) had given me support and guidance for this project and answered any questions that I had.
+
+### Code Institute
+
+* Tutor support was a massive help when I couldn't get certain parts of code to work.
+* The Backend Development Mini Project was used as a reference for me during the development process.
 
 [Back to Table of Contents](#table-of-contents)
