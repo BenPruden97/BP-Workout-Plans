@@ -750,17 +750,13 @@ Once you have completed these steps:
 11. Within the Config Vars section, select 'Reveal Config Vars'
 12. Once open you will want to Keys & Values:
 
-| Key | Values |
-| ------------ |
-| IP | 0.0.0.0 |
-| ------------ |
-| PORT | 5000 |
-| ------------ |
-| SECRET_KEY | <your_secret_key> |
-| ------------ |
-| MONGO_URI | <your_connection_string> |
-| ------------ |
-| MONGO_DBNAME | <your_mongdb_name> |
+|Key|Values|
+|:-----:|:-----:|
+|IP|0.0.0.0|
+|PORT|5000|
+|SECRET_KEY|<your_secret_key>|
+|MONGO_URI|<your_connection_string>|
+|MONGO_DBNAME|<your_mongdb_name>|
  
 13. Navigate back to the 'Deploy' navaigation link
 14. Within the 'Automatic Deploys' section make sure that your main branch is selected and click on 'Enable Automatic Deploys'
