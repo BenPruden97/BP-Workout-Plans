@@ -39,6 +39,7 @@
   * [Edit Account Page Features](#edit-account-page-features)
 * [Features To Implement In The Future](#features-to-implement-in-the-future)
 * [Issues And Bugs](#issues-and-bugs)
+* [Technologies Used](#technologies-used)
 
 # Project Goals
 
@@ -584,4 +585,66 @@ To Fix this error, I used 'session.pop("member")' to log the member out after ch
 
 I had created a seperate js file for flash messages to only display on the pages where flash messages were going to display. The issue here was that the log out functionality had a flash message to let the member know that they had logged out successfully. I decided to leave the flash message js script tag within the base.html file. Because of this, there are error messages for the flash message js file within the console when displaying a page where there are no flash messages to display.
 
+[Back to Table of Contents](#table-of-contents)
 
+# Technologies Used
+
+### Languages
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://www.javascript.com/)
+* [Python](https://www.python.org/)
+
+### Programs Used
+
+* [Git](https://git-scm.com/)
+  * Git was used as version control for my project. This was so I could add, commit & push my code to my GitHub Repository.
+
+* [GitHub](https://github.com/)
+  * GitHub was used as a software hosting platform to host my project. GitHub is where all of my project files, images, screenshots, code and folders are stored.
+
+* [GitPod](https://gitpod.io/workspaces)
+  * GitPod was used as a development hosting platform for me to create my project code.
+
+* [Heroku App](https://www.heroku.com/)
+  * The Heroku App was used to be able to deploy my project website.
+
+* [Adobe XD](https://www.adobe.com/uk/products/xd.html)
+  * Adobe XD was used to be able to create my wireframes, screenshots & images for my project.
+
+* [Google Fonts](https://fonts.google.com/)
+  * Google Fonts was used to display my primary font (Poppins) & secondary font (Sans-Serif)
+
+* [Font Awesome](https://fontawesome.com/)
+  * Font Awesome was used to display icons used throughout my project
+
+### Libraries
+
+* [Bootstrap](https://getbootstrap.com/)
+  * Bootstrap was used to implement responsiveness to my project pages and bootstrap classes for design features.
+
+* [EmailJS](https://www.emailjs.com/)
+  * EmailJS was used to allow users/ members to send messages using the contact form directly to the Developer's email address using JavaScript.
+
+* [SweetAlert](https://sweetalert.js.org/docs/)
+  * SweetAlert was used alongside EmailJS to provide an email validation pop up once the email had been sent. 
+
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+  * Flask was used as a web framework for my project application.
+
+* [Flask Pagination Links](https://pythonhosted.org/Flask-paginate/)
+  * Pagination Links were used for pages where workout plans were going to be displayed. The flask_paginate extension was used to display only 6 workout plans per page and           provided links to more pages if required.
+
+* [Jinja](https://jinja.palletsprojects.com/en/2.10.x/)
+  * Jinja templating was used within the base.html file to display html code throughout the project application.
+
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+  * Werkzeug security was used for password hashing, authentication and validation.
+
+### Database Management
+
+* [MongoDB](https://www.mongodb.com/)
+  * MongoDB was used to store the data collections used for this project
+
+[Back to Table of Contents](#table-of-contents)
