@@ -38,6 +38,7 @@
   * [Profile Page Features](#profile-page-features)
   * [Edit Account Page Features](#edit-account-page-features)
 * [Features To Implement In The Future](#features-to-implement-in-the-future)
+* [Issues And Bugs](#issues-and-bugs)
 
 # Project Goals
 
@@ -521,7 +522,7 @@ The member will only be able to edit workout plans that they have created themse
 
 # Features To Implement In The Future
 
-1. Email Verification/ Forgotten Password
+### 1. Email Verification/ Forgotten Password
 
 * Email Verification:
 
@@ -531,17 +532,17 @@ Once the user signs up to an account with BP Workout Plans, a verification email
 
 If the member has forgotten their password then they can select the forgotten password option on the log in page. The member will then receive an email to provide their username and email address they used when signing up. If the information provided is validated, the member will then have the option to change their password and log back in using their username and updated password.
 
-2. Be Able To Like Other Members Workout Plans
+### 2. Be Able To Like Other Members Workout Plans
 
 On the workout plan id page there will be an option for the member to like that workout plan which will then display within the member's liked workout plans. This allows members to save other member's workout plans that they may find helpful or useful.
 
-3. Have Workout Category And Workout Difficulty Fitler Options
+### 3. Have Workout Category And Workout Difficulty Fitler Options
 
 This option will give the user/ member options on what they can search for instead of having to type in the correct keywords into the search bar to display the workout plans they are trying to search for.
 
 For example: I want to find all workout plans that were created for Beginners for the Chest Muscle Group. I can then select the Chest and Beginner options and only workout plans that have a workout difficulty of Beginner and workout category of Chestwill display. This will save the user/ member time on finding the workout plans they are looking for and makes sure they are getting the correct results.
 
-4. Give The Member The Option To Remove And Add Exercises To Their Workout Plan
+### 4. Give The Member The Option To Remove And Add Exercises To Their Workout Plan
 
 When a member is currently creating a workout plan they have by default 6 exercises to fill in before completing the workout plan. This option will give the member more flexibility on how many exercises they would like to have for their workout plan. The minimum amount of exercises per workout plan would now be 3 and the max amount of exercises would be 8. 
 
@@ -549,8 +550,38 @@ With this new feature, as soon as the member creates a workout plan the default 
 
 This will allow more customisation and flexibility when creating and viewing workout plans.
 
-5. A Comment Section Under Each Workout Plan For Suggestions And Help
+### 5. A Comment Section Under Each Workout Plan For Suggestions And Help
 
 The comment section would be displayed underneath the options for each workout plan. This will allow other members to give their opinion on member's workout plans and maybe offer some advice or point out errors or mistakes the member who created the workout plan has made. The member who created the workout plan will have authority over which comments they can keep or remove for the workout plan.
 
 [Back to Table of Contents](#table-of-contents)
+
+# Issues And Bugs
+
+The developer encounted some issues while developing BP Workout Plans which have been listed below:
+
+### 1. Create A Workout Plan Input Validation
+
+When a member is creating a workout plan using the form within the create a workout plan page, if there are any input fields that the member has left empty, the browser default message of "Please fill in this fields" does not display within Google Chrome & Microsoft Edge browsers. To try and fix this issue I tried to:
+* Use the bootstrap form validation code with the class of "form-control" however that did not fix the issue.
+* I sent a message to my mentor to see if they could find any issues or problems that was causing the field message to not display.
+* I then contacted tutor support to try and find a solution as to why the field message was not displaying. I spoke to 2 tutors over live chat who was also unable to find the       problem or a solution to fix this issue
+
+I then tested the create a workout plan form on the Internet Explorer browser and the form validation and "Please fill in this form" message was displaying.
+Here is a screenshot of the create a workout plan form within the Internet Explorer browser:
+
+![Create Form Validation Error](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/form-validation-error.png)
+
+### 2. Edit Account Page
+
+Error:
+When a member was to change their username within the edit account page to a new one. When the username was changed and the member was to then navigate to their member profile, an error would occur as the member's username had changed.
+
+Solution:
+To Fix this error, I used 'session.pop("member")' to log the member out after changing their username. A flash message would display to let the member know that their username had been updated successfully. The member would then have to log back into their account using the updated username which fixed the profile error.
+
+### 3. Flash Message JS File
+
+I had created a seperate js file for flash messages to only display on the pages where flash messages were going to display. The issue here was that the log out functionality had a flash message to let the member know that they had logged out successfully. I decided to leave the flash message js script tag within the base.html file. Because of this, there are error messages for the flash message js file within the console when displaying a page where there are no flash messages to display.
+
+
