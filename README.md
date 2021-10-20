@@ -42,6 +42,9 @@
 * [Technologies Used](#technologies-used)
 * [Testing.md File](TESTING.md)
 * [Project Deployment](#project-deployment)
+  * [MongoDB Database Deployment](#mongodb-database-deployment)
+  * [GitHub Deployment](#github-deployment)
+  * [Heroku App Deployment](#heroku-app-deployment)
 * [Credits](#credits)
 
 # Project Goals
@@ -658,7 +661,7 @@ I had created a seperate js file for flash messages to only display on the pages
 
 # Project Deployment
 
-### 1. MongoDB Database Deployment/ Creation
+### 1. MongoDB Database Deployment
 
 The Developer used MongoDB to store the data for the project BP Workout Plans
 
