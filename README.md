@@ -78,32 +78,35 @@ The primary goal of BP Workout Plans is to provide a web-based fitness community
 
 ### As A User, I want to:
 
-* Search for workouts from the database.
+* Find Workout Plans from the database.
+* Search for Workout Plans from the database.
+* View Workout Plans created by members of BP Workout Plans.
 * Sign up for an account to become a member.
 *	Log into their account once signed up.
-*	Choose the muscle group they would like to search for.
 *	Contact the Developer/ Site Owner for any feedback or issues they may have.
 
 # As a Member, I want to:
 
-* Search for workouts from the database.
-* Sign up for an account to become a member.
+* Find Workout Plans from the database.
+* Search for Workout Plans from the database.
+* View all Workout Plans created by the member.
 *	Log into their account once signed up.
-*	Create a workout plan to share with the community.
-*	Edit my workout plans & account to update any information.
-*	Delete my workout plans & account if needed.
-*	Like any workouts created by other members.
-*	View all workouts created by the member.
-* Choose the difficulty for my workout plans.
-*	Choose the muscle group for my workout plans.
+*	Create A Workout Plan to share with the community.
+*	Edit my Workout Plans.
+*	Edit Account details.
+*	Delete my Workout Plans.
+*	Delete Account Option.
 *	Contact the Developer/ Site Owner for any feedback or issues they may have.
 
 # As an administrative Account Holder, I want to:
 
+* Find Workout Plans from the database
+* Seach for Workout Plans from the database
 * View all workout plans that have been uploaded to BP Workout Plans database.
-* Be able to edit any workout plans created by members.
-* Be able to delete any workout plans created by members if necessary.
-* Create workout plans like any other member.
+* Log into their account
+* Create A Workout Plan to share with the community
+* Edit Any Workout Plan from the database
+* Delete Any Workout Plan from the data
 
 [Back to Table of Contents](#table-of-contents)
 
