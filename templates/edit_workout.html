@@ -115,16 +115,9 @@
 
                                             <div>
 
-                                                <label for="rest_time_1">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_1 }}" name="rest_time_1" id="rest_time_1">
-                                                    {% for rest_time in ["15 Secs", "30 Secs", "45 Secs", "60 Secs", "75 Secs", "90 Secs", "105 Secs", "120 Secs"] %}
-                                                        {% if rest_time == workout_plan.rest_time_1 %}
-                                                            <option value="{{ workout_plan.rest_time_1 }}" selected>{{ workout_plan.rest_time_1 }}</option>
-                                                        {% else %}
-                                                            <option value="{{ rest_time }}">{{ rest_time }}</option>
-                                                        {% endif %}
-                                                    {% endfor %}
-                                                </select>
+                                                <label for="rest_time_1">Rest Time (Secs):</label>
+                                                <input value="{{ workout_plan.rest_time_1 }}" name="rest_time_1" id="rest_time_1" type="number"
+                                                min="15" max="120" placeholder="Rest Time" required>
 
                                             </div>
 
@@ -136,7 +129,7 @@
 
                                         <div class="exercise-input">
 
-                                            <label for="weight_used_1">Weight Used(kg):</label>
+                                            <label for="weight_used_1">Weight Used (kg):</label>
                                             <input value="{{ workout_plan.weight_used_1 }}" id="weight_used_1" name="weight_used_1" type="number" 
                                             min="3" max="50" placeholder="Weight Used" required>
 
@@ -204,16 +197,9 @@
 
                                             <div>
 
-                                                <label for="rest_time_2">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_2 }}" name="rest_time_2" id="rest_time_2">
-                                                    {% for rest_time in ["15 Secs", "30 Secs", "45 Secs", "60 Secs", "75 Secs", "90 Secs", "105 Secs", "120 Secs"] %}
-                                                        {% if rest_time == workout_plan.rest_time_2 %}
-                                                            <option value="{{ workout_plan.rest_time_2 }}" selected>{{ workout_plan.rest_time_2 }}</option>
-                                                        {% else %}
-                                                            <option value="{{ rest_time }}">{{ rest_time }}</option>
-                                                        {% endif %}
-                                                    {% endfor %}
-                                                </select>
+                                                <label for="rest_time_2">Rest Time (Secs):</label>
+                                                <input value="{{ workout_plan.rest_time_2 }}" name="rest_time_2" id="rest_time_2" type="number"
+                                                min="15" max="120" placeholder="Rest Time" required>
 
                                             </div>
 
@@ -225,7 +211,7 @@
 
                                         <div class="exercise-input">
 
-                                            <label for="weight_used_2">Weight Used(kg):</label>
+                                            <label for="weight_used_2">Weight Used (kg):</label>
                                             <input value="{{ workout_plan.weight_used_2 }}" id="weight_used_2" name="weight_used_2" type="number" 
                                             min="3" max="50" placeholder="Weight Used" required>
 
@@ -285,7 +271,7 @@
 
                             <div class="container-fluid">
 
-                                <div class="row border-top">
+                                <div class="row">
 
                                     <div class="col-md-6 col-12">
 
@@ -293,16 +279,9 @@
 
                                             <div>
 
-                                                <label for="rest_time_3">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_3 }}" name="rest_time_3" id="rest_time_3">
-                                                    {% for rest_time in ["15 Secs", "30 Secs", "45 Secs", "60 Secs", "75 Secs", "90 Secs", "105 Secs", "120 Secs"] %}
-                                                        {% if rest_time == workout_plan.rest_time_3 %}
-                                                            <option value="{{ workout_plan.rest_time_3 }}" selected>{{ workout_plan.rest_time_3 }}</option>
-                                                        {% else %}
-                                                            <option value="{{ rest_time }}">{{ rest_time }}</option>
-                                                        {% endif %}
-                                                    {% endfor %}
-                                                </select>
+                                                <label for="rest_time_3">Rest Time (Secs):</label>
+                                                <input value="{{ workout_plan.rest_time_3 }}" name="rest_time_3" id="rest_time_3" type="number"
+                                                min="15" max="120" placeholder="Rest Time" required>
 
                                             </div>
 
@@ -314,7 +293,7 @@
 
                                         <div class="exercise-input">
 
-                                            <label for="weight_used_3">Weight Used(kg):</label>
+                                            <label for="weight_used_3">Weight Used (kg):</label>
                                             <input value="{{ workout_plan.weight_used_3 }}" id="weight_used_3" name="weight_used_3" type="number" 
                                             min="3" max="50" placeholder="Weight Used" required>
 
@@ -382,16 +361,9 @@
 
                                             <div>
 
-                                                <label for="rest_time_4">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_4 }}" name="rest_time_4" id="rest_time_4">
-                                                    {% for rest_time in ["15 Secs", "30 Secs", "45 Secs", "60 Secs", "75 Secs", "90 Secs", "105 Secs", "120 Secs"] %}
-                                                        {% if rest_time == workout_plan.rest_time_4 %}
-                                                            <option value="{{ workout_plan.rest_time_4 }}" selected>{{ workout_plan.rest_time_4 }}</option>
-                                                        {% else %}
-                                                            <option value="{{ rest_time }}">{{ rest_time }}</option>
-                                                        {% endif %}
-                                                {% endfor %}
-                                                </select>
+                                                <label for="rest_time_4">Rest Time (Secs):</label>
+                                                <input value="{{ workout_plan.rest_time_4 }}" name="rest_time_4" id="rest_time_4" type="number"
+                                                min="15" max="120" placeholder="Rest Time" required>
 
                                             </div>
 
@@ -403,7 +375,7 @@
 
                                         <div class="exercise-input">
 
-                                            <label for="weight_used_4">Weight Used(kg):</label>
+                                            <label for="weight_used_4">Weight Used (kg):</label>
                                             <input value="{{ workout_plan.weight_used_4 }}" id="weight_used_4" name="weight_used_4" type="number" 
                                             min="3" max="50" placeholder="Weight Used" required>
 
@@ -471,16 +443,9 @@
 
                                             <div>
 
-                                                <label for="rest_time_5">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_5 }}" name="rest_time_5" id="rest_time_5">
-                                                    {% for rest_time in ["15 Secs", "30 Secs", "45 Secs", "60 Secs", "75 Secs", "90 Secs", "105 Secs", "120 Secs"] %}
-                                                        {% if rest_time == workout_plan.rest_time_5 %}
-                                                            <option value="{{ workout_plan.rest_time_5 }}" selected>{{ workout_plan.rest_time_5 }}</option>
-                                                        {% else %}
-                                                            <option value="{{ rest_time }}">{{ rest_time }}</option>
-                                                        {% endif %}
-                                                    {% endfor %}
-                                                </select>
+                                                <label for="rest_time_5">Rest Time (Secs):</label>
+                                                <input value="{{ workout_plan.rest_time_5 }}" name="rest_time_5" id="rest_time_5" type="number"
+                                                min="15" max="120" placeholder="Rest Time" required>
 
                                             </div>
 
@@ -492,7 +457,7 @@
 
                                         <div class="exercise-input">
 
-                                            <label for="weight_used_5">Weight Used(kg):</label>
+                                            <label for="weight_used_5">Weight Used (kg):</label>
                                             <input value="{{ workout_plan.weight_used_5 }}" id="weight_used_5" name="weight_used_5" type="number" 
                                             min="3" max="50" placeholder="Weight Used" required>
 
@@ -560,16 +525,9 @@
 
                                             <div>
 
-                                                <label for="rest_time_6">Rest Time:</label>
-                                                <select value="{{ workout_plan.rest_time_6 }}" name="rest_time_6" id="rest_time_6">
-                                                    {% for rest_time in ["15 Secs", "30 Secs", "45 Secs", "60 Secs", "75 Secs", "90 Secs", "105 Secs", "120 Secs"] %}
-                                                        {% if rest_time == workout_plan.rest_time_6 %}
-                                                            <option value="{{ workout_plan.rest_time_6 }}" selected>{{ workout_plan.rest_time_6 }}</option>
-                                                        {% else %}
-                                                            <option value="{{ rest_time }}">{{ rest_time }}</option>
-                                                        {% endif %}
-                                                    {% endfor %}    
-                                                </select>
+                                                <label for="rest_time_6">Rest Time (Secs):</label>
+                                                <input value="{{ workout_plan.rest_time_6 }}" name="rest_time_6" id="rest_time_6" type="number"
+                                                min="15" max="120" placeholder="Rest Time" required>
 
                                             </div>
 
@@ -581,7 +539,7 @@
 
                                         <div class="exercise-input">
 
-                                            <label for="weight_used_6">Weight Used(kg):</label>
+                                            <label for="weight_used_6">Weight Used (kg):</label>
                                             <input value="{{ workout_plan.weight_used_6 }}" id="weight_used_6" name="weight_used_6" type="number" 
                                             min="3" max="50" placeholder="Weight Used" required>
 
@@ -617,7 +575,7 @@
                                     <div class="exercise-options">
 
                                         <label for="total_workout_time">Total Workout Time: (Mins)</label>
-                                        <input id="total_workout_time" name="total_workout_time" type="number" 
+                                        <input value="{{ workout_plan.total_workout_time }}" id="total_workout_time" name="total_workout_time" type="number" 
                                             min="15" max="120" placeholder="Total Workout Time" required>
 
                                     </div>
