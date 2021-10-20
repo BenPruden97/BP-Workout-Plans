@@ -40,6 +40,7 @@
 * [Features To Implement In The Future](#features-to-implement-in-the-future)
 * [Issues And Bugs](#issues-and-bugs)
 * [Technologies Used](#technologies-used)
+* [Testing.md File](TESTING.md)
 
 # Project Goals
 
@@ -646,5 +647,116 @@ I had created a seperate js file for flash messages to only display on the pages
 
 * [MongoDB](https://www.mongodb.com/)
   * MongoDB was used to store the data collections used for this project
+
+[Back to Table of Contents](#table-of-contents)
+
+# Testing 
+
+* The testing for BP Workout Plans was created in a separate file. The TESTING.md file can be found here - [TESTING.md File](TESTING.md)
+
+# Deployment
+
+### 1. MongoDB Database Deployment/ Creation
+
+The Developer used MongoDB to store the data for the project BP Workout Plans
+
+Here is how you can create your own database by following these steps:
+
+1. Log into your MongoDB account or create an account if you don't have one
+2. Once you have logged into your account
+3. Locate your MongoDB projects and select create a new project and give your project a name and then select, Create Project.
+4. Once the project has been created:
+  * Select Build Database
+  * Choose the Free Cluster Option
+  * Make sure you have selected 'Shared' from the 3 options at the top
+  * Move onto the Cloud Provider & Region Option and select the correct options for you (The developer used AWS and Ireland)
+  * Move onto Cluster Tier and select the Free forever option listed under the base price (The developer used M0 Sandbox)
+  * Lastly move onto the Cluster Name and give your cluster a name.
+  * Lastly Select Create Cluster Button (The Cluster may take some time to be created)
+5. Once the cluster has been created, select 'Database Access' on the left hand side. Once selected, select the 'Add New Database User'
+  * Choose the 'Password' Authentication Method
+  * Enter a username and password
+  * Move onto 'Database User Privileges' and select the 'Read and write to any database' option
+  * Lastly click on the 'Add User' Button
+6. Select the 'Network Access' on the left hand side under the 'Database Access' option. Once selected, select the 'Add IP Address'
+  * Select 'allow access from anywhere'
+  * Lastly click on the 'Confirm' Button
+7.  Select 'Database' on the left hand side of the page. Once selected, select 'Browse Collections' and click on the 'Create' Button.
+  * Click on the 'Add My Own Data' Button
+  * Enter A Database name and collection name to get started. Once entered click on the 'Create Button'
+  * Once created, select the 'Insert Document' option and start building your collections.
+
+### GitHub Deployment
+
+1. Forking A Repository
+  * Log into your GitHub Account
+  * Select your project repository
+  * On the top right of your repository page, click on the 'Fork' Button
+  * You should now have a copy of your GitHub project repository in your GitHub account.
+
+2. Cloning A Repository
+  * Log into your GitHub Account
+  * Select your project repository
+  * Click on the green 'GitPod' button on the right hand side of the respository page. This will open up a new GitPod workspace for you to work on.
+
+There are also 3 other options that you can use to clone your repository. Select the 'Code' dropdown button to left of the green 'GitPod' Button.
+  1. To clone your repository using HTTPS, click on the "HTTPS" option and copy the link using the copy button to the right of the https link.
+  2. To clone your repository using a SSH key, click on the "SSH" option and copy the link using the copy button to the right of the SSH link.
+  3. To clone your repository using a GitHub CLI, click on the "GitHub CLI" option and copy the link using the copy button to the right of the GitHub CLI link.
+
+### Heroku App Deployment
+
+Herku is a cloud application platform that supports many programming languages. As this project is using a server, application and database, the developer thought Heroku was the best app to deploy his project.
+
+Before you can deploy your project to Heroku, you must complete the following steps to allow the Heroku app to work.
+
+* You will need to create a requirements.txt file to install project requirements. The following code is used to create the requirements.txt within the terminal.
+
+pip3 install -r requirements.txt
+
+Once created push to your repository:
+
+git add requirements.txt
+git commit -m "Add requirements.txt"
+git push
+
+* You will also need to create a Procfile so Heroku will know which file runs the app. The following code is used to create the Procfile within the terminal.
+
+echo web: python app.py > Procfile
+
+Once created push to your repository:
+
+git add Procfile
+git commit -m "Add Procfile"
+git push
+
+Once you have completed these steps:
+
+1. Log Into Heroku or create an account if you don't already have one
+2. Once logged in, Click on the 'New' Button on the right hand side of the page
+3. Select the 'Create New App' option
+4. Give your app a name and select your region (The developer chose Europe)
+5. Lastly click on the 'Create App' Button
+6. Select the 'Deploy' option from the navigation links
+7. Within the Deployment Method section, select the 'Connect to GitHub' option
+8. Search for your project repository name and select your respository
+9. Click on the 'Connect' Button to connect Heroku to your GitHub repository
+10. Once connected select the 'Settings' option from the navigation links
+11. Within the Config Vars section, select 'Reveal Config Vars'
+12. Once open you will want to Keys & Values:
+
+| Key | Values |
+| IP | 0.0.0.0 |
+| PORT | 5000 |
+| SECRET_KEY | <your_secret_key> |
+| MONGO_URI | <your_connection_string> |
+| MONGO_DBNAME | <your_mongdb_name> |
+ 
+13. Navigate back to the 'Deploy' navaigation link
+14. Within the 'Automatic Deploys' section make sure that your main branch is selected and click on 'Enable Automatic Deploys'
+ 
+Your Project is now deployed onto Heroku and any code pushed to GitHub will also be pushed to the Heroku App.
+ 
+You can preview your app at anytime by clicking on the 'Open App' button at the top right hand side of the page.
 
 [Back to Table of Contents](#table-of-contents)
