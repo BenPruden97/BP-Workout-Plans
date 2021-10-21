@@ -698,6 +698,8 @@ footer{
 
 .chest-image-section h5{
     color: #fafafa;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .back-image-section{
@@ -718,6 +720,8 @@ footer{
 
 .back-image-section h5{
     color: #fafafa;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .arms-image-section{
@@ -738,6 +742,8 @@ footer{
 
 .arms-image-section h5{
     color: #fafafa;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .legs-image-section{
@@ -758,6 +764,8 @@ footer{
 
 .legs-image-section h5{
     color: #fafafa;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .shoulders-image-section{
@@ -778,6 +786,8 @@ footer{
 
 .shoulders-image-section h5{
     color: #fafafa;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .card-workout-stats{
@@ -1016,6 +1026,15 @@ ul.pagination{
     margin-bottom: 0.5rem;
 }
 
+.exercise-options p{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fafafa;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .exercise-options input::placeholder{
     color: black;
 }
@@ -1089,7 +1108,7 @@ ul.pagination{
 
 .chest-workout-image h3{
     color: #fafafa;
-    padding: 0.25rem;
+    padding: 0.25rem 1rem;
 }
 
 .back-workout-image{
@@ -1107,7 +1126,7 @@ ul.pagination{
 
 .back-workout-image h3{
     color: #fafafa;
-    padding: 0.25rem;
+    padding: 0.25rem 1rem;
 }
 
 .arms-workout-image{
@@ -1125,7 +1144,7 @@ ul.pagination{
 
 .arms-workout-image h3{
     color: #fafafa;
-    padding: 0.25rem;
+    padding: 0.25rem 1rem;
 }
 
 .legs-workout-image{
@@ -1143,7 +1162,7 @@ ul.pagination{
 
 .legs-workout-image h3{
     color: #fafafa;
-    padding: 0.25rem;
+    padding: 0.25rem 1rem;
 }
 
 .shoulders-workout-image{
@@ -1161,7 +1180,7 @@ ul.pagination{
 
 .shoulders-workout-image h3{
     color: #fafafa;
-    padding: 0.25rem;
+    padding: 0.25rem 1rem;
 }
 
 .plan-options{
@@ -1824,6 +1843,7 @@ button.accordion-button.collapsed{
 .profile-heading h1{
     color: black;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .profile-heading h3{

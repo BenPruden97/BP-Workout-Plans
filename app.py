@@ -65,14 +65,14 @@ def home():
 # ----- Search Input -----
 
 
-@app.route("/search", methods=["GET", "POST"])
+@app.route("/search")
 def search():
     """
     This is the search query to allow users/members
     to search for workout plans by category and difficulty
     """
 
-    query = request.form.get("query")
+    query = request.args.get('query')
 
     workout_plans = list(
         mongo.db.workout_plans.find({"$text": {"$search": query}}))
@@ -99,7 +99,8 @@ def find_workouts():
     to find different workout plans created by members
     """
 
-    workout_plans = list(mongo.db.workout_plans.find())
+    workout_plans = list(mongo.db.workout_plans.find().sort(
+        "_id", DESCENDING))
     workout_difficulties = mongo.db.workout_difficulties.find()
     workout_categories = mongo.db.workout_categories.find()
 
@@ -195,8 +196,8 @@ def log_in():
             else:
                 flash(
                     """
-                    Username already exists,
-                    please try again
+                    Incorrect Username and/or
+                    Password Entered, please try again
                     """
                     )
                 return redirect(url_for("log_in"))
@@ -204,8 +205,8 @@ def log_in():
         else:
             flash(
                 """
-                Incorrect Username and/or
-                Password Entered, please try again
+                Username Does Not Exist,
+                please try again
                 """
                 )
             return redirect(url_for("log_in"))
@@ -485,7 +486,8 @@ def my_workouts(username):
         {"username": session["member"]})["username"]
 
     workout_plans = list(mongo.db.workout_plans.find(
-        {"created_by": username}))
+        {"created_by": username}).sort(
+        "_id", DESCENDING))
 
     workout_plans_paginated = paginated(workout_plans)
     pagination = pagination_args(workout_plans)
