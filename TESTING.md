@@ -9,6 +9,8 @@
   * [Member Stories](#member-stories)
   * [Admin Stories](#admin-stories)
 * [Testing Project Functionality](#testing-project-functionality)
+* [Testing Code Validation](#testing-code-validation)
+* [Lighthouse Performance Testing](#lighthouse-performance-testing)
 
 # Testing User Stories
 
@@ -107,6 +109,8 @@ The Developer tested the User Stories to make sure they were being followed:
 7. Delete Any Workout Plan from the data
 8 Admins will have the authorization to delete any member's workout plan if necessary.
 
+[Back To Table Of Contents](#back-to-table-of-contents)
+
 # Testing Project Functionality
 
 ### Logo Testing
@@ -132,10 +136,6 @@ Takes the user/ member back to the home page.
 ![Footer Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/footer-links.gif)
 
 ### Testing Pagination Links
-
-
-
-# Testing Passwords Match Functionality
 
 
 
@@ -321,5 +321,175 @@ Takes the user/ member back to the home page.
 
 ![Edit Account Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/edit-account-page-responsive.gif)
 
+[Back To Table Of Contents](#back-to-table-of-contents)
 
+# Testing Code Validation
 
+### HTML Validation
+
+I used [W3C Markup Validation Service](https://validator.w3.org/) to validate my HTML code for all pages.
+* All errors/ warnings recommended were amended.
+* The only errors left are the python html code which could not be amended.
+
+### CSS Validation
+
+I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate my CSS style sheet.
+
+There were no errors within the file
+
+![]()
+
+### Javascript Validation
+
+I used [JSHint](https://jshint.com/) to validate my Javascript files.
+
+The errors found were from:
+* CONST being used to declare variables
+* Using SweetAlert & EmailJS for the contact form feedback
+* The unused variables are from onclicks and modals
+
+![]()
+
+### Python Code Checking
+
+I used the flask extension flake8 to check the app.py for any errors.
+
+![]()
+
+[Back To Table Of Contents](#back-to-table-of-contents)
+
+# Lighthouse Performance Testing
+
+### Home Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|99|86|93|100|
+
+### Home Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|Performance Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|84|92|93|100|Minify CSS Files & Unused CSS|
+
+### Find A Workout Plan Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|97|94|93|89|
+
+### Find A Workout Plan Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|Performance Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|84|92|93|100|Due to the Search Query Input|
+
+### Sign Up Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|100|92|93|100|
+
+### Sign Up Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|93|97|93|91|
+
+### Log In Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|100|92|93|100|
+
+### Log In Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|93|97|93|91|
+
+### Contact Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|99|92|93|100|
+
+### Contact Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|90|94|93|91|
+
+### Create A Workout Plan Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|99|92|93|100|
+
+### Create A Workout Plan Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|Performance Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|87|97|93|100|Minify CSS Files & Unused CSS|
+
+### Workout Plan Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|Accessibility Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|98|82|93|100|Due To Bootstrap Accordion Class|
+
+### Workout Plan Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|Performance Issue|Accessibility Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|82|85|93|100|Minify CSS Files & Unused CSS|Due To Bootstrap Accordion Class|
+
+### Edit Workout Plan Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|99|93|93|100|
+
+### Edit Workout Plan Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|Performance Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|87|92|93|100|Minify CSS Files & Unused CSS|
+
+### My Workout Plans Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|Accessibility Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|99|86|93|100|Contact Button Color & Links Have No Discernable Name|
+
+### My Workout Plans Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|Performance Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|87|85|93|100|Minify CSS Files & Unused CSS|
+
+### View Profile Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|Accessibility Issue|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|100|86|93|100|Contact Button Color & Links Have No Discernable Name|
+
+### View Profile Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|92|95|93|100|
+
+### Edit Account Page Desktop Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|100|90|93|100|
+
+### Edit Account Page Mobile Performance
+
+|Performance|Accessibility|Best Practice|SEO|
+|:-----:|:-----:|:-----:|:-----:|
+|93|95|93|91|
+
+[Back To Table Of Contents](#back-to-table-of-contents)
