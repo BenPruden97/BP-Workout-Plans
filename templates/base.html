@@ -88,10 +88,14 @@
 
                     <div class="user-links">
 
+                        <ul>
+
                             <li><a href="#"><i class="fas fa-user-cog"></i></a></li>
                             <li><a href="{{ url_for('my_workouts', username=session['member']) }}">My Workout Plans</a></li>
                             <li><a href="{{ url_for('profile', username=session['member']) }}">View Profile</a></li>
                             <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
+
+                        </ul>
 
                     </div>
 
@@ -120,21 +124,25 @@
 
                     <div class="collapse" id="navbarToggleExternalContent">
 
-                        <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('find_workouts') }}">Find A Workout Plan</a></li>
-                        {% if session.member %}
-                            <li><a href="{{ url_for('create_workout') }}">Create A Workout Plan</a></li>                                                                                 
-                        {% else %}
-                            <li><a href="{{ url_for('sign_up') }}" class="sign-up">Sign Up</a></li>
-                            <li><a href="{{ url_for('log_in') }}" class="log-in">Log In</a></li>
-                        {% endif %}
-                        <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
-                        {% if session.member|lower %}
-                        <li><a href="#"><i class="fas fa-user-cog"></i></a></li>
-                        <li><a href="{{ url_for('my_workouts', username=session['member']) }}">My Workout Plans</a></li>
-                        <li><a href="{{ url_for('profile', username=session['member']) }}">View Profile</a></li>
-                        <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
-                        {% endif %}
+                        <ul>
+
+                            <li><a href="{{ url_for('home') }}">Home</a></li>
+                            <li><a href="{{ url_for('find_workouts') }}">Find A Workout Plan</a></li>
+                            {% if session.member %}
+                                <li><a href="{{ url_for('create_workout') }}">Create A Workout Plan</a></li>                                                                                 
+                            {% else %}
+                                <li><a href="{{ url_for('sign_up') }}" class="sign-up">Sign Up</a></li>
+                                <li><a href="{{ url_for('log_in') }}" class="log-in">Log In</a></li>
+                            {% endif %}
+                            <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+                            {% if session.member|lower %}
+                            <li><a href="#"><i class="fas fa-user-cog"></i></a></li>
+                            <li><a href="{{ url_for('my_workouts', username=session['member']) }}">My Workout Plans</a></li>
+                            <li><a href="{{ url_for('profile', username=session['member']) }}">View Profile</a></li>
+                            <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
+                            {% endif %}
+
+                        </ul>
 
                     </div>
 
@@ -199,11 +207,11 @@
 
                         <ul>
 
-                            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/ben-pruden-9aa4a8123/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="https://github.com/BenPruden97" target="_blank"><i class="fab fa-github"></i></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/" rel="noopener" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/ben-pruden-9aa4a8123/" rel="noopener" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://github.com/BenPruden97" rel="noopener" target="_blank"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://www.instagram.com/" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a></li>
 
                         </ul>
 

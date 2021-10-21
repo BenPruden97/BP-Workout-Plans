@@ -125,7 +125,7 @@ div.col-lg-12{
 
 /* ----- Navigation Logo Styling ----- */
 
-nav.navbar.navbar-expand-lg{
+div#navbarToggleExternalContent.collapse.show ul{
     display: none;
 }
 
@@ -168,7 +168,7 @@ nav .nav{
     margin-bottom: 0.5rem;
 }
 
-nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+nav.navbar.navbar-expand-lg.navbar-light{
     padding: 0;
 }
 
@@ -256,7 +256,7 @@ nav .nav .log-in:hover{
 
 /* ----- Navigation Member Options ----- */
 
-.user-links{
+.user-links ul{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,11 +264,8 @@ nav .nav .log-in:hover{
     height: 50px;
     width: 100%;
     margin-bottom: 0.5rem;
-}
-
-.user-links ul{
     text-decoration: none;
-}
+}   
 
 .user-links li{
     margin: 1rem 0 1rem;
@@ -368,6 +365,7 @@ footer{
     border-bottom: 2px solid black;
     text-align: center;
     padding: 1rem 0 2rem;
+    color: black;
 }
 
 .home-text h1{
@@ -409,6 +407,7 @@ footer{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     padding-top: 1.5rem;
+    color: black;
 }
 
 .create-home h1{
@@ -2467,7 +2466,7 @@ button.accordion-button.collapsed{
         margin-bottom: 0.5rem;
     }
 
-    nav.navbar.navbar-expand-lg{
+    div#navbarToggleExternalContent.collapse.show ul{
         display: none;
     }
 
@@ -2750,7 +2749,7 @@ button.accordion-button.collapsed{
         display: none;
     }
 
-    div#navbarToggleExternalContent.collapse.show{
+    div#navbarToggleExternalContent.collapse.show ul{
         display: flex;
         justify-content: center;
         align-items: center;
