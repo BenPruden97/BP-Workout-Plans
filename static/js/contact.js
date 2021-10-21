@@ -4,7 +4,7 @@ form = document.querySelector(".contact-section");
 
 form.addEventListener("submit", function (event) {
 
-    event.preventDefault()
+    event.preventDefault();
     const target = event.target;
 
     const templateParams = {
@@ -36,4 +36,4 @@ form.addEventListener("submit", function (event) {
 
     });
 
-})
+});
