@@ -8,6 +8,7 @@
   * [User Stories](#user-stories)
   * [Member Stories](#member-stories)
   * [Admin Stories](#admin-stories)
+* [Testing Project Functionality](#testing-project-functionality)
 
 # Testing User Stories
 
@@ -105,3 +106,210 @@ The Developer tested the User Stories to make sure they were being followed:
 
 7. Delete Any Workout Plan from the data
 8 Admins will have the authorization to delete any member's workout plan if necessary.
+
+# Testing Project Functionality
+
+### Logo Testing
+
+Takes the user/ member back to the home page.
+
+
+
+### User Navigation Links
+
+
+
+### Member Navigation Links & Logo Testing
+
+
+
+### Testing Burger Menu For Tablet & Mobile Devices
+
+
+
+### Footer Social Links
+
+
+
+### Testing Pagination Links
+
+
+
+# Testing Passwords Match Functionality
+
+
+
+# Home Page Testing
+
+### Testing Home Page Find & Create A Workout Button Functionality
+
+
+
+### Testing Sign Up & Log In Button Functionality
+
+
+
+### Testing If The User/ Member Can View A Workout Plan From The Home Page
+
+
+
+### Testing Home Page Reponsive Design
+
+
+
+# Find A Workout Plan Page Testing
+
+### Testing The Search Input Functionality
+
+
+
+### Testing The Search Input Reset Functionality
+
+
+
+### Testing If The User/ Member Can View A Workout Plan From The Find A Workout Plan Page
+
+
+
+
+### Testing Find A Workout Plan Page Reponsive Design
+
+
+
+# Sign Up Page Testing
+
+### Testing the Sign Up Form Functionality
+
+
+
+### Testing Log In Button Link
+
+
+
+### Testing Sign Up Page Reponsive Design
+
+
+
+# Log In Page Testing
+
+### Testing the Log In Form Functionality
+
+
+
+### Testing Sign Up Button Link
+
+
+
+### Testing Log In Page Reponsive Design
+
+
+
+# Testing The Log Out Navigation Link Functionality
+
+
+
+# Contact Page Testing
+
+### Testing the Contact Form Functionality
+
+
+
+### Testing Contact Page Reponsive Design
+
+# Create A Workout Plan Page Testing
+
+### Testing The Create A Workout Plan Form
+
+
+
+### Testing The Cancel Button
+
+
+
+### Testing The Create A Workout Plan Page Responsive Design
+
+# Edit A Workout Plan Page
+
+### Testing The Edit Workout Plan Page Functionality
+
+
+
+### Testing The Cancel Button
+
+
+
+### Testing The Edit Workout Plan Page Responsive Design
+
+
+
+# Testing The Workout Plan Id Page
+
+### Testing The Workout Plan Id Page Accordion Section
+
+
+
+### Testing The Go Back Button Functionality
+
+
+
+### Testing The Create A Workout Plan Button Functionality
+
+
+
+### Testing The Edit Workout Plan Button Functionality
+
+
+
+### Testing The Delete Workout Plan Button Functionality To Open Delete Workout Plan Modal
+
+
+
+### Testing Workout Plan Id Page Responsive Design
+
+
+
+# Testing Profile Page
+
+### Testing The Find & Create A Workout Plan Buttons Functionality
+
+
+
+### Testing The My Workout Plans Button Functionality
+
+
+
+### Testing The Edit Account Button Functionality
+
+
+
+### Testing The Delete Account Modal Button Functionality To Open Delete Account Modal
+
+
+### Testing The Profile Page Responsive Design
+
+
+
+# Testing The Edit Account Page
+
+### Testing The Update Username Form Functionality
+
+
+
+### Testing The Cancel Username Button Functionality
+
+
+
+### Testing The Update Password Form Functionality
+
+
+
+### Testing The Cancel Password Button Functionlity
+
+
+
+### Testing Edit Account Responsive Design
+
+
+
+
+
