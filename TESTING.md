@@ -113,23 +113,23 @@ The Developer tested the User Stories to make sure they were being followed:
 
 Takes the user/ member back to the home page.
 
-
+![Logo](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/Logo.gif)
 
 ### User Navigation Links
 
+![User Navigation Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/user-nav-links.gif)
 
+### Member Navigation Links
 
-### Member Navigation Links & Logo Testing
-
-
+![Member Navigation Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/member-nav-links.gif)
 
 ### Testing Burger Menu For Tablet & Mobile Devices
 
-
+![Burger Menu Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/burger-nav-menu.gif)
 
 ### Footer Social Links
 
-
+![Footer Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/footer-links.gif)
 
 ### Testing Pagination Links
 
@@ -143,88 +143,113 @@ Takes the user/ member back to the home page.
 
 ### Testing Home Page Find & Create A Workout Button Functionality
 
-
+![Find & Create A Workout Plan Buttons](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/find-and-create-button-home.gif)
 
 ### Testing Sign Up & Log In Button Functionality
 
-
+![Sign Up & Log In Buttons For Home Page](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/sign-up-log-in-links-home.gif)
 
 ### Testing If The User/ Member Can View A Workout Plan From The Home Page
 
-
+![View Workout Plans On Home Page](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/workout-plan-page-home.gif)
 
 ### Testing Home Page Reponsive Design
 
-
+![Home Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/home-page-responsive.gif)
 
 # Find A Workout Plan Page Testing
 
-### Testing The Search Input Functionality
+### Testing The Search Input Functionality With Muscle Groups
 
+![]()
 
+### Testing The Search Input Functionality With Workout Difficulty
+
+![]()
 
 ### Testing The Search Input Reset Functionality
 
-
+![]()
 
 ### Testing If The User/ Member Can View A Workout Plan From The Find A Workout Plan Page
 
-
-
+![]()
 
 ### Testing Find A Workout Plan Page Reponsive Design
 
-
+![]()
 
 # Sign Up Page Testing
 
 ### Testing the Sign Up Form Functionality
 
+![Sign Up Page Form Functionality](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/sign-up-page-form.gif)
 
+### Testing Sign Up Page Password & Confirm Password Match
+
+![Testing Whether The Sign Up Page Password & Confirm Password Match](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/sign-up-page-form.gif)
 
 ### Testing Log In Button Link
 
-
+![Log In Button Link](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/log-in-button-sign-up-page.gif)
 
 ### Testing Sign Up Page Reponsive Design
 
-
+![Sign Up Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/sign-up-page-responsive.gif)
 
 # Log In Page Testing
 
 ### Testing the Log In Form Functionality
 
-
+![Log In Page Form Functionality](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/log-in-page-form.gif)
 
 ### Testing Sign Up Button Link
 
-
+![Sign Up Button Link](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/sign-up-button-log-in-page.gif)
 
 ### Testing Log In Page Reponsive Design
 
-
+![Log In Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/log-in-page-responsive.gif)
 
 # Testing The Log Out Navigation Link Functionality
 
-
+![Log Out Functionality](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/log-out.gif)
 
 # Contact Page Testing
 
 ### Testing the Contact Form Functionality
 
-
+![Contact Page Form Functionality](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/contact-page-form.gif)
 
 ### Testing Contact Page Reponsive Design
 
+![Contact Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/contact-page-responsive.gif)
+
 # Create A Workout Plan Page Testing
 
-### Testing The Create A Workout Plan Form
+### Creating A Chest Workout Plan
 
+![Creating A Chest Workout Plan](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/creating-chest-workout-plan.gif)
 
+### Creating A Back Workout Plan
+
+![Creating A Back Workout Plan](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/creating-back-workout-plan.gif)
+
+### Creating A Arms Workout Plan
+
+![Creating A Arms Workout Plan](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/creating-arm-workout-plan.gif)
+
+### Creating A Legs Workout Plan
+
+![Creating A Legs Workout Plan](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/creating-leg-workout-plan.gif)
+
+### Creating A Shoulders Workout Plan
+
+![Creating A Shoulders Workout Plan](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/creating-shoulder-workout-plan.gif)
 
 ### Testing The Cancel Button
 
-
+![]()
 
 ### Testing The Create A Workout Plan Page Responsive Design
 
@@ -232,84 +257,69 @@ Takes the user/ member back to the home page.
 
 ### Testing The Edit Workout Plan Page Functionality
 
-
-
-### Testing The Cancel Button
-
-
-
-### Testing The Edit Workout Plan Page Responsive Design
-
-
+![Edit Workout Plan Functionality](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/edit-workout-plan.gif)
 
 # Testing The Workout Plan Id Page
 
 ### Testing The Workout Plan Id Page Accordion Section
 
-
-
-### Testing The Go Back Button Functionality
-
-
-
-### Testing The Create A Workout Plan Button Functionality
-
-
-
-### Testing The Edit Workout Plan Button Functionality
-
-
+![]()
 
 ### Testing The Delete Workout Plan Button Functionality To Open Delete Workout Plan Modal
 
-
+![]()
 
 ### Testing Workout Plan Id Page Responsive Design
 
-
+![]()
 
 # Testing Profile Page
 
 ### Testing The Find & Create A Workout Plan Buttons Functionality
 
-
+![Find & Create Button Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/profile-find-create-button.gif)
 
 ### Testing The My Workout Plans Button Functionality
 
-
+![]()
 
 ### Testing The Edit Account Button Functionality
 
-
+![Edit Account Button](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/edit-account-button.gif)
 
 ### Testing The Delete Account Modal Button Functionality To Open Delete Account Modal
 
+![]()
 
 ### Testing The Profile Page Responsive Design
 
-
+![Profile Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/profile-page-responsive.gif)
 
 # Testing The Edit Account Page
 
 ### Testing The Update Username Form Functionality
 
-
+![Update Username Form Functionality](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/updating-username.gif)
 
 ### Testing The Cancel Username Button Functionality
 
-
+![Cancel Update Username Button](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/username-cancel-button.gif)
 
 ### Testing The Update Password Form Functionality
 
+![Update Password Form Functionality](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/updating-password.gif)
 
+### Testing Edit Account Password & Confirm Password Match
+
+![Testing Whether The Edit Account Password & Confirm Password Match](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/updating-password.gif)
 
 ### Testing The Cancel Password Button Functionlity
 
-
+![Cancel Update Password Button](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/password-cancel-button.gif)
 
 ### Testing Edit Account Responsive Design
 
-
+![Edit Account Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/edit-account-page-responsive.gif)
 
 
 
