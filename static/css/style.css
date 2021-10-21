@@ -1290,6 +1290,7 @@ button.accordion-button.collapsed{
 }
 
 .workout-name{
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3644,16 +3645,19 @@ button.accordion-button.collapsed{
 
     .workout-options-styling{
         padding: 0.25rem 0;
+        font-size: 0.8rem;
     }
 
     .workout-plan-options{
         width: 250px;
         margin: 0;
+        font-size: 0.8rem;
     }
 
     .go-back{
         width: 250px;
         margin-top: 0.75rem;
+        margin-bottom: 0;
     }
 
     .workout-edit{
