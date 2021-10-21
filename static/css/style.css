@@ -1473,7 +1473,7 @@ button.accordion-button.collapsed{
     align-items: center;
     background-color: #009dff;
     width: 100%;
-    height: 64vh;
+    height: 70vh;
     border-bottom: 2px solid black;
 }
 
@@ -1576,7 +1576,7 @@ button.accordion-button.collapsed{
     align-items: center;
     background-color: #db0007;
     width: 100%;
-    height: 64vh;
+    height: 70vh;
     border-bottom: 2px solid black;
 }
 
@@ -1594,7 +1594,7 @@ button.accordion-button.collapsed{
     display: block;
     justify-content: center;
     align-items: center;
-    height: 470px;
+    height: 485px;
     width: 500px;
     background-color: #fafafa;
     border: 2px solid black;
@@ -1717,7 +1717,7 @@ button.accordion-button.collapsed{
     align-items: center;
     background-color: #118324;
     padding: 1rem;
-    height: 64vh;
+    height: 70vh;
     border-bottom: 2px solid black;
 }
 
@@ -2463,13 +2463,15 @@ button.accordion-button.collapsed{
         height: 125px;
     }
 
+    footer p{
+        text-align: center;
+        margin-top: 0.5rem;
+        padding: 0 2rem;
+    }
+
     /* --------------- contact.html Styling ---------------*/
 
     /* ----- Contact Section Styling ----- */
-
-    .contact-section{
-        height: 500px;
-    }
 
     .contact-card{
         position: relative;
@@ -2498,13 +2500,6 @@ button.accordion-button.collapsed{
         margin: 0.5rem;
     }
 
-    /* --------------- sign_up.html Styling ---------------*/
-
-    /* ----- Sign Up Section Styling ----- */
-
-    .sign-up-section{
-        height: 500px;
-    }
 
     .sign-up-card{
         height: 450px;
@@ -2526,14 +2521,6 @@ button.accordion-button.collapsed{
     .account-already p{
         text-align: center;
         padding: 0.4rem;
-    }
-
-    /* --------------- log_in.html Styling ---------------*/
-
-    /* ----- Log In Section Styling ----- */
-
-    .log-in-section{
-        height: 475px;
     }
 
     /* ----- Footer Section Styling ----- */
@@ -2834,10 +2821,6 @@ button.accordion-button.collapsed{
         margin-top: 0;
     }
 
-    .contact-section{
-        height: 500px;
-    }
-
     .contact-card{
         width: 400px;
     }
@@ -2850,10 +2833,6 @@ button.accordion-button.collapsed{
         margin-top: 0;
     }
 
-    .sign-up-section{
-        height: 500px;
-    }
-
     .sign-up-card{
         width: 400px;
     }
@@ -2864,10 +2843,6 @@ button.accordion-button.collapsed{
 
     .log-in-header{
         margin-top: 0;
-    }
-
-    .log-in-section{
-        height: 500px;
     }
 
     .log-in-card{
@@ -2906,8 +2881,8 @@ button.accordion-button.collapsed{
 
     .designer p{
         text-align: center;
-        font-size: 0.75rem;
-        padding: 1rem 2rem 0;
+        font-size: 0.85rem;
+        padding: 0.5rem 2rem 0;
     }
 
     /* ----- Footer Social Links Styling ----- */
