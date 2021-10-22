@@ -117,19 +117,19 @@ The Developer tested the User Stories to make sure they were being followed:
 
 Takes the user/ member back to the home page.
 
-![Logo](/bp-workout-plans/static/videos/Logo.gif)
+![Logo](static/videos/Logo.gif)
 
 ### User Navigation Links
 
-![User Navigation Links](/static/videos/user-nav-links.gif)
+![User Navigation Links](static/videos/user-nav-links.gif)
 
 ### Member Navigation Links
 
-![Member Navigation Links](/static/videos/member-nav-links.gif)
+![Member Navigation Links](static/videos/member-nav-links.gif)
 
 ### Testing Burger Menu For Tablet & Mobile Devices
 
-![Burger Menu Links](/static/videos/burger-nav-menu.gif)
+![Burger Menu Links](static/videos/burger-nav-menu.gif)
 
 ### Footer Social Links
 
