@@ -117,27 +117,27 @@ The Developer tested the User Stories to make sure they were being followed:
 
 Takes the user/ member back to the home page.
 
-![Logo](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/Logo.gif)
+![Logo](static/videos/Logo.gif)
 
 ### User Navigation Links
 
-![User Navigation Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/user-nav-links.gif)
+![User Navigation Links](static/videos/user-nav-links.gif)
 
 ### Member Navigation Links
 
-![Member Navigation Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/member-nav-links.gif)
+![Member Navigation Links](static/videos/member-nav-links.gif)
 
 ### Testing Burger Menu For Tablet & Mobile Devices
 
-![Burger Menu Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/burger-nav-menu.gif)
+![Burger Menu Links](static/videos/burger-nav-menu.gif)
 
 ### Footer Social Links
 
-![Footer Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/footer-links.gif)
+![Footer Links](static/videos/footer-links.gif)
 
 ### Testing Pagination Links
 
-![Pagination Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/pagination-links.gif)
+![Pagination Links](static/videos/pagination-links.gif)
 
 # Home Page Testing
 
