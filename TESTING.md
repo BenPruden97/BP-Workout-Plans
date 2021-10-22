@@ -117,23 +117,23 @@ The Developer tested the User Stories to make sure they were being followed:
 
 Takes the user/ member back to the home page.
 
-![Logo](static/videos/Logo.gif)
+![Logo](static/testing_videos/Logo%20(1).gif)
 
 ### User Navigation Links
 
-![User Navigation Links](static/videos/user-nav-links.gif)
+![User Navigation Links](static/testing_videos/User%20Nav%20Links.gif)
 
 ### Member Navigation Links
 
-![Member Navigation Links](static/videos/member-nav-links.gif)
+![Member Navigation Links](Member%20Nav%20Links.gif)
 
 ### Testing Burger Menu For Tablet & Mobile Devices
 
-![Burger Menu Links](static/videos/burger-nav-menu.gif)
+![Burger Menu Links](static/testing_videos/burger%20menu.gif)
 
 ### Footer Social Links
 
-![Footer Links](static/videos/footer-links.gif)
+![Footer Links](footer.gif)
 
 ### Testing Pagination Links
 
