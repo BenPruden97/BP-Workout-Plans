@@ -145,10 +145,6 @@ Takes the user/ member back to the home page.
 
 ![Sign Up & Log In Buttons For Home Page](static/testing_videos/sign%20up%20log%20in%20home.gif)
 
-### Testing If The User/ Member Can View A Workout Plan From The Home Page
-
-![View Workout Plans On Home Page](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/workout-plan-page-home.gif)
-
 ### Testing Home Page Reponsive Design
 
 ![Home Page Responsive Design](static/testing_videos/home%20page%20responsive%20design.gif)
@@ -166,14 +162,6 @@ Takes the user/ member back to the home page.
 ### Testing The Search Input Reset Functionality
 
 ![Search Input Reset Button](static/testing_videos/find%20reset%20button.gif)
-
-### Testing If The User/ Member Can View A Workout Plan From The Find A Workout Plan Page
-
-![Viewing Workout Plans On Find A Workout Plan Page](static/testing_videos/Viewing%20workout%20plans%20on%20Find.gif)
-
-### Testing Find A Workout Plan Page Reponsive Design
-
-![Find A Workout Plan Page Responsive Design](static/videos/find-workout-plan-page-responsive.gif)
 
 # Sign Up Page Testing
 
