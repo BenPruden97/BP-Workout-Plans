@@ -109,7 +109,7 @@ The Developer tested the User Stories to make sure they were being followed:
 7. Delete Any Workout Plan from the data
 8 Admins will have the authorization to delete any member's workout plan if necessary.
 
-[Back To Table Of Contents](#back-to-table-of-contents)
+[Back To Table Of Contents](#table-of-contents)
 
 # Testing Project Functionality
 
@@ -137,7 +137,7 @@ Takes the user/ member back to the home page.
 
 ### Testing Pagination Links
 
-
+![Pagination Links](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/pagination-links.gif)
 
 # Home Page Testing
 
@@ -161,23 +161,23 @@ Takes the user/ member back to the home page.
 
 ### Testing The Search Input Functionality With Muscle Groups
 
-![]()
+![Muscle Groups Search Input](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/search-query-muscle-category.gif)
 
 ### Testing The Search Input Functionality With Workout Difficulty
 
-![]()
+![Workout Difficulty Search Input](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/search-query-workout-difficulty.gif)
 
 ### Testing The Search Input Reset Functionality
 
-![]()
+![Search Input Reset Button](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/find-workouts-reset-button.gif)
 
 ### Testing If The User/ Member Can View A Workout Plan From The Find A Workout Plan Page
 
-![]()
+![Viewing Workout Plans On Find A Workout Plan Page](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/viewing-workout-plans-on-find.gif)
 
 ### Testing Find A Workout Plan Page Reponsive Design
 
-![]()
+![Find A Workout Plan Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/find-workout-plan-page-responsive.gif)
 
 # Sign Up Page Testing
 
@@ -249,9 +249,23 @@ Takes the user/ member back to the home page.
 
 ### Testing The Cancel Button
 
-![]()
+![Create A Workout Plan Cancel Button](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/create-workout-plan-cancel-button.gif)
 
 ### Testing The Create A Workout Plan Page Responsive Design
+
+# My Workout Plans Page Testing
+
+### Create A Workut Plan Page Button
+
+![Create A Workut Plan Page Button](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/my-workout-plans-page-create-button.gif)
+
+### My Workout Plans Page Viewing Workout Plan
+
+![My Workout Plans Page Viewing Workout Plan](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/my-workouts-page-viewing-workouts.gif)
+
+### My Workouts Plan Page Responsive Design
+
+![My Workouts Plan Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/my-workouts-plan-page-responsive.gif)
 
 # Edit A Workout Plan Page
 
@@ -263,15 +277,15 @@ Takes the user/ member back to the home page.
 
 ### Testing The Workout Plan Id Page Accordion Section
 
-![]()
+![Workout Plan Page Accordion Section Testing](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/workout-plan-page-accordion.gif)
 
 ### Testing The Delete Workout Plan Button Functionality To Open Delete Workout Plan Modal
 
-![]()
+![Deleting A Workout Plan](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/deleting-a-workout-plan.gif)
 
 ### Testing Workout Plan Id Page Responsive Design
 
-![]()
+![Workout Plan Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/workout-plan-page-responsive.gif)
 
 # Testing Profile Page
 
@@ -281,7 +295,7 @@ Takes the user/ member back to the home page.
 
 ### Testing The My Workout Plans Button Functionality
 
-![]()
+![My Workout Plans Button](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/my-workouts-page-button-profile.gif)
 
 ### Testing The Edit Account Button Functionality
 
@@ -289,7 +303,7 @@ Takes the user/ member back to the home page.
 
 ### Testing The Delete Account Modal Button Functionality To Open Delete Account Modal
 
-![]()
+![Deleting Member Account Modal](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/deleting-account.gif)
 
 ### Testing The Profile Page Responsive Design
 
@@ -321,15 +335,24 @@ Takes the user/ member back to the home page.
 
 ![Edit Account Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/edit-account-page-responsive.gif)
 
-[Back To Table Of Contents](#back-to-table-of-contents)
+[Back To Table Of Contents](#table-of-contents)
 
 # Testing Code Validation
 
 ### HTML Validation
 
 I used [W3C Markup Validation Service](https://validator.w3.org/) to validate my HTML code for all pages.
-* All errors/ warnings recommended were amended.
-* The only errors left are the python html code which could not be amended.
+* Home Page - Anchor Tag nested of place that is needed.
+* Find A Workouts Plan Page - Duplicate Class Used for if statement images.
+* Sign Up Page - No Errors
+* Log In Page - No Errors
+* Contact Page - No Errors
+* Create A Workout Plan Page - Have Name & Id attribute within a p tag to display a value.
+* Workout Plan Page - value displaying within a p tag and bootstrap accordion code error.
+* Edit Workout Plan Page - value displaying errors
+* My Workout Plans Page - No Errors
+* View Profile Page - No Errors
+* Edit Account Page - No Errors
 
 ### CSS Validation
 
@@ -337,7 +360,7 @@ I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to val
 
 There were no errors within the file
 
-![]()
+![CSS Validation](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/css-validation.png)
 
 ### Javascript Validation
 
@@ -348,15 +371,15 @@ The errors found were from:
 * Using SweetAlert & EmailJS for the contact form feedback
 * The unused variables are from onclicks and modals
 
-![]()
+![JSHint Validation](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/js-hint.png)
 
 ### Python Code Checking
 
 I used the flask extension flake8 to check the app.py for any errors.
 
-![]()
+![flake8 Extension](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/screenshots/flake8-app-py.png)
 
-[Back To Table Of Contents](#back-to-table-of-contents)
+[Back To Table Of Contents](#table-of-contents)
 
 # Lighthouse Performance Testing
 
@@ -492,4 +515,4 @@ I used the flask extension flake8 to check the app.py for any errors.
 |:-----:|:-----:|:-----:|:-----:|
 |93|95|93|91|
 
-[Back To Table Of Contents](#back-to-table-of-contents)
+[Back To Table Of Contents](#table-of-contents)
