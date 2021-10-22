@@ -117,7 +117,7 @@ The Developer tested the User Stories to make sure they were being followed:
 
 Takes the user/ member back to the home page.
 
-![Logo](bp-workout-plans/static/videos/Logo.gif)
+![Logo](/bp-workout-plans/static/videos/Logo.gif)
 
 ### User Navigation Links
 
