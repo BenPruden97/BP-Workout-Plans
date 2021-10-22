@@ -125,7 +125,7 @@ Takes the user/ member back to the home page.
 
 ### Member Navigation Links
 
-![Member Navigation Links](Member%20Nav%20Links.gif)
+![Member Navigation Links](static/testing_videos/Member%20Nav%20Links.gif)
 
 ### Testing Burger Menu For Tablet & Mobile Devices
 
@@ -134,10 +134,6 @@ Takes the user/ member back to the home page.
 ### Footer Social Links
 
 ![Footer Links](static/testing_videos/footer.gif)
-
-### Testing Pagination Links
-
-![Pagination Links](static/videos/pagination-links.gif)
 
 # Home Page Testing
 
@@ -177,7 +173,7 @@ Takes the user/ member back to the home page.
 
 ### Testing Find A Workout Plan Page Reponsive Design
 
-![Find A Workout Plan Page Responsive Design](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/videos/find-workout-plan-page-responsive.gif)
+![Find A Workout Plan Page Responsive Design](static/videos/find-workout-plan-page-responsive.gif)
 
 # Sign Up Page Testing
 
@@ -253,7 +249,7 @@ Takes the user/ member back to the home page.
 
 ### Testing The Create A Workout Plan Page Responsive Design
 
-![]()
+![Create A Workout Plan Page Responsive](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/testing_videos/create%20a%20workout%20plan%20responsive.gif)
 
 # My Workout Plans Page Testing
 
@@ -305,7 +301,7 @@ Takes the user/ member back to the home page.
 
 ### Testing The Delete Account Modal Button Functionality To Open Delete Account Modal
 
-![Deleting Member Account Modal]()
+![Deleting Member Account Modal](https://github.com/BenPruden97/BP-Workout-Plans/blob/main/static/testing_videos/deleting%20account.gif)
 
 ### Testing The Profile Page Responsive Design
 
