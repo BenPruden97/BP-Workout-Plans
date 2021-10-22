@@ -594,6 +594,18 @@ To Fix this error, I used 'session.pop("member")' to log the member out after ch
 
 I had created a seperate js file for flash messages to only display on the pages where flash messages were going to display. The issue here was that the log out functionality had a flash message to let the member know that they had logged out successfully. I decided to leave the flash message js script tag within the base.html file. Because of this, there are error messages for the flash message js file within the console when displaying a page where there are no flash messages to display.
 
+### 4. Search Query Pagination Issue
+
+When a user/ member was to use the search query and if the query result had more then one page, every page after the first link would throw an error.
+
+To Fix this issue I change the following code:
+
+1. The Create A Workout Plan Form method from method="POST" to method="GET".
+2. Removed the methods of "GET" & "POST" within the search query route.
+3. Changed the query variable from request.form.get('query') to request.args.get('query').
+
+By changing the code above, this fixed the pagination links for when users/ members were to query workout plans with more then one page of results.
+
 [Back to Table of Contents](#table-of-contents)
 
 # Technologies Used
